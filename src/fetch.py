@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import json
+import time
 from pathlib import Path
 from datetime import datetime, timedelta
 
@@ -24,19 +25,24 @@ CHANNELS = [
 YTDLP = os.environ.get("YTDLP_PATH", "yt-dlp")
 
 
-def list_recent_videos(channel_url: str, max_results: int = 15) -> list[dict]:
+def list_recent_videos(channel_url: str, max_results: int = 15, retries: int = 2) -> list[dict]:
     """Return a list of {id, title} for the most recent videos on a channel."""
-    result = subprocess.run(
-        [YTDLP, "--flat-playlist", "--print", "%(id)s\t%(title)s", "--no-warnings",
-         "--playlist-end", str(max_results), channel_url],
-        capture_output=True, text=True, timeout=60
-    )
-    videos = []
-    for line in result.stdout.strip().splitlines():
-        parts = line.split("\t", 1)
-        if len(parts) == 2:
-            videos.append({"id": parts[0], "title": parts[1]})
-    return videos
+    for attempt in range(retries + 1):
+        result = subprocess.run(
+            [YTDLP, "--flat-playlist", "--print", "%(id)s\t%(title)s", "--no-warnings",
+             "--playlist-end", str(max_results), channel_url],
+            capture_output=True, text=True, timeout=60
+        )
+        videos = []
+        for line in result.stdout.strip().splitlines():
+            parts = line.split("\t", 1)
+            if len(parts) == 2:
+                videos.append({"id": parts[0], "title": parts[1]})
+        if videos:
+            return videos
+        if attempt < retries:
+            time.sleep(2 + attempt * 3)
+    return []
 
 
 def score_video(title: str, race_name: str) -> int:

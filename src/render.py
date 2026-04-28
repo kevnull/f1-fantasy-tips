@@ -5,7 +5,7 @@ render.py — Generate docs/index.html from strategy JSON + OpenF1 driver photos
 import json
 import base64
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -96,7 +96,7 @@ def render(strategy: dict, output_path: str = "docs/index.html") -> None:
     round_num = strategy.get("round", "")
     sprint = strategy.get("sprint", False)
     deadline = strategy.get("deadline", "")
-    updated = datetime.utcnow().strftime("%-d %b %Y")
+    updated = datetime.now(timezone.utc).strftime("%-d %b %Y")
 
     # Captain cards
     captain_html = ""
@@ -318,8 +318,8 @@ a{{color:#185FA5}}
       <thead><tr><th>Budget</th><th>Core</th><th>B-tier fills</th></tr></thead>
       <tbody>
         {''.join(
-            f'<tr{"class=highlight-row" if t.get("optimal") else ""}>'
-            f'<td class="budget-val">{t["budget"]}{"<span class=optimal-badge>optimal</span>" if t.get("optimal") else ""}</td>'
+            f'<tr{" class=\"highlight-row\"" if t.get("optimal") else ""}>'
+            f'<td class="budget-val">{t["budget"]}{"<span class=\"optimal-badge\">optimal</span>" if t.get("optimal") else ""}</td>'
             f'<td>{t["core"]}</td><td>{t["fills"]}</td></tr>'
             for t in strategy.get('meta_template',{}).get('budget_tiers',[])
         )}
