@@ -319,7 +319,7 @@ a{{color:#185FA5}}
       <tbody>
         {''.join(
             f"<tr{' class=highlight-row' if t.get('optimal') else ''}>"
-            f"<td class=\"budget-val\">{t['budget']}{'<span class=optimal-badge>optimal</span>' if t.get('optimal') else ''}</td>"
+            f"<td class=budget-val>{t['budget']}{'<span class=optimal-badge>optimal</span>' if t.get('optimal') else ''}</td>"
             f'<td>{t["core"]}</td><td>{t["fills"]}</td></tr>'
             for t in strategy.get('meta_template',{}).get('budget_tiers',[])
         )}
