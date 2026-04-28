@@ -13,10 +13,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,18 +44,17 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "name=${{ github.event.inputs.race }}" >> $GITHUB_OUTPUT
           else
-            # For scheduled runs, derive from F1 calendar via a quick API call
-            python3 -c "
+            python3 - <<'PY' >> $GITHUB_OUTPUT
           import urllib.request, json
+          from datetime import datetime, timezone
           with urllib.request.urlopen('https://api.openf1.org/v1/meetings?year=2026') as r:
               meetings = json.load(r)
-          from datetime import datetime, timezone
-          now = datetime.now(timezone.utc)
-          upcoming = [m for m in meetings if not m.get('is_cancelled') and m.get('date_start','') > now.isoformat()[:10]]
+          now = datetime.now(timezone.utc).isoformat()[:10]
+          upcoming = [m for m in meetings if not m.get('is_cancelled') and m.get('date_start','') > now]
           next_race = upcoming[0] if upcoming else None
           name = next_race['meeting_name'].replace(' Grand Prix','').strip() if next_race else 'Unknown'
           print(f'name={name}')
-          " >> $GITHUB_OUTPUT
+          PY
           fi
 
       - name: Generate page
@@ -54,12 +62,24 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python src/main.py --race "${{ steps.race.outputs.name }}"
 
-      - name: Commit and push
+      - name: Commit cached strategy
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
+          git add docs/ data/ || true
           git diff --staged --quiet && echo "No changes" || (
             git commit -m "F1 Fantasy: ${{ steps.race.outputs.name }} GP [automated]"
             git push
           )
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
