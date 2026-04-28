@@ -284,10 +284,11 @@ def fetch_photos(acronyms: list[str]) -> dict[str, str]:
 
 def avatar(acr: str, colour: str, photo: str, size: int) -> str:
     c = colour.lstrip("#") or "888888"
-    fb = f'<span class="av-fb" style="width:{size}px;height:{size}px;background:#{c}">{acr}</span>'
-    if not photo: return fb
+    if not photo:
+        return f'<span class="av-fb" style="width:{size}px;height:{size}px;background:#{c}">{acr}</span>'
+    fb_hidden = f'<span class="av-fb" style="width:{size}px;height:{size}px;background:#{c};display:none">{acr}</span>'
     return (f'<img class="av" style="width:{size}px;height:{size}px" src="{photo}" alt="{acr}" '
-            f'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">{fb}')
+            f'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">{fb_hidden}')
 
 def rec_cls(rec: str) -> str:
     return {"use": "rec-use", "save": "rec-save", "maybe": "rec-maybe"}.get(rec.lower(), "rec-save")
