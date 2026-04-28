@@ -134,16 +134,27 @@ def geojson_to_svg(geo: dict) -> str:
             f'<path d="{d}" fill="none" stroke="currentColor" stroke-width="4" '
             f'stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
+CIRCUIT_CACHE_DIR = Path("data/cache/circuits")
+PHOTO_CACHE_DIR = Path("data/cache/photos")
+
+
 def fetch_circuit_svg(race_name: str) -> str:
     c = lookup_circuit(race_name)
     if not c or not c.get("geo"): return ""
+    cache_file = CIRCUIT_CACHE_DIR / f"{c['geo']}.svg"
+    if cache_file.exists():
+        svg = cache_file.read_text()
+        print(f"  [circuit] {c['geo']} (cached) → {len(svg)} chars")
+        return svg
     url = f"{BASE_GEO}/{c['geo']}.geojson"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "f1-fantasy-tips/1.0"})
         with urllib.request.urlopen(req, timeout=10) as r:
             geo = json.load(r)
         svg = geojson_to_svg(geo)
-        print(f"  [circuit] {c['geo']} → {len(svg)} chars")
+        CIRCUIT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(svg)
+        print(f"  [circuit] {c['geo']} (fetched, cached) → {len(svg)} chars")
         return svg
     except Exception as e:
         print(f"  [circuit] Failed {c['geo']}: {e}")
@@ -236,12 +247,25 @@ def weather_cell(label: str, data: dict | None) -> str:
 # ── Existing helpers ───────────────────────────────────────────────────────────
 
 def fetch_photos(acronyms: list[str]) -> dict[str, str]:
-    print("Fetching OpenF1 driver photos...")
+    photos: dict[str, str] = {}
+    missing: list[str] = []
+    for acr in acronyms:
+        cache_file = PHOTO_CACHE_DIR / acr
+        if cache_file.exists():
+            photos[acr] = cache_file.read_text()
+        else:
+            missing.append(acr)
+
+    if not missing:
+        print(f"Driver photos: {len(photos)} cached, 0 fetched")
+        return photos
+
+    print(f"Driver photos: {len(photos)} cached, fetching {len(missing)}: {missing}")
     req = urllib.request.Request(OPENF1_DRIVERS_URL, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=15) as r:
         drivers = {d["name_acronym"]: d for d in json.load(r)}
-    photos = {}
-    for acr in acronyms:
+    PHOTO_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    for acr in missing:
         d = drivers.get(acr)
         if not d or not d.get("headshot_url"):
             photos[acr] = ""; continue
@@ -250,8 +274,10 @@ def fetch_photos(acronyms: list[str]) -> dict[str, str]:
             with urllib.request.urlopen(req2, timeout=10) as r2:
                 data = r2.read()
                 ct = r2.headers.get("Content-Type", "image/png").split(";")[0].strip()
-                photos[acr] = f"data:{ct};base64,{base64.b64encode(data).decode()}"
-            print(f"  {acr}: {len(data)}B")
+                uri = f"data:{ct};base64,{base64.b64encode(data).decode()}"
+            (PHOTO_CACHE_DIR / acr).write_text(uri)
+            photos[acr] = uri
+            print(f"  {acr}: {len(data)}B (cached)")
         except Exception as e:
             print(f"  {acr}: {e}"); photos[acr] = ""
     return photos

@@ -8,6 +8,7 @@ Usage:
 """
 
 import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -24,12 +25,26 @@ STRATEGY_CACHE = "data/strategy.json"
 OUTPUT_PATH = "docs/index.html"
 
 
+def _hash_sources(transcripts: list[dict], race: str) -> str:
+    """Stable hash over (race, sorted video_ids, transcript text). Race included so
+    re-running for a different GP with stale transcripts still re-synthesizes."""
+    h = hashlib.sha256()
+    h.update(race.lower().encode())
+    for t in sorted(transcripts, key=lambda x: x["video_id"]):
+        h.update(b"\0")
+        h.update(t["video_id"].encode())
+        h.update(b"\0")
+        h.update(t["transcript_text"].encode())
+    return h.hexdigest()
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate F1 Fantasy tips page")
     parser.add_argument("--race", default="Miami", help="Race name e.g. Miami, Monaco, Canada")
     parser.add_argument("--skip-fetch", action="store_true", help="Reuse existing transcripts")
     parser.add_argument("--skip-synthesize", action="store_true", help="Reuse cached strategy.json")
     parser.add_argument("--render-only", action="store_true", help="Skip fetch + synthesize, just render from cached strategy.json")
+    parser.add_argument("--force-synthesize", action="store_true", help="Re-synthesize even if source hash matches cache")
     args = parser.parse_args()
 
     print(f"\n=== F1 Fantasy Tips Generator — {args.race} GP ===\n")
@@ -67,13 +82,27 @@ def main():
         print("[error] No transcripts fetched. Exiting.")
         sys.exit(1)
 
-    # Step 2: Synthesize
-    if args.skip_synthesize and Path(STRATEGY_CACHE).exists():
+    # Step 2: Synthesize (skip if source hash matches cached strategy)
+    source_hash = _hash_sources(transcripts, args.race)
+    cached_strategy = None
+    if Path(STRATEGY_CACHE).exists():
+        try:
+            with open(STRATEGY_CACHE) as f:
+                cached_strategy = json.load(f)
+        except json.JSONDecodeError:
+            cached_strategy = None
+
+    if args.skip_synthesize and cached_strategy is not None:
         print(f"[skip] Using cached strategy from {STRATEGY_CACHE}")
-        with open(STRATEGY_CACHE) as f:
-            strategy = json.load(f)
+        strategy = cached_strategy
+    elif (not args.force_synthesize
+          and cached_strategy is not None
+          and cached_strategy.get("_source_hash") == source_hash):
+        print(f"[cache hit] Source set unchanged ({source_hash[:12]}); skipping Claude API call.")
+        strategy = cached_strategy
     else:
         strategy = synthesize(transcripts, args.race)
+        strategy["_source_hash"] = source_hash
         Path(STRATEGY_CACHE).parent.mkdir(parents=True, exist_ok=True)
         with open(STRATEGY_CACHE, "w") as f:
             json.dump(strategy, f, indent=2)
