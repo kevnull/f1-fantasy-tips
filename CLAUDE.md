@@ -9,16 +9,22 @@ Generates a race-week strategy page for F1 Fantasy, synthesized from YouTube tra
 3. `src/render.py` — fetches OpenF1 driver data (photos, team colors), renders `docs/index.html` from the synthesis JSON
 4. `src/main.py` — orchestrates the above, accepts `--race` arg
 
-GitHub Actions runs this on `workflow_dispatch` (manual) or every Thursday at noon UTC.
+**GitHub Actions only renders + deploys** (uses `--render-only`). It does NOT fetch or synthesize, because YouTube blocks the runner IPs for transcript downloads ("Sign in to confirm you're not a bot"). Fetch + synthesize must run locally.
 
-## Running locally
+## Local refresh (race week)
 
 ```bash
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-...
-python src/main.py --race "Miami"
-# Output: docs/index.html
-open docs/index.html
+set -a; source .env; set +a
+.venv/bin/python src/main.py --race "Miami"   # fetch + synthesize + render
+git add data/strategy.json docs/index.html
+git commit -m "Refresh strategy: Miami GP"
+git push   # triggers Pages re-render + deploy
+```
+
+## Render-only (no API calls)
+
+```bash
+.venv/bin/python src/main.py --render-only    # uses cached data/strategy.json
 ```
 
 ## Channels

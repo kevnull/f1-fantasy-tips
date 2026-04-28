@@ -29,9 +29,21 @@ def main():
     parser.add_argument("--race", default="Miami", help="Race name e.g. Miami, Monaco, Canada")
     parser.add_argument("--skip-fetch", action="store_true", help="Reuse existing transcripts")
     parser.add_argument("--skip-synthesize", action="store_true", help="Reuse cached strategy.json")
+    parser.add_argument("--render-only", action="store_true", help="Skip fetch + synthesize, just render from cached strategy.json")
     args = parser.parse_args()
 
     print(f"\n=== F1 Fantasy Tips Generator — {args.race} GP ===\n")
+
+    if args.render_only:
+        if not Path(STRATEGY_CACHE).exists():
+            print(f"[error] --render-only requires {STRATEGY_CACHE} to exist.")
+            sys.exit(1)
+        with open(STRATEGY_CACHE) as f:
+            strategy = json.load(f)
+        print(f"[render-only] Loaded {STRATEGY_CACHE}")
+        render(strategy, output_path=OUTPUT_PATH)
+        print(f"\nDone. Open: {OUTPUT_PATH}")
+        return
 
     # Step 1: Fetch transcripts
     if args.skip_fetch and Path(TRANSCRIPT_DIR).exists():
