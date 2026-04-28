@@ -1,15 +1,24 @@
-name: Generate F1 Fantasy Tips
+name: Render & Deploy F1 Fantasy Tips
+
+# YouTube blocks GitHub Actions runner IPs for transcript downloads,
+# so fetch + synthesize runs locally (see README). This workflow only
+# re-renders docs/index.html from the committed data/strategy.json
+# (to refresh OpenF1 driver photos and the "Updated" timestamp) and
+# deploys to Pages. It triggers on every push that touches the strategy
+# or render code, plus daily to refresh photos.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "data/strategy.json"
+      - "src/render.py"
+      - "src/main.py"
+      - ".github/workflows/generate.yml"
   workflow_dispatch:
-    inputs:
-      race:
-        description: "Race name (e.g. Miami, Monaco, Canada)"
-        required: true
-        default: "Miami"
   schedule:
-    # Every Thursday at noon UTC — covers most race week deadlines
-    - cron: "0 12 * * 4"
+    # Daily at noon UTC — refreshes photos + timestamp even without new strategy
+    - cron: "0 12 * * *"
 
 permissions:
   contents: write
@@ -21,65 +30,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Determine race name
-        id: race
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "name=${{ github.event.inputs.race }}" >> $GITHUB_OUTPUT
-          else
-            python3 - <<'PY' >> $GITHUB_OUTPUT
-          import urllib.request, json
-          from datetime import datetime, timezone
-          with urllib.request.urlopen('https://api.openf1.org/v1/meetings?year=2026') as r:
-              meetings = json.load(r)
-          now = datetime.now(timezone.utc).isoformat()[:10]
-          upcoming = [m for m in meetings if not m.get('is_cancelled') and m.get('date_start','') > now]
-          next_race = upcoming[0] if upcoming else None
-          name = next_race['meeting_name'].replace(' Grand Prix','').strip() if next_race else 'Unknown'
-          print(f'name={name}')
-          PY
-          fi
+      - name: Render page from cached strategy
+        run: python src/main.py --render-only
 
-      - name: Generate page
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python src/main.py --race "${{ steps.race.outputs.name }}"
-
-      - name: Commit cached strategy
+      - name: Commit refreshed page
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/ data/ || true
+          git add docs/
           git diff --staged --quiet && echo "No changes" || (
-            git commit -m "F1 Fantasy: ${{ steps.race.outputs.name }} GP [automated]"
+            git commit -m "Re-render docs/index.html [automated]"
             git push
           )
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
