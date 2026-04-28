@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Transcripts (downloaded at runtime, not committed)
+transcripts/
+*.vtt
+*.en.vtt
+
+# Synthesis cache
+data/synthesis_cache.json
+
+# Secrets
+.env
+
+# macOS
+.DS_Store

@@ -1,0 +1,65 @@
+name: Generate F1 Fantasy Tips
+
+on:
+  workflow_dispatch:
+    inputs:
+      race:
+        description: "Race name (e.g. Miami, Monaco, Canada)"
+        required: true
+        default: "Miami"
+  schedule:
+    # Every Thursday at noon UTC — covers most race week deadlines
+    - cron: "0 12 * * 4"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine race name
+        id: race
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ github.event.inputs.race }}" >> $GITHUB_OUTPUT
+          else
+            # For scheduled runs, derive from F1 calendar via a quick API call
+            python3 -c "
+          import urllib.request, json
+          with urllib.request.urlopen('https://api.openf1.org/v1/meetings?year=2026') as r:
+              meetings = json.load(r)
+          from datetime import datetime, timezone
+          now = datetime.now(timezone.utc)
+          upcoming = [m for m in meetings if not m.get('is_cancelled') and m.get('date_start','') > now.isoformat()[:10]]
+          next_race = upcoming[0] if upcoming else None
+          name = next_race['meeting_name'].replace(' Grand Prix','').strip() if next_race else 'Unknown'
+          print(f'name={name}')
+          " >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate page
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python src/main.py --race "${{ steps.race.outputs.name }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet && echo "No changes" || (
+            git commit -m "F1 Fantasy: ${{ steps.race.outputs.name }} GP [automated]"
+            git push
+          )
