@@ -307,7 +307,7 @@ def rec_cls(rec: str) -> str:
 
 # ── Main render ────────────────────────────────────────────────────────────────
 
-def render(strategy: dict, output_path: str = None) -> str:
+def render(strategy: dict, output_path: str = None, is_archive: bool = False) -> str:
     btier    = strategy.get("btier", {})
     captains = strategy.get("captains", [])
     race     = strategy.get("race", "F1 Fantasy")
@@ -416,6 +416,10 @@ def render(strategy: dict, output_path: str = None) -> str:
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',Helvetica,Arial,sans-serif;background:#F2F2F2;color:#1A1A1A;-webkit-font-smoothing:antialiased}}
 a{{color:#0055CC;text-decoration:none}}
+/* Top nav */
+.topnav{{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;background:#0a0a0a;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}}
+.topnav a{{color:rgba(255,255,255,.6);text-decoration:none}}
+.topnav a:hover{{color:#fff}}
 /* Hero */
 .hero{{background:#111;border-top:4px solid #E10600;padding:1.4rem 1.5rem 1.2rem}}
 .hero-eyebrow{{font-size:10px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#E10600;margin-bottom:6px}}
@@ -533,6 +537,10 @@ a{{color:#0055CC;text-decoration:none}}
 </style>
 </head>
 <body>
+<nav class="topnav">
+  {'<a class="topnav-back" href="../../">← Latest race</a>' if is_archive else '<span></span>'}
+  <a class="topnav-all" href="{'../../archive.html' if is_archive else 'archive.html'}">All races →</a>
+</nav>
 <div class="hero">
   <div class="hero-eyebrow">F1 Fantasy · {season}</div>
   <div class="hero-title">{race}</div>
