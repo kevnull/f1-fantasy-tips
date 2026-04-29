@@ -162,10 +162,23 @@ def fetch_circuit_svg(race_name: str) -> str:
 
 # ── Weather ────────────────────────────────────────────────────────────────────
 
-def fetch_session_weather(race_name: str, season: int) -> dict:
-    result = {"qualifying": None, "race": None}
+SESSION_LABELS = {
+    "practice 1":     "FP1",
+    "practice 2":     "FP2",
+    "practice 3":     "FP3",
+    "sprint qualifying": "Sprint Quali",
+    "sprint shootout": "Sprint Shootout",
+    "sprint":         "Sprint",
+    "qualifying":     "Qualifying",
+    "race":           "Race",
+}
+
+
+def fetch_session_weather(race_name: str, season: int) -> list[dict]:
+    """Returns a list of {label, date, code, tmax, tmin, precip} for every session of the meeting,
+    in chronological order. Empty list on failure."""
     c = lookup_circuit(race_name)
-    if not c: return result
+    if not c: return []
     lat, lng = c["lat"], c["lng"]
     try:
         url = f"https://api.openf1.org/v1/meetings?year={season}"
@@ -173,33 +186,30 @@ def fetch_session_weather(race_name: str, season: int) -> dict:
         with urllib.request.urlopen(req, timeout=10) as r:
             meetings = json.load(r)
 
-        rl = race_name.lower()
+        # Normalize: strip "GP", "Grand Prix" so "Miami GP" matches "Miami Grand Prix"
+        rl = re.sub(r"\b(grand prix|gp)\b", "", race_name.lower()).strip()
         meeting = next(
-            (m for m in meetings if rl in m.get("meeting_name","").lower()
-             or rl in m.get("location","").lower()
-             or rl in m.get("circuit_short_name","").lower()),
+            (m for m in meetings if rl and (
+                rl in m.get("meeting_name","").lower()
+                or rl in m.get("location","").lower()
+                or rl in m.get("circuit_short_name","").lower())),
             None
         )
         if not meeting:
             print(f"  [weather] No meeting: {race_name}")
-            return result
+            return []
 
         url2 = f"https://api.openf1.org/v1/sessions?meeting_key={meeting['meeting_key']}"
         with urllib.request.urlopen(urllib.request.Request(url2, headers={"User-Agent": "f1-fantasy-tips/1.0"}), timeout=10) as r:
             sessions = json.load(r)
 
-        quali = next((s for s in sessions if s.get("session_type","").lower() == "qualifying"), None)
-        race  = next((s for s in sessions if s.get("session_type","").lower() == "race"), None)
+        sessions = sorted(sessions, key=lambda s: s.get("date_start",""))
+        if not sessions: return []
 
-        dates = {d for d in [
-            quali["date_start"][:10] if quali else None,
-            race["date_start"][:10]  if race  else None
-        ] if d}
-        if not dates: return result
-
+        dates = sorted({s["date_start"][:10] for s in sessions if s.get("date_start")})
         wurl = (f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}"
                 f"&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max"
-                f"&timezone=auto&start_date={min(dates)}&end_date={max(dates)}")
+                f"&timezone=auto&start_date={dates[0]}&end_date={dates[-1]}")
         with urllib.request.urlopen(wurl, timeout=10) as r:
             wd = json.load(r)
 
@@ -207,40 +217,42 @@ def fetch_session_weather(race_name: str, season: int) -> dict:
         by_date = {}
         for i, d in enumerate(daily.get("time", [])):
             by_date[d] = {
-                "date": d,
-                "code":  (daily.get("weathercode") or [None]*99)[i],
-                "tmax":  (daily.get("temperature_2m_max") or [None]*99)[i],
-                "tmin":  (daily.get("temperature_2m_min") or [None]*99)[i],
-                "precip":(daily.get("precipitation_probability_max") or [None]*99)[i],
+                "code":   (daily.get("weathercode") or [None]*99)[i],
+                "tmax":   (daily.get("temperature_2m_max") or [None]*99)[i],
+                "tmin":   (daily.get("temperature_2m_min") or [None]*99)[i],
+                "precip": (daily.get("precipitation_probability_max") or [None]*99)[i],
             }
 
-        if quali: result["qualifying"] = by_date.get(quali["date_start"][:10])
-        if race:  result["race"]       = by_date.get(race["date_start"][:10])
-        print(f"  [weather] Fetched quali={result['qualifying'] and result['qualifying']['date']} "
-              f"race={result['race'] and result['race']['date']}")
+        forecasts = []
+        for s in sessions:
+            stype = (s.get("session_name") or s.get("session_type") or "").lower()
+            label = SESSION_LABELS.get(stype) or stype.title()
+            d = (s.get("date_start") or "")[:10]
+            wx = by_date.get(d, {})
+            forecasts.append({"label": label, "date": d, **wx})
+        print(f"  [weather] {len(forecasts)} sessions: {[f['label'] for f in forecasts]}")
+        return forecasts
     except Exception as e:
         print(f"  [weather] Error: {e}")
-    return result
+        return []
 
-def weather_cell(label: str, data: dict | None) -> str:
-    if not data:
-        return f'<div class="wx-cell"><div class="wx-label">{label}</div><div class="wx-empty">—</div></div>'
-    cond   = wmo_cond(data.get("code"))
-    icon   = WEATHER_ICONS.get(cond, WEATHER_ICONS["clear"])
-    tmax   = f'{round(data["tmax"])}°' if data.get("tmax") is not None else "—"
-    tmin   = f'{round(data["tmin"])}°' if data.get("tmin") is not None else ""
-    precip = f'{round(data["precip"])}%' if data.get("precip") is not None else ""
-    wlabel = WEATHER_LABELS.get(cond, cond)
-    date_s = fmt_date(data.get("date",""))
-    precip_html = f'<span class="wx-precip">💧 {precip}</span>' if precip else ""
+def weather_cell(forecast: dict) -> str:
+    label  = forecast.get("label","")
+    code   = forecast.get("code")
+    cond   = wmo_cond(code) if code is not None else None
+    icon   = WEATHER_ICONS.get(cond, WEATHER_ICONS["clear"]) if cond else ""
+    tmax   = f'{round(forecast["tmax"])}°' if forecast.get("tmax") is not None else ""
+    precip = forecast.get("precip")
+    precip_html = f'<span class="wx-precip">💧 {round(precip)}%</span>' if precip is not None and precip >= 20 else ""
+    iso = forecast.get("date","")
+    try: date_s = datetime.strptime(iso[:10], "%Y-%m-%d").strftime("%a")
+    except: date_s = iso[:10]
+    icon_html = f'<span class="wx-icon">{icon}</span>' if icon else '<span class="wx-icon"></span>'
     return f"""<div class="wx-cell">
       <div class="wx-label">{label}</div>
       <div class="wx-date">{date_s}</div>
-      <div class="wx-main">
-        <span class="wx-icon">{icon}</span>
-        <span class="wx-temp">{tmax}</span>
-        <span class="wx-cond">{wlabel}</span>
-      </div>
+      {icon_html}
+      <div class="wx-temp">{tmax}</div>
       {precip_html}
     </div>"""
 
@@ -368,21 +380,26 @@ def render(strategy: dict, output_path: str = None) -> str:
     sprint_badge = '<span class="badge badge-sprint">Sprint weekend</span>' if strategy.get("sprint") else ""
     dl = strategy.get("deadline", "")
     dl_badge = f'<span class="badge badge-deadline">Deadline: {dl}</span>' if dl else ""
+
+    from overtakes import lookup_rank
+    overtake = lookup_rank(race)
+    overtake_badge = ""
+    if overtake:
+        title = f'Avg {overtake["avg"]:.0f} overtakes per race since 2017 (racingpass.net)'
+        overtake_badge = (f'<span class="badge badge-overtake" title="{title}">'
+                          f'Overtakes #{overtake["rank"]}/{overtake["total"]}</span>')
     updated  = datetime.utcnow().strftime("%-d %b %Y")
     meta_name = strategy.get("meta_template", {}).get("name", "")
     arc       = strategy.get("arc", "")
-    arc_title = arc.split("—")[0].strip() if "—" in arc else "Race arc"
+    arc_title = "Race arc"
 
     circuit_section = (f'<div class="circuit-wrap" title="{race} circuit">{circuit_svg}</div>'
                        if circuit_svg else "")
 
     weather_section = ""
-    if weather.get("qualifying") or weather.get("race"):
-        weather_section = f"""<div class="wx-strip">
-          {weather_cell("Qualifying", weather.get("qualifying"))}
-          <div class="wx-divider"></div>
-          {weather_cell("Race", weather.get("race"))}
-        </div>"""
+    if weather:
+        cells = "".join(weather_cell(f) for f in weather)
+        weather_section = f'<div class="wx-strip">{cells}</div>'
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -406,27 +423,41 @@ a{{color:#185FA5;text-decoration:none}}
 .badge-deadline{{background:#E6F1FB;color:#0C447C;border-color:#B5D4F4}}
 .badge-round{{background:#f5f5f5;color:#555;border-color:#ddd}}
 @media(prefers-color-scheme:dark){{.badge-round{{background:#222;color:#aaa;border-color:#444}}}}
+.badge-overtake{{background:#EAF3DE;color:#27500A;border-color:#C0DD97}}
+/* Mobile */
+@media(max-width:560px){{
+  body{{padding:.75rem}}
+  .race-title{{font-size:19px}}
+  .captain-grid{{grid-template-columns:1fr}}
+  .chip-grid{{grid-template-columns:1fr}}
+  .budget-table{{font-size:12px}}
+  .budget-table th,.budget-table td{{padding:5px 6px}}
+  .captain-reason{{font-size:12px}}
+  .callout-text{{font-size:13px}}
+  .arc-text{{font-size:12.5px}}
+  .pill{{font-size:12px}}
+  .source-channel{{min-width:100px;font-size:11px}}
+}}
 .updated{{font-size:12px;color:#888;white-space:nowrap;padding-top:3px}}
 /* Circuit map */
 .circuit-wrap{{margin-bottom:1rem;display:flex;justify-content:center;align-items:center;height:130px;color:#bbb;padding:0 1rem}}
 @media(prefers-color-scheme:dark){{.circuit-wrap{{color:#444}}}}
 .circuit-svg{{height:100%;max-width:100%}}
 /* Weather strip */
-.wx-strip{{display:flex;border:.5px solid #e0e0e0;border-radius:10px;overflow:hidden;margin-bottom:1.25rem}}
+.wx-strip{{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(64px,1fr);gap:0;border:.5px solid #e0e0e0;border-radius:10px;overflow-x:auto;margin-bottom:1.25rem;scrollbar-width:none}}
+.wx-strip::-webkit-scrollbar{{display:none}}
 @media(prefers-color-scheme:dark){{.wx-strip{{border-color:#333}}}}
-.wx-cell{{flex:1;padding:.75rem 1rem}}
-.wx-divider{{width:.5px;background:#e0e0e0;flex-shrink:0}}
-@media(prefers-color-scheme:dark){{.wx-divider{{background:#333}}}}
-.wx-label{{font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}}
-.wx-date{{font-size:12px;color:#888;margin-bottom:6px}}
-.wx-main{{display:flex;align-items:center;gap:8px;margin-bottom:4px}}
-.wx-icon{{width:22px;height:22px;flex-shrink:0;color:#555}}
+.wx-cell{{padding:.6rem .5rem;text-align:center;border-right:.5px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;gap:2px}}
+.wx-cell:last-child{{border-right:none}}
+@media(prefers-color-scheme:dark){{.wx-cell{{border-color:#333}}}}
+.wx-label{{font-size:9.5px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
+.wx-date{{font-size:10px;color:#aaa;margin-bottom:1px;white-space:nowrap}}
+.wx-icon{{width:24px;height:24px;color:#555;display:flex;align-items:center;justify-content:center}}
+.wx-icon:empty{{display:none}}
 @media(prefers-color-scheme:dark){{.wx-icon{{color:#aaa}}}}
 .wx-icon svg{{width:100%;height:100%}}
-.wx-temp{{font-size:17px;font-weight:600;letter-spacing:-.01em}}
-.wx-cond{{font-size:12px;color:#888}}
-.wx-precip{{font-size:12px;color:#5B8DD9}}
-.wx-empty{{font-size:20px;color:#ccc;padding-top:6px}}
+.wx-temp{{font-size:14px;font-weight:600;letter-spacing:-.01em}}
+.wx-precip{{font-size:10px;color:#5B8DD9;white-space:nowrap}}
 /* Callout */
 .callout{{background:#fafafa;border-left:3px solid #EF9F27;border-radius:0 6px 6px 0;padding:.75rem 1rem;margin-bottom:1.25rem}}
 @media(prefers-color-scheme:dark){{.callout{{background:#1a1a1a}}}}
@@ -514,7 +545,7 @@ a{{color:#185FA5;text-decoration:none}}
       <div class="race-title">{race} {season}</div>
       <div class="race-meta">
         <span class="badge badge-round">Round {strategy.get('round','')}</span>
-        {sprint_badge}{dl_badge}
+        {sprint_badge}{dl_badge}{overtake_badge}
       </div>
     </div>
     <div class="updated">Updated {updated}</div>
