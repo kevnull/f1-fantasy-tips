@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from fetch import fetch_transcripts
 from synthesize import synthesize
 from render import render
+from archive import save as save_archive, render_all as render_archive_all
 
 TRANSCRIPT_DIR = "transcripts"
 STRATEGY_CACHE = "data/strategy.json"
@@ -57,6 +58,7 @@ def main():
             strategy = json.load(f)
         print(f"[render-only] Loaded {STRATEGY_CACHE}")
         render(strategy, output_path=OUTPUT_PATH)
+        render_archive_all()
         print(f"\nDone. Open: {OUTPUT_PATH}")
         return
 
@@ -108,8 +110,11 @@ def main():
             json.dump(strategy, f, indent=2)
         print(f"Strategy saved to {STRATEGY_CACHE}")
 
-    # Step 3: Render
+    # Step 3: Save to archive + render current + re-render archive
+    archive_path = save_archive(strategy)
+    print(f"Archived to {archive_path}")
     render(strategy, output_path=OUTPUT_PATH)
+    render_archive_all()
     print(f"\nDone. Open: {OUTPUT_PATH}")
 
 
