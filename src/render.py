@@ -403,7 +403,7 @@ def render(strategy: dict, output_path: str = None, is_archive: bool = False) ->
     if weather:
         cells = "".join(weather_cell(f) for f in weather)
         weather_html = f'<div class="wx-strip">{cells}</div>'
-    circuit_weather_section = (f'<div class="circuit-weather">{circuit_html}{weather_html}</div>'
+    circuit_weather_section = (f'<div class="circuit-weather"><div class="circuit-weather-inner">{circuit_html}{weather_html}</div></div>'
                                if (circuit_html or weather_html) else "")
 
     html = f"""<!DOCTYPE html>
@@ -421,7 +421,8 @@ a{{color:#0055CC;text-decoration:none}}
 .topnav a{{color:rgba(255,255,255,.6);text-decoration:none}}
 .topnav a:hover{{color:#fff}}
 /* Hero */
-.hero{{background:#111;border-top:4px solid #E10600;padding:1.4rem 1.5rem 1.2rem}}
+.hero{{background:#111;border-top:4px solid #E10600;padding:1.4rem 0 1.2rem}}
+.hero-inner{{max-width:680px;margin:0 auto;padding:0 1.5rem}}
 .hero-eyebrow{{font-size:10px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#E10600;margin-bottom:6px}}
 .hero-title{{font-size:26px;font-weight:800;color:#fff;letter-spacing:-0.025em;margin-bottom:10px;line-height:1.1}}
 .hero-badges{{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}}
@@ -432,7 +433,8 @@ a{{color:#0055CC;text-decoration:none}}
 .badge-overtake{{background:rgba(234,243,222,0.15);color:#8DD48A;border:1px solid rgba(141,212,138,0.3);cursor:default}}
 .hero-updated{{font-size:11px;color:rgba(255,255,255,0.3)}}
 /* Circuit + weather zone */
-.circuit-weather{{background:#1A1A1A;padding:0 1.5rem 1.2rem;display:flex;gap:16px;align-items:center}}
+.circuit-weather{{background:#1A1A1A;padding:0 0 1.2rem}}
+.circuit-weather-inner{{max-width:680px;margin:0 auto;padding:0 1.5rem;display:flex;gap:16px;align-items:center}}
 .circuit-wrap{{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;height:100px}}
 .circuit-svg{{height:100%;max-width:100%;color:#444;display:block}}
 /* Weather strip */
@@ -542,13 +544,15 @@ a{{color:#0055CC;text-decoration:none}}
   <a class="topnav-all" href="{'../../archive.html' if is_archive else 'archive.html'}">All races →</a>
 </nav>
 <div class="hero">
-  <div class="hero-eyebrow">F1 Fantasy · {season}</div>
-  <div class="hero-title">{race}</div>
-  <div class="hero-badges">
-    <span class="badge badge-round">Round {strategy.get('round','')}</span>
-    {sprint_badge}{dl_badge}{overtake_badge}
+  <div class="hero-inner">
+    <div class="hero-eyebrow">F1 Fantasy · {season}</div>
+    <div class="hero-title">{race}</div>
+    <div class="hero-badges">
+      <span class="badge badge-round">Round {strategy.get('round','')}</span>
+      {sprint_badge}{dl_badge}{overtake_badge}
+    </div>
+    <div class="hero-updated">Updated {updated}</div>
   </div>
-  <div class="hero-updated">Updated {updated}</div>
 </div>
 {circuit_weather_section}
 <div class="content">
