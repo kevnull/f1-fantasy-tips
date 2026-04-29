@@ -27,6 +27,16 @@ git push   # triggers Pages re-render + deploy
 .venv/bin/python src/main.py --render-only    # uses cached data/strategy.json
 ```
 
+## Refresh overtake ranking (a few times per season)
+
+```bash
+.venv/bin/python src/overtakes.py refresh     # re-scrapes racingpass.net
+git add data/cache/overtakes.json
+git commit -m "Refresh overtake ranking"
+```
+
+The data only updates when racingpass posts new race stats. Render won't auto-fetch — if `data/cache/overtakes.json` is missing, the badge silently skips.
+
 ## Channels
 
 | Channel | URL | Focus |
