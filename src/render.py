@@ -131,7 +131,7 @@ def geojson_to_svg(geo: dict) -> str:
     pts = [f"{(lng-mnx)*scale+xo:.2f},{(mxy-lat)*scale+yo:.2f}" for lng, lat in coords]
     d = "M " + " L ".join(pts)
     return (f'<svg class="circuit-svg" viewBox="0 0 {VW} {VH}" xmlns="http://www.w3.org/2000/svg">'
-            f'<path d="{d}" fill="none" stroke="currentColor" stroke-width="4" '
+            f'<path d="{d}" fill="none" stroke="currentColor" stroke-width="5.5" '
             f'stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 CIRCUIT_CACHE_DIR = Path("data/cache/circuits")
@@ -436,18 +436,19 @@ a{{color:#0055CC;text-decoration:none}}
 .circuit-weather{{background:#1A1A1A;padding:0 0 1.2rem}}
 .circuit-weather-inner{{max-width:680px;margin:0 auto;padding:0 1.5rem;display:flex;gap:16px;align-items:center}}
 .circuit-wrap{{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;height:100px}}
-.circuit-svg{{height:100%;max-width:100%;color:#444;display:block}}
+.circuit-svg{{height:100%;max-width:100%;color:#9A9A9A;display:block}}
+.circuit-svg path{{stroke-width:5.5}}
 /* Weather strip */
-.wx-strip{{display:flex;gap:0;border:1px solid #2E2E2E;border-radius:8px;overflow:hidden;flex-shrink:0}}
-.wx-cell{{padding:.55rem .65rem;text-align:center;border-right:1px solid #2E2E2E;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:60px}}
+.wx-strip{{display:flex;gap:0;border:1px solid #4A4A4A;border-radius:8px;overflow:hidden;flex-shrink:0;background:#0F0F0F}}
+.wx-cell{{padding:.55rem .65rem;text-align:center;border-right:1px solid #3A3A3A;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:60px}}
 .wx-cell:last-child{{border-right:none}}
-.wx-label{{font-size:9px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
-.wx-date{{font-size:10px;color:#555;white-space:nowrap}}
-.wx-icon{{width:22px;height:22px;color:#888;display:flex;align-items:center;justify-content:center;margin:1px 0}}
+.wx-label{{font-size:9px;font-weight:700;color:#B8B8B8;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
+.wx-date{{font-size:10px;color:#888;white-space:nowrap}}
+.wx-icon{{width:22px;height:22px;color:#E0E0E0;display:flex;align-items:center;justify-content:center;margin:1px 0}}
 .wx-icon:empty{{display:none}}
 .wx-icon svg{{width:100%;height:100%}}
-.wx-temp{{font-size:13px;font-weight:600;color:#ccc;letter-spacing:-.01em}}
-.wx-precip{{font-size:10px;color:#5B9BD5;font-weight:600;white-space:nowrap}}
+.wx-temp{{font-size:14px;font-weight:700;color:#fff;letter-spacing:-.01em}}
+.wx-precip{{font-size:10px;color:#7AB8FF;font-weight:600;white-space:nowrap}}
 /* Content */
 .content{{max-width:680px;margin:0 auto;padding:1.35rem 1.25rem 2.5rem}}
 /* Sections */
