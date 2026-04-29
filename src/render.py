@@ -324,20 +324,23 @@ def render(strategy: dict, output_path: str = None) -> str:
 
     def captain_cards() -> str:
         html = ""
-        for i, c in enumerate(captains):
+        for c in captains:
             acr, col = c.get("acronym",""), c.get("team_colour","888888")
-            border = "border:1.5px solid #B5D4F4" if i == 0 else "border:0.5px solid #e0e0e0"
-            html += f"""<div class="captain-card" style="{border}">
+            tc = col.lstrip('#')
+            html += f"""<div class="captain-card">
+              <div class="captain-team-bar" style="background:#{tc}"></div>
+              <div class="captain-body">
               <div class="captain-card-label">{c.get('label','')}</div>
               <div class="captain-layout">
-                <div class="captain-photo-wrap" style="border-color:#{col.lstrip('#')}">
-                  {avatar(acr, col, photos.get(acr,''), 56)}
+                <div class="captain-photo-wrap" style="border-color:#{tc}">
+                  {avatar(acr, col, photos.get(acr,''), 52)}
                 </div>
                 <div class="captain-info">
                   <div class="captain-name">{c.get('name','')}</div>
                   <div class="captain-price">{c.get('price','')} · {c.get('team','')}</div>
                   <div class="captain-reason">{c.get('reason','')}</div>
                 </div>
+              </div>
               </div>
             </div>"""
         return html
@@ -356,15 +359,17 @@ def render(strategy: dict, output_path: str = None) -> str:
 
     def chip_cards():
         html = ""
+        chip_colors = {"use": "#1A7C2E", "save": "#0044AA", "maybe": "#9B5500"}
         for chip in strategy.get("chips", []):
             rec = chip.get("rec","save")
             label = "Wait" if rec == "maybe" else rec.capitalize()
             icon_html = chip_icon(chip.get("name",""))
-            html += f'<div class="chip-card"><div class="chip-header"><span class="chip-name-wrap">{icon_html}<span class="chip-name">{chip.get("name","")}</span></span><span class="chip-rec {rec_cls(rec)}">{label}</span></div><div class="chip-body">{chip.get("reason","")}</div></div>'
+            color = chip_colors.get(rec, "#E4E4E4")
+            html += f'<div class="chip-card" style="--chip-color:{color}"><div class="chip-header"><span class="chip-name-wrap">{icon_html}<span class="chip-name">{chip.get("name","")}</span></span><span class="chip-rec {rec_cls(rec)}">{label}</span></div><div class="chip-body">{chip.get("reason","")}</div></div>'
         return html
 
     def watch_items():
-        return "".join(f'<div class="watch-item"><div class="watch-dot"></div><div>{i}</div></div>' for i in strategy.get("watch_items", []))
+        return "".join(f'<div class="watch-item"><div class="watch-num">{n}</div><div>{item}</div></div>' for n, item in enumerate(strategy.get("watch_items", []), 1))
 
     def sources():
         return "".join(f'<div class="source-item"><span class="source-channel">{s.get("channel","")}</span><a class="source-link" href="{s.get("url","#")}" target="_blank">{s.get("title","")}</a></div>' for s in strategy.get("sources", []))
@@ -393,13 +398,13 @@ def render(strategy: dict, output_path: str = None) -> str:
     arc       = strategy.get("arc", "")
     arc_title = "Race arc"
 
-    circuit_section = (f'<div class="circuit-wrap" title="{race} circuit">{circuit_svg}</div>'
-                       if circuit_svg else "")
-
-    weather_section = ""
+    circuit_html = f'<div class="circuit-wrap">{circuit_svg}</div>' if circuit_svg else ""
+    weather_html = ""
     if weather:
         cells = "".join(weather_cell(f) for f in weather)
-        weather_section = f'<div class="wx-strip">{cells}</div>'
+        weather_html = f'<div class="wx-strip">{cells}</div>'
+    circuit_weather_section = (f'<div class="circuit-weather">{circuit_html}{weather_html}</div>'
+                               if (circuit_html or weather_html) else "")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -409,166 +414,156 @@ def render(strategy: dict, output_path: str = None) -> str:
 <title>F1 Fantasy — {race} {season}</title>
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
-body{{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',Helvetica,Arial,sans-serif;background:#fff;color:#111;padding:1.25rem;-webkit-font-smoothing:antialiased}}
-@media(prefers-color-scheme:dark){{body{{background:#111;color:#f0f0f0}}}}
-.page{{max-width:680px;margin:0 auto}}
-a{{color:#185FA5;text-decoration:none}}
-/* Header */
-.header{{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:1rem;border-bottom:.5px solid #e0e0e0;margin-bottom:1rem}}
-@media(prefers-color-scheme:dark){{.header{{border-color:#333}}}}
-.race-title{{font-size:22px;font-weight:500;letter-spacing:-.02em}}
-.race-meta{{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}}
-.badge{{font-size:11px;font-weight:500;padding:3px 8px;border-radius:6px;border:.5px solid}}
-.badge-sprint{{background:#FAEEDA;color:#633806;border-color:#FAC775}}
-.badge-deadline{{background:#E6F1FB;color:#0C447C;border-color:#B5D4F4}}
-.badge-round{{background:#f5f5f5;color:#555;border-color:#ddd}}
-@media(prefers-color-scheme:dark){{.badge-round{{background:#222;color:#aaa;border-color:#444}}}}
-.badge-overtake{{background:#EAF3DE;color:#27500A;border-color:#C0DD97}}
-/* Mobile */
-@media(max-width:560px){{
-  body{{padding:.75rem}}
-  .race-title{{font-size:19px}}
-  .captain-grid{{grid-template-columns:1fr}}
-  .chip-grid{{grid-template-columns:1fr}}
-  .budget-table{{font-size:12px}}
-  .budget-table th,.budget-table td{{padding:5px 6px}}
-  .captain-reason{{font-size:12px}}
-  .callout-text{{font-size:13px}}
-  .arc-text{{font-size:12.5px}}
-  .pill{{font-size:12px}}
-  .source-channel{{min-width:100px;font-size:11px}}
-}}
-.updated{{font-size:12px;color:#888;white-space:nowrap;padding-top:3px}}
-/* Circuit map */
-.circuit-wrap{{margin-bottom:1rem;display:flex;justify-content:center;align-items:center;height:130px;color:#bbb;padding:0 1rem}}
-@media(prefers-color-scheme:dark){{.circuit-wrap{{color:#444}}}}
-.circuit-svg{{height:100%;max-width:100%}}
+body{{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',Helvetica,Arial,sans-serif;background:#F2F2F2;color:#1A1A1A;-webkit-font-smoothing:antialiased}}
+a{{color:#0055CC;text-decoration:none}}
+/* Hero */
+.hero{{background:#111;border-top:4px solid #E10600;padding:1.4rem 1.5rem 1.2rem}}
+.hero-eyebrow{{font-size:10px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#E10600;margin-bottom:6px}}
+.hero-title{{font-size:26px;font-weight:800;color:#fff;letter-spacing:-0.025em;margin-bottom:10px;line-height:1.1}}
+.hero-badges{{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}}
+.badge{{font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px}}
+.badge-sprint{{background:#FF6B00;color:#fff}}
+.badge-deadline{{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.18)}}
+.badge-round{{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.4)}}
+.badge-overtake{{background:rgba(234,243,222,0.15);color:#8DD48A;border:1px solid rgba(141,212,138,0.3);cursor:default}}
+.hero-updated{{font-size:11px;color:rgba(255,255,255,0.3)}}
+/* Circuit + weather zone */
+.circuit-weather{{background:#1A1A1A;padding:0 1.5rem 1.2rem;display:flex;gap:16px;align-items:center}}
+.circuit-wrap{{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;height:100px}}
+.circuit-svg{{height:100%;max-width:100%;color:#444;display:block}}
 /* Weather strip */
-.wx-strip{{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(64px,1fr);gap:0;border:.5px solid #e0e0e0;border-radius:10px;overflow-x:auto;margin-bottom:1.25rem;scrollbar-width:none}}
-.wx-strip::-webkit-scrollbar{{display:none}}
-@media(prefers-color-scheme:dark){{.wx-strip{{border-color:#333}}}}
-.wx-cell{{padding:.6rem .5rem;text-align:center;border-right:.5px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;gap:2px}}
+.wx-strip{{display:flex;gap:0;border:1px solid #2E2E2E;border-radius:8px;overflow:hidden;flex-shrink:0}}
+.wx-cell{{padding:.55rem .65rem;text-align:center;border-right:1px solid #2E2E2E;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:60px}}
 .wx-cell:last-child{{border-right:none}}
-@media(prefers-color-scheme:dark){{.wx-cell{{border-color:#333}}}}
-.wx-label{{font-size:9.5px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
-.wx-date{{font-size:10px;color:#aaa;margin-bottom:1px;white-space:nowrap}}
-.wx-icon{{width:24px;height:24px;color:#555;display:flex;align-items:center;justify-content:center}}
+.wx-label{{font-size:9px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
+.wx-date{{font-size:10px;color:#555;white-space:nowrap}}
+.wx-icon{{width:22px;height:22px;color:#888;display:flex;align-items:center;justify-content:center;margin:1px 0}}
 .wx-icon:empty{{display:none}}
-@media(prefers-color-scheme:dark){{.wx-icon{{color:#aaa}}}}
 .wx-icon svg{{width:100%;height:100%}}
-.wx-temp{{font-size:14px;font-weight:600;letter-spacing:-.01em}}
-.wx-precip{{font-size:10px;color:#5B8DD9;white-space:nowrap}}
-/* Callout */
-.callout{{background:#fafafa;border-left:3px solid #EF9F27;border-radius:0 6px 6px 0;padding:.75rem 1rem;margin-bottom:1.25rem}}
-@media(prefers-color-scheme:dark){{.callout{{background:#1a1a1a}}}}
-.callout-label{{font-size:11px;font-weight:600;color:#633806;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}}
-.callout-text{{font-size:13.5px;line-height:1.55}}
+.wx-temp{{font-size:13px;font-weight:600;color:#ccc;letter-spacing:-.01em}}
+.wx-precip{{font-size:10px;color:#5B9BD5;font-weight:600;white-space:nowrap}}
+/* Content */
+.content{{max-width:680px;margin:0 auto;padding:1.35rem 1.25rem 2.5rem}}
 /* Sections */
-.section{{margin-bottom:1.5rem}}
-.section-title{{font-size:11px;font-weight:600;color:#888;letter-spacing:.07em;text-transform:uppercase;margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:.5px solid #e0e0e0}}
-@media(prefers-color-scheme:dark){{.section-title{{border-color:#333}}}}
+.section{{margin-bottom:1.75rem}}
+.section-header{{display:flex;align-items:center;gap:10px;margin-bottom:1rem}}
+.section-bar{{width:4px;height:20px;background:#E10600;border-radius:2px;flex-shrink:0}}
+.section-title{{font-size:15px;font-weight:700;color:#1A1A1A;letter-spacing:-.01em}}
+.section-sub{{font-size:12px;color:#888;font-weight:400;margin-left:2px}}
+/* Callout */
+.callout{{background:#FFF8ED;border:1.5px solid #F5A623;border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.75rem}}
+.callout-header{{display:flex;align-items:center;gap:7px;margin-bottom:5px}}
+.callout-icon{{width:20px;height:20px;border-radius:50%;background:#F5A623;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;line-height:1}}
+.callout-label{{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#B85C00}}
+.callout-text{{font-size:13.5px;color:#3D2B00;line-height:1.55}}
 /* Budget table */
-.budget-table{{width:100%;font-size:13px;border-collapse:collapse}}
-.budget-table th{{font-weight:500;color:#888;text-align:left;padding:6px 8px;border-bottom:.5px solid #e0e0e0;font-size:12px}}
-@media(prefers-color-scheme:dark){{.budget-table th{{border-color:#333}}}}
-.budget-table td{{padding:7px 8px;border-bottom:.5px solid #e0e0e0;vertical-align:top;line-height:1.4}}
-@media(prefers-color-scheme:dark){{.budget-table td{{border-color:#333}}}}
+.table-wrap{{background:#fff;border:1px solid #E4E4E4;border-radius:10px;overflow:hidden}}
+.budget-table{{width:100%;border-collapse:collapse;font-size:13px}}
+.budget-table th{{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#999;text-align:left;padding:10px 12px 8px;border-bottom:1px solid #EBEBEB;background:#FAFAFA}}
+.budget-table td{{padding:9px 12px;border-bottom:1px solid #F2F2F2;color:#1A1A1A;vertical-align:top;line-height:1.45}}
 .budget-table tr:last-child td{{border-bottom:none}}
-.budget-val{{font-weight:600;font-size:13.5px;white-space:nowrap}}
-.highlight-row td{{background:rgba(100,160,255,.07)}}
-.optimal-badge{{font-size:10px;background:#E6F1FB;color:#0C447C;padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:600;vertical-align:middle}}
+.budget-val{{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}}
+.highlight-row td{{background:#EEF5FF}}
+.highlight-row .budget-val{{color:#0059CC}}
+.optimal-badge{{display:inline-block;font-size:10px;font-weight:700;background:#0059CC;color:#fff;padding:2px 7px;border-radius:4px;margin-left:7px;vertical-align:middle;letter-spacing:.02em}}
 /* Captains */
 .captain-grid{{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
-.captain-card{{border-radius:10px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:10px}}
-@media(prefers-color-scheme:dark){{.captain-card{{background:#1a1a1a;border-color:#333!important}}}}
-.captain-card-label{{font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.07em}}
+.captain-card{{background:#fff;border:1px solid #E4E4E4;border-radius:12px;overflow:hidden}}
+.captain-team-bar{{height:5px}}
+.captain-body{{padding:.9rem 1rem}}
+.captain-card-label{{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-bottom:9px}}
 .captain-layout{{display:flex;gap:12px;align-items:flex-start}}
-.captain-photo-wrap{{flex-shrink:0;width:56px;height:56px;border-radius:50%;overflow:hidden;border-width:2.5px;border-style:solid;background:#f5f5f5;display:flex;align-items:center;justify-content:center}}
+.captain-photo-wrap{{flex-shrink:0;width:52px;height:52px;border-radius:50%;overflow:hidden;border-width:2.5px;border-style:solid;background:#f5f5f5;display:flex;align-items:center;justify-content:center}}
 .captain-photo-wrap .av{{width:100%;height:100%;object-fit:cover;object-position:top center}}
-.captain-photo-wrap .av-fb{{width:100%;height:100%;font-size:12px}}
+.captain-photo-wrap .av-fb{{width:100%;height:100%;font-size:11px}}
 .captain-info{{flex:1;min-width:0}}
-.captain-name{{font-size:16px;font-weight:600;margin-bottom:2px;letter-spacing:-.01em}}
+.captain-name{{font-size:15px;font-weight:700;color:#1A1A1A;margin-bottom:2px;letter-spacing:-.01em}}
 .captain-price{{font-size:12px;color:#888;margin-bottom:6px}}
-.captain-reason{{font-size:12.5px;line-height:1.5}}
+.captain-reason{{font-size:12.5px;color:#444;line-height:1.5}}
 /* Avatars */
 .av{{border-radius:50%;object-fit:cover;object-position:top center;display:block;flex-shrink:0}}
 .av-fb{{border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:.02em}}
 /* Pills */
-.driver-groups{{display:flex;flex-direction:column;gap:10px}}
+.driver-groups{{display:flex;flex-direction:column;gap:13px}}
 .driver-group{{display:flex;align-items:flex-start;gap:10px}}
-.driver-group-label{{font-size:10px;font-weight:600;width:58px;flex-shrink:0;padding-top:6px;text-transform:uppercase;letter-spacing:.06em}}
-.label-buy{{color:#3B6D11}}.label-consider{{color:#633806}}.label-avoid{{color:#A32D2D}}
-.pills{{display:flex;flex-wrap:wrap;gap:6px}}
-.pill{{font-size:12.5px;padding:5px 10px 5px 5px;border-radius:20px;border:.5px solid;line-height:1.35;display:inline-flex;align-items:center;gap:6px}}
-.pill-avoid{{padding:5px 10px}}
-.pill-buy{{background:#EAF3DE;color:#27500A;border-color:#C0DD97}}
-.pill-consider{{background:#FAEEDA;color:#633806;border-color:#FAC775}}
-.pill-avoid{{background:#FCEBEB;color:#791F1F;border-color:#F7C1C1}}
-.pill-note{{font-size:11px;opacity:.7}}
+.driver-group-label{{font-size:10px;font-weight:700;width:66px;flex-shrink:0;padding-top:7px;text-transform:uppercase;letter-spacing:.07em}}
+.label-buy{{color:#1A7C2E}}.label-consider{{color:#9B5500}}.label-avoid{{color:#B71C1C}}
+.pills{{display:flex;flex-wrap:wrap;gap:7px}}
+.pill{{font-size:12.5px;padding:5px 11px 5px 5px;border-radius:24px;display:inline-flex;align-items:center;gap:6px;font-weight:500;line-height:1.3}}
+.pill-avoid{{padding:5px 11px}}
+.pill-buy{{background:#E7F6EC;color:#145C23;border:1.5px solid #82CCA0}}
+.pill-consider{{background:#FFF4DE;color:#7A3D00;border:1.5px solid #FFC960}}
+.pill-avoid{{background:#FFEBEB;color:#8B1A1A;border:1.5px solid #FFAAAA}}
+.pill-note{{font-size:11px;opacity:.65}}
 /* Chips */
 .chip-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
-.chip-card{{background:#fff;border:.5px solid #e0e0e0;border-radius:10px;padding:.85rem 1rem}}
-@media(prefers-color-scheme:dark){{.chip-card{{background:#1a1a1a;border-color:#333}}}}
-.chip-header{{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}}
+.chip-card{{background:#fff;border:1px solid #E4E4E4;border-radius:10px;padding:.85rem 1rem;border-left:4px solid var(--chip-color,#E4E4E4)}}
+.chip-header{{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}}
 .chip-name-wrap{{display:flex;align-items:center;gap:7px}}
 .chip-icon{{width:17px;height:17px;flex-shrink:0;color:#666;display:flex}}
-@media(prefers-color-scheme:dark){{.chip-icon{{color:#aaa}}}}
 .chip-icon svg{{width:100%;height:100%}}
-.chip-name{{font-size:13.5px;font-weight:600}}
-.chip-rec{{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;letter-spacing:.03em;white-space:nowrap}}
-.rec-use{{background:#EAF3DE;color:#27500A}}.rec-save{{background:#E6F1FB;color:#0C447C}}.rec-maybe{{background:#FAEEDA;color:#633806}}
-.chip-body{{font-size:12px;color:#666;line-height:1.5}}
-@media(prefers-color-scheme:dark){{.chip-body{{color:#aaa}}}}
-/* Watch list */
-.watch-list{{display:flex;flex-direction:column}}
-.watch-item{{display:flex;gap:10px;font-size:13px;line-height:1.55;padding:8px 0;border-bottom:.5px solid #e0e0e0}}
-@media(prefers-color-scheme:dark){{.watch-item{{border-color:#333}}}}
+.chip-name{{font-size:13.5px;font-weight:700;color:#1A1A1A}}
+.chip-rec{{font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.03em;white-space:nowrap}}
+.rec-use{{background:#E7F6EC;color:#145C23}}.rec-save{{background:#EEF5FF;color:#0044AA}}.rec-maybe{{background:#FFF4DE;color:#7A3D00}}
+.chip-body{{font-size:12px;color:#555;line-height:1.5}}
+/* Watch */
+.watch-list{{background:#fff;border:1px solid #E4E4E4;border-radius:10px;overflow:hidden}}
+.watch-item{{display:flex;gap:12px;font-size:13px;color:#333;line-height:1.55;padding:10px 14px;border-bottom:1px solid #F2F2F2}}
 .watch-item:last-child{{border-bottom:none}}
-.watch-dot{{width:6px;height:6px;border-radius:50%;background:#EF9F27;flex-shrink:0;margin-top:7px}}
+.watch-num{{font-size:11px;font-weight:800;color:#E10600;flex-shrink:0;width:16px;text-align:right;margin-top:2px;font-variant-numeric:tabular-nums}}
 /* Arc */
-.arc-text{{font-size:13px;line-height:1.6;background:#fafafa;border-radius:10px;padding:.9rem 1rem}}
-@media(prefers-color-scheme:dark){{.arc-text{{background:#1a1a1a}}}}
+.arc-card{{background:#fff;border:1px solid #E4E4E4;border-radius:10px;padding:1rem 1.1rem;border-top:4px solid #E10600}}
+.arc-text{{font-size:13px;color:#444;line-height:1.6}}
 /* Sources */
-.sources-list{{display:flex;flex-direction:column}}
-.source-item{{display:flex;align-items:baseline;gap:8px;font-size:12px;color:#888;padding:4px 0;border-bottom:.5px solid #e0e0e0}}
-@media(prefers-color-scheme:dark){{.source-item{{border-color:#333}}}}
+.sources-list{{background:#fff;border:1px solid #E4E4E4;border-radius:10px;overflow:hidden}}
+.source-item{{display:flex;align-items:baseline;gap:8px;font-size:12px;color:#555;padding:8px 14px;border-bottom:1px solid #F2F2F2}}
 .source-item:last-child{{border-bottom:none}}
-.source-channel{{font-weight:600;color:#111;min-width:130px;flex-shrink:0}}
-@media(prefers-color-scheme:dark){{.source-channel{{color:#f0f0f0}}}}
-.source-link{{color:#185FA5}}
+.source-channel{{font-weight:700;color:#1A1A1A;min-width:130px;flex-shrink:0}}
+.source-link{{color:#0055CC}}
+/* Mobile */
+@media(max-width:560px){{
+  .captain-grid{{grid-template-columns:1fr}}
+  .chip-grid{{grid-template-columns:1fr}}
+  .circuit-weather{{flex-direction:column;gap:10px;padding-bottom:1rem}}
+  .wx-strip{{width:100%}}
+  .circuit-wrap{{height:80px;width:100%}}
+  .budget-table{{font-size:12px}}
+  .budget-table th,.budget-table td{{padding:5px 8px}}
+}}
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="race-title">{race} {season}</div>
-      <div class="race-meta">
-        <span class="badge badge-round">Round {strategy.get('round','')}</span>
-        {sprint_badge}{dl_badge}{overtake_badge}
-      </div>
-    </div>
-    <div class="updated">Updated {updated}</div>
+<div class="hero">
+  <div class="hero-eyebrow">F1 Fantasy · {season}</div>
+  <div class="hero-title">{race}</div>
+  <div class="hero-badges">
+    <span class="badge badge-round">Round {strategy.get('round','')}</span>
+    {sprint_badge}{dl_badge}{overtake_badge}
   </div>
-  {circuit_section}
-  {weather_section}
+  <div class="hero-updated">Updated {updated}</div>
+</div>
+{circuit_weather_section}
+<div class="content">
   <div class="callout">
-    <div class="callout-label">Central unknown</div>
+    <div class="callout-header">
+      <div class="callout-icon">?</div>
+      <div class="callout-label">Central unknown</div>
+    </div>
     <div class="callout-text">{strategy.get('central_unknown','')}</div>
   </div>
   <div class="section">
-    <div class="section-title">Meta template — {meta_name}</div>
-    <table class="budget-table">
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">Meta template <span class="section-sub">{meta_name}</span></div></div>
+    <div class="table-wrap"><table class="budget-table">
       <thead><tr><th>Budget</th><th>Core</th><th>B-tier fills</th></tr></thead>
       <tbody>{budget_rows()}</tbody>
-    </table>
+    </table></div>
   </div>
   <div class="section">
-    <div class="section-title">×2 Captain</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">×2 Captain</div></div>
     <div class="captain-grid">{captain_cards()}</div>
   </div>
   <div class="section">
-    <div class="section-title">B-tier drivers</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">B-tier drivers</div></div>
     <div class="driver-groups">
       {pill_row("label-buy","Buy",btier.get("buy",[]),"pill-buy")}
       {pill_row("label-consider","Consider",btier.get("consider",[]),"pill-consider")}
@@ -576,19 +571,19 @@ a{{color:#185FA5;text-decoration:none}}
     </div>
   </div>
   <div class="section">
-    <div class="section-title">Chip strategy</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">Chip strategy</div></div>
     <div class="chip-grid">{chip_cards()}</div>
   </div>
   <div class="section">
-    <div class="section-title">Watch before deadline</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">Watch before deadline</div></div>
     <div class="watch-list">{watch_items()}</div>
   </div>
   <div class="section">
-    <div class="section-title">{arc_title}</div>
-    <div class="arc-text">{arc}</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">{arc_title}</div></div>
+    <div class="arc-card"><div class="arc-text">{arc}</div></div>
   </div>
   <div class="section">
-    <div class="section-title">Sources</div>
+    <div class="section-header"><div class="section-bar"></div><div class="section-title">Sources</div></div>
     <div class="sources-list">{sources()}</div>
   </div>
 </div>
