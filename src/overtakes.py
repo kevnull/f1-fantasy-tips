@@ -107,9 +107,15 @@ def fetch_overtakes() -> list[dict]:
 
 
 def current_calendar_ranking() -> list[dict]:
-    """Filter scraped data to current 2026 calendar circuits, dedup by circuit name keeping
-    the row with the most recent (open-ended) year range, then re-rank 1..N."""
-    raw = _load_or_fetch()
+    """Filter cached racingpass data to current 2026 calendar circuits, dedup by circuit name
+    keeping the row with the most recent (open-ended) year range, then re-rank 1..N.
+
+    Cache must already exist — overtake data only changes a few times per season, so the
+    refresh is a manual local step (`python src/overtakes.py refresh`). No auto-fetch."""
+    if not CACHE.exists():
+        print(f"  [overtakes] No cache at {CACHE}; run `python src/overtakes.py refresh` to populate. Skipping.")
+        return []
+    raw = json.loads(CACHE.read_text())
     current_names = set(RACE_TO_CIRCUIT.values())
 
     # Group by circuit, keep current-layout row (or first if none flagged)
@@ -125,16 +131,6 @@ def current_calendar_ranking() -> list[dict]:
         row["rank"] = i
         row["total"] = len(ranked)
     return ranked
-
-
-def _load_or_fetch() -> list[dict]:
-    if CACHE.exists():
-        return json.loads(CACHE.read_text())
-    print(f"  [overtakes] Fetching racingpass.net (no cache at {CACHE})")
-    data = fetch_overtakes()
-    CACHE.parent.mkdir(parents=True, exist_ok=True)
-    CACHE.write_text(json.dumps(data, indent=2))
-    return data
 
 
 def refresh() -> list[dict]:
