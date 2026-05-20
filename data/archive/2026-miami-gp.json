@@ -3,27 +3,27 @@
   "round": 4,
   "season": 2026,
   "sprint": true,
-  "deadline": "May 2",
-  "central_unknown": "McLaren's surge in sprint qualifying (Norris P1, Piastri P3) raises the question of whether their upgrades represent a genuine long-term step forward or a one-weekend anomaly, making the choice between McLaren and Mercedes as the second premium constructor the defining decision. Additionally, a 60-80% chance of Sunday thunderstorms threatens possible race cancellation, creating chip activation risk.",
+  "deadline": "May 2 (at sprint race start)",
+  "central_unknown": "McLaren's upgrades looked strong in sprint qualifying (Norris on pole), but it's unclear if this pace is sustainable beyond Miami. Compounding the uncertainty is a 60-80% chance of rain and thunderstorms on Sunday, which could shorten or disrupt the Grand Prix and makes chip deployment and constructor choice extremely risky.",
   "meta_template": {
-    "name": "Antonelli x2 + Ferrari + McLaren/Mercedes",
+    "name": "Antonelli x2 + Ferrari + McLaren (or Mercedes)",
     "budget_tiers": [
       {
         "budget": "107.7M",
-        "core": "Antonelli (x2), Ferrari constructor, McLaren or Mercedes constructor",
-        "fills": "Ocon, Lawson, Hulkenberg, Colapinto + 1 budget filler",
+        "core": "Antonelli x2, Ferrari constructor, McLaren constructor",
+        "fills": "Ocon, Lawson, Hulkenberg, Colapinto",
         "optimal": true
       },
       {
-        "budget": "~105-107M",
-        "core": "Leclerc (x2), Ferrari constructor, Mercedes constructor",
-        "fills": "Ocon, Lawson, Hulkenberg, Colapinto/Perez",
+        "budget": "~108M",
+        "core": "Antonelli x2, Ferrari constructor, Mercedes constructor",
+        "fills": "Ocon, Lawson, Hulkenberg, Colapinto/Bearman",
         "optimal": false
       },
       {
-        "budget": "~109M+ (differential)",
-        "core": "Norris (x2), Ferrari constructor, McLaren constructor",
-        "fills": "Budget B-tier drivers",
+        "budget": "~108M",
+        "core": "Leclerc x2, Ferrari constructor, McLaren constructor",
+        "fills": "Ocon, Lawson, Hulkenberg, Colapinto",
         "optimal": false
       }
     ]
@@ -36,25 +36,25 @@
       "price": "~16.5M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Consensus pick across all three channels. Championship leader at 19, two GP wins (Suzuka, China), two poles in three races, 150 points banked. Strong sprint quali P2. Higher Driver of the Day upside than Russell due to fan favorite status. Best long-term budget building option among A-tier drivers."
+      "reason": "Consensus top x2 pick across all channels. P2 in sprint qualifying, two GP wins this season, leads the WDC at 19, highest Driver of the Day upside due to fan popularity, and best long-term budget building trajectory. Even with Mercedes bringing fewer upgrades, his individual pace remains elite."
     },
     {
-      "label": "Differential",
+      "label": "Primary",
       "name": "Charles Leclerc",
       "acronym": "LEC",
       "price": "~16.0M",
       "team": "Ferrari",
       "team_colour": "E80020",
-      "reason": "ZachGP and FormulaFantasyHub both rate him as the #2 captain option. Made a mistake on his final sprint quali lap suggesting more pace in the Ferrari. Ferrari's fast race starts and elite pit stops bail out weaker qualifying. Strong budget building upside. ZachGP considering a Leclerc x2 play."
+      "reason": "Strong alternative x2 pick. Ferrari brought 11 upgrades to Miami. Leclerc made a mistake on his final SQ lap suggesting more pace in the car. Ferrari's race starts and pit stops are elite, and he pairs naturally with a Ferrari constructor. Slightly lower ceiling than Antonelli but safer floor with Ferrari's consistency."
     },
     {
       "label": "Differential",
       "name": "Lando Norris",
       "acronym": "NOR",
-      "price": "~22.0M",
+      "price": "~20.0M",
       "team": "McLaren",
       "team_colour": "FF8000",
-      "reason": "Sprint pole sitter with an insane lap. ZachGP flags him as the aggressive differential if not worried about budget building, but notes he needs 80+ points to gain just 0.3M \u2014 poor long-term value. Short-term points maximizer only."
+      "reason": "Sprint pole sitter, McLaren upgrades clearly working. ZachGP flags him as the differential captain if you're chasing points rather than budget building. However, he needs 80+ points to gain only 0.3M \u2014 poor budget efficiency. Short-term upside play only; most channels advise against unless all-in on points this week."
     }
   ],
   "btier": {
@@ -64,28 +64,28 @@
         "acronym": "HUL",
         "price": "5.0M",
         "team_colour": "52E252",
-        "note": "Consensus strong buy across all channels. Needs just 1 point for max price rise, 71% chance per F1FantasyTools sims. 7 points in China, 10 in Japan. Cheapest viable budget builder \u2014 saves ~2M vs Perez."
+        "note": "Universal consensus buy. Cheapest viable B-tier driver, needs only 1 point for max price rise (71% chance per f1fantasytools). Enables the two premium constructor build. Also rated as one of the best wet-weather midfield drivers. 7 pts in China, 10 pts in Japan after DNS in Australia."
       },
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
         "price": "7.5M",
         "team_colour": "6692FF",
-        "note": "Consensus strong buy. Leads entire grid in points per million at 2.59. Needs -24 points to avoid a fall, -18 for max rise \u2014 89% chance of max price rise. 35-point haul in China. Safest budget builder on the grid."
+        "note": "Must-have budget builder. Needs -18 points for max price rise (89% chance). Leads the grid in points per million at 2.59. However, Racing Bulls looked lost in sprint qualifying (SQ1 exit), so temper scoring expectations this weekend."
       },
       {
         "name": "Esteban Ocon",
         "acronym": "OCO",
-        "price": "~6.5M",
-        "team_colour": "FF87BC",
-        "note": "Consensus buy alongside Lawson as the basic budget pair. Needs 0 points for max price rise, 79% chance. Safe floor."
+        "price": "~7.0M",
+        "team_colour": "6692FF",
+        "note": "Strong budget builder. Needs 0 points for max price rise (79% chance). Ranks 2nd on the grid in overtakes. Starting sprint P18 gives overtake upside. Knocked out in SQ1 but expected to gain positions in race trim."
       },
       {
         "name": "Franco Colapinto",
         "acronym": "COL",
         "price": "7.6M",
         "team_colour": "0093CC",
-        "note": "ZachGP rates him top B-tier pick after sprint quali \u2014 looked rapid in the Alpine, sitting in potential points positions. 55% max price rise chance. F1FantasyPolePosition notes his points come in unsustainable ways but Alpine showed strong pace."
+        "note": "Made SQ3, showing genuine Alpine pace with upgrades. Needs -1 point to avoid price fall and 6 points for max price rise (55% chance). Risk is he could lose positions from a high sprint grid slot, but overall Alpine pace is encouraging for race points."
       }
     ],
     "consider": [
@@ -93,56 +93,72 @@
         "name": "Sergio Perez",
         "acronym": "PER",
         "price": "7.0M",
-        "team_colour": "B6BABD",
-        "note": "Budget filler option. Needs 2 points for max rise, 55% chance. F1FantasyPolePosition warns of Cadillac reliability risk across three quali sessions. ZachGP lists as a backup filler. One-week punt concerns if DNF hits."
+        "team_colour": "C0C0C0",
+        "note": "Needs only 2 points for max price rise (55% chance). Consistently outperforms qualifying in races. However, Cadillac reliability is a concern across three scoring sessions in a sprint weekend. One-week punt only; may need to transfer out for Canada."
       },
       {
         "name": "Ollie Bearman",
         "acronym": "BEA",
-        "price": "~6.0M",
+        "price": "~6.5M",
         "team_colour": "52E252",
-        "note": "In-betweener per F1FantasyPolePosition. Falling in price \u2014 downgrade candidate to Hulkenberg to save budget. Could hold one more week if transfers are tight."
+        "note": "Holdable for one more week if already owned. Needs 13 points for max price rise. Likely a sell target for Canada but serviceable as a filler this weekend. ReinFantasy notes he can still rise in price."
       }
     ],
     "avoid": [
-      "Gabriel Bortoleto \u2014 10% price rise chance, needs 22 points to avoid max fall",
-      "Alex Albon \u2014 needs 27 points to avoid max price fall, dismal season",
-      "Fernando Alonso \u2014 <1% price rise chance",
-      "Lance Stroll \u2014 <1% price rise chance",
-      "Valtteri Bottas \u2014 falling to price floor (3M), 12% price rise chance, budget drain"
+      "Valtteri Bottas \u2014 Continues to lose value, 12% chance of max price rise, Cadillac unreliable",
+      "Gabriel Bortoleto \u2014 10% chance of price rise, 22 points needed to avoid max fall, Audi struggling",
+      "Alex Albon \u2014 Needs 27 points to avoid max fall, dismal season, Williams inconsistent",
+      "Fernando Alonso \u2014 <1% chance of price rise, Aston Martin off the pace",
+      "Lance Stroll \u2014 Hasn't finished a race all season, <1% chance of price rise",
+      "Isack Hadjar \u2014 Needs 12 points to avoid fall, better options at his price point (Gasly, Sainz)"
     ]
   },
   "chips": [
     {
       "name": "No Negative",
       "rec": "maybe",
-      "reason": "F1FantasyPolePosition is leaning toward using it due to 60-80% thunderstorm risk on Sunday and the fact these are the first wet-race laps in 2026 cars. FormulaFantasyHub also flags it as the frontrunner chip but warns to monitor weather closer to deadline. If race is cancelled after sprint, chip would still be consumed with only sprint points scored."
+      "reason": "Most debated chip this week. Rain and thunderstorms create high DNF risk, first time these cars race in wet conditions. However, FanAmp warns that FIA may avoid full wet running (as in Spa 2025 where No Negative saved only 3 points). F1FantasyPolePosition leans toward using it; FanAmp and ReinFantasy lean toward saving it. If weather worsens closer to deadline, becomes more attractive."
     },
     {
       "name": "Wildcard",
       "rec": "maybe",
-      "reason": "ZachGP recommends wildcarding to the Antonelli x2 + Ferrari/McLaren meta if your team is far off template. F1FantasyPolePosition considering it on T3 squad to fix structural issues. Save if you're already close to the meta build."
+      "reason": "Only recommended if your team is far from the meta and you need 4+ changes to reach the two premium constructor build. ZachGP recommends wildcarding to the base meta if you're far off. Otherwise save for a future pivot."
+    },
+    {
+      "name": "3X Boost",
+      "rec": "save",
+      "reason": "Consensus save. Too much weather chaos and grid uncertainty to risk your most powerful chip. FanAmp suggests waiting for at least Canada or a dry sprint weekend like Silverstone where a dominant Antonelli/Russell can maximize the triple."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "F1FantasyPolePosition suggests saving Limitless for Canada GP, which follows in a few weeks and where Mercedes is expected to bring major upgrades. Better deployment when the field picture is clearer."
+      "reason": "Consensus save. Multiple channels targeting Canada or Monaco for Limitless deployment. Weather risk makes this a poor week to use an uncapped budget."
     }
   ],
   "watch_items": [
-    "Sunday thunderstorm forecast (60-80% rain probability) \u2014 potential race cancellation would mean only sprint points count; monitor weather updates within 18 hours of deadline",
-    "McLaren upgrade durability: P1 and P3 in sprint quali is massive but ZachGP doubts it carries to Canada onwards \u2014 watch sprint race pace to validate",
-    "Mercedes confirmed most upgrades coming for Canada GP (per George Russell) \u2014 current form may be a temporary low point",
-    "Ferrari qualifying weakness vs race-start strength: Leclerc made a mistake in sprint quali suggesting hidden pace; pit stop advantage remains elite",
-    "Alpine pace breakout: Colapinto P8 and Gasly P10 in sprint quali suggest genuine midfield step forward",
-    "Cadillac reliability across three sessions: Perez didn't get a second SQ1 run for unknown reasons \u2014 triple quali session exposure increases DNF risk"
+    "Sunday weather: 60-80% rain chance with thunderstorms; FIA may move race start earlier (like Brazil 2024). If thunderstorms force cancellation, points from sprint and qualifying would still count but GP scores would be zero for all.",
+    "McLaren sustainability: Upgrades clearly working (P1 and P3 in sprint quali) but channels disagree on whether this is a one-race flash or lasting shift. Monitor sprint race pace closely.",
+    "Mercedes engine issues: Both Russell (whistling PU) and Antonelli (suspected PU issue) had problems in FP1. Mercedes only brought 2 upgrades, saving bigger package for Canada. Watch reliability through sprint.",
+    "Alpine pace: Both Alpines in SQ2 top 10, Colapinto into SQ3. If pace holds through the weekend, Alpine becomes the best B-tier constructor option over Haas.",
+    "Racing Bulls form: Lindblad P21 in FP1, Lawson eliminated in SQ1. Budget building value is safe for Lawson but scoring expectations should be tempered. Avoid Racing Bulls as constructor.",
+    "Article B2.5.3: Only 2 laps under green flag needed to award championship points. Points scaled by race distance completed. Race almost certainly happens in some form even with weather delays."
   ],
-  "arc": "Miami is a transitional weekend where the constructor meta is in flux. Mercedes has been dominant through three rounds but Russell confirmed their main upgrades target the Canadian GP, making this a potential soft patch. McLaren's sprint quali surge makes them a viable short-term swap, especially if you have free transfers to pivot back for Canada. The consensus play is to run Antonelli x2 with Ferrari and one of McLaren/Mercedes, loading up on budget builders (Lawson, Ocon, Hulkenberg, Colapinto) to generate value for the premium two-constructor template long-term. Canada in a few weeks is shaping up as a Limitless target with Mercedes upgrades expected, so preserving that chip and building budget now is the strategic priority. The weather wildcard adds an unusual layer of risk that could punish aggressive chip usage.",
+  "arc": "Miami is a pivotal inflection point for the season. McLaren's resurgence with upgrades challenges the Mercedes-Ferrari duopoly that has defined the meta through the first three races. If McLaren sustain this pace, the constructor calculus shifts dramatically for Canada and beyond. Mercedes are reportedly saving their major upgrade package for the Canadian GP, which means the Silver Arrows could reassert dominance in two weeks \u2014 making a temporary McLaren pivot this week relatively low-risk since you can swap back with free transfers. Canada (also a sprint weekend) and Monaco are the consensus targets for Limitless and 3X Boost deployment, so preserving chips through Miami's chaos is the strategic play. Budget building remains critical: Lawson, Ocon, and Hulkenberg are near-guaranteed risers, and maximizing their value now funds the premium A-tier assets needed for the season's second half.",
   "sources": [
     {
       "channel": "ZachGP",
       "title": "F1 FANTASY POST SPRINT QUALI FINAL THOUGHTS - MIAMI 2026",
       "url": "https://www.youtube.com/watch?v=2sKhtdiWdA4"
+    },
+    {
+      "channel": "FanAmp",
+      "title": "F1 Fantasy: Final Thoughts for the Miami GP 2026 | The Fantasy Formula",
+      "url": "https://www.youtube.com/watch?v=reSH8ygsymY"
+    },
+    {
+      "channel": "ReinFantasy",
+      "title": "RACE CANCELLED ON SUNDAY? | Miami GP Final Thoughts | F1 Fantasy Tips 2026",
+      "url": "https://www.youtube.com/watch?v=WYXxcaiorIQ"
     },
     {
       "channel": "FormulaFantasyHub",
@@ -165,5 +181,5 @@
       "url": "https://www.youtube.com/watch?v=pWr63bvPoIY"
     }
   ],
-  "_source_hash": "5d60dff558d692bb4974d6125f9c5884558c519dcabc6772a5d1ccc6cc3c6e49"
+  "_source_hash": "ceedf7ed79c489cd17d0728c070bac524c3046d502326ae08e9e9fb455e93faf"
 }
