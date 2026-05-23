@@ -8,9 +8,11 @@ Usage:
 """
 
 import argparse
+import datetime as dt
 import hashlib
 import json
 import sys
+import urllib.request
 from pathlib import Path
 
 # Add src/ to path when run from repo root
@@ -39,14 +41,50 @@ def _hash_sources(transcripts: list[dict], race: str) -> str:
     return h.hexdigest()
 
 
+def detect_current_race(today: dt.date | None = None) -> str:
+    """Query OpenF1 for the meeting whose race day is today or next upcoming.
+    Falls back to the most recent past meeting at season's end.
+    Returns a short name suitable for --race (e.g. "Miami", "Monaco")."""
+    today = today or dt.date.today()
+    season = today.year
+    url = f"https://api.openf1.org/v1/meetings?year={season}"
+    req = urllib.request.Request(url, headers={"User-Agent": "f1-fantasy-tips/1.0"})
+    with urllib.request.urlopen(req, timeout=10) as r:
+        meetings = json.load(r)
+    if not meetings:
+        raise RuntimeError(f"OpenF1 returned no meetings for {season}")
+
+    def race_date(m: dict) -> dt.date:
+        # date_start on a meeting is FP1; race is typically +2 days, +1 for sprint weekends.
+        ds = m.get("date_start", "")[:10]
+        return dt.date.fromisoformat(ds) if ds else dt.date.max
+
+    meetings = sorted(meetings, key=race_date)
+    # Race weekend "owns" today through Sunday + 2 days of recap before flipping to next.
+    upcoming = [m for m in meetings if race_date(m) + dt.timedelta(days=4) >= today]
+    pick = upcoming[0] if upcoming else meetings[-1]
+
+    # meeting_name is "Miami Grand Prix"; strip suffix to get a short, title-matchable name.
+    name = pick.get("meeting_name") or pick.get("location", "")
+    return name.split(" Grand Prix")[0].replace(" GP", "").strip()
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate F1 Fantasy tips page")
-    parser.add_argument("--race", default="Miami", help="Race name e.g. Miami, Monaco, Canada")
+    parser.add_argument("--race", default=None, help="Race name e.g. Miami, Monaco, Canada (auto-detected from OpenF1 if omitted)")
     parser.add_argument("--skip-fetch", action="store_true", help="Reuse existing transcripts")
     parser.add_argument("--skip-synthesize", action="store_true", help="Reuse cached strategy.json")
     parser.add_argument("--render-only", action="store_true", help="Skip fetch + synthesize, just render from cached strategy.json")
     parser.add_argument("--force-synthesize", action="store_true", help="Re-synthesize even if source hash matches cache")
     args = parser.parse_args()
+
+    if not args.race and not args.render_only:
+        try:
+            args.race = detect_current_race()
+            print(f"[auto] Detected current race: {args.race}")
+        except Exception as e:
+            print(f"[error] Could not auto-detect race ({e}); pass --race explicitly.")
+            sys.exit(1)
 
     print(f"\n=== F1 Fantasy Tips Generator — {args.race} GP ===\n")
 
