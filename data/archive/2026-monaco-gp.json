@@ -4,51 +4,42 @@
   "season": 2026,
   "sprint": false,
   "deadline": "June 7",
-  "central_unknown": "Can Mercedes maintain their dominant 2026 form at a circuit with minimal straights and no real aero advantage, or will Ferrari and McLaren's slow-speed prowess and superior race starts allow them to finally beat the Silver Arrows? The June 1st FIA compression ratio testing adds further uncertainty, though its effects may not be visible until Barcelona.",
+  "central_unknown": "Whether to use Final Fix or Limitless this weekend, and which Ferrari driver (Leclerc or Hamilton) to captain \u2014 qualifying will decide everything at a track with virtually zero overtaking.",
   "meta_template": {
-    "name": "Antonelli/Leclerc x2 + Mercedes/Ferrari + budget builders",
+    "name": "Leclerc 2x + Ferrari + Mercedes",
     "budget_tiers": [
       {
-        "budget": "~110-111M",
-        "core": "Antonelli x2 + Mercedes constructor + Ferrari constructor, Colapinto + Bottas/Hulkenberg + one budget fill",
-        "fills": "Bortoletto or Stroll as cheapest enablers",
+        "budget": "~100M",
+        "core": "Leclerc (2x), Hamilton or Antonelli, Ferrari constructor, Mercedes constructor",
+        "fills": "Colapinto, Bottas/Stroll, Bortoleto or Bearman",
         "optimal": true
       },
       {
-        "budget": "~108-109M",
-        "core": "Leclerc x2 + Ferrari constructor + Mercedes constructor, Colapinto + Bottas + budget fill",
-        "fills": "Stroll or Bortoletto to round out",
-        "optimal": false
+        "budget": "~105M+ (Limitless)",
+        "core": "Leclerc (2x), Hamilton, Verstappen, Antonelli, Russell, Ferrari, Mercedes",
+        "fills": "N/A \u2014 Limitless ignores budget",
+        "optimal": true
       }
     ]
   },
   "captains": [
     {
       "label": "Primary",
-      "name": "Kimi Antonelli",
-      "acronym": "ANT",
-      "price": "~30.0M",
-      "team": "Mercedes",
-      "team_colour": "27F4D2",
-      "reason": "Consensus primary 2x pick across most creators. Mercedes qualifying dominance has been the story of 2026, and qualifying is everything at Monaco. Won 4 of the last 5 races. ZachGP, ReinFantasy, and FormulaFantasyHub all lean Antonelli, though with less conviction than normal given Mercedes' historically poor Monaco record and Antonelli finishing 3 laps down in 2025."
-    },
-    {
-      "label": "Primary",
       "name": "Charles Leclerc",
       "acronym": "LEC",
-      "price": "~23.0M",
+      "price": "~15.5M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "Strong consensus co-favorite for 2x. Hometown hero, 4 front row starts in last 5 Monaco GPs, won driver of the day the last two years (10 bonus fantasy points). Ferrari's slow-speed car strengths suit Monaco perfectly. Leading the betting lines. FanAmp and F1FantasyPolePosition are especially bullish on Leclerc. Even if he finishes 2nd, driver of the day could see him outscore Antonelli. Cheaper price means easier to fit in lineups."
+      "reason": "Consensus pick across all channels. Home race specialist, won Driver of the Day the last two years (worth 10 bonus points), Ferrari 1-2 in both FP1 and FP2, P1 in FP1 and P2 in FP2. Four front-row starts in last five Monaco GPs. Dirt cheap relative to Antonelli, enabling budget flexibility for Final Fix pivot."
     },
     {
       "label": "Differential",
-      "name": "Lando Norris",
-      "acronym": "NOR",
-      "price": "~26.0M",
-      "team": "McLaren",
-      "team_colour": "FF8000",
-      "reason": "Won Monaco in 2025 and McLaren have strong race starts. ZachGP flags him as the differential 2x pick. Concern: McLaren's strategy errors in Canada are worrying at a track where strategy is paramount and overtaking is nearly impossible."
+      "name": "Lewis Hamilton",
+      "acronym": "HAM",
+      "price": "~14.5M",
+      "team": "Ferrari",
+      "team_colour": "E8002D",
+      "reason": "P2 in FP1, P1 in FP2. Brilliant form since Canada. Even cheaper than Leclerc. If Hamilton wins his first race for Ferrari at Monaco, he likely bags Driver of the Day instead. Multiple creators flag him as a viable alternative captain."
     }
   ],
   "btier": {
@@ -58,108 +49,106 @@
         "acronym": "COL",
         "price": "~8.8M",
         "team_colour": "0093CC",
-        "note": "Universal consensus buy. Positive points in every race this season. Needs only -14 points to avoid price fall, -6 for max rise \u2014 virtually guaranteed at least +0.2M. 65% ownership in top 500. Q3 upside with Alpine's improving pace. Dead-set asset across all creators."
+        "note": "Consensus set-and-forget. Positive points in every race this season, needs only -14 points to avoid price fall and -6 for max rise. 65% ownership in top 500. Q3 upside with Alpine's improving pace. Pure budget enabler."
       },
       {
         "name": "Valtteri Bottas",
         "acronym": "BOT",
-        "price": "~4.6M",
-        "team_colour": "B6BABD",
-        "note": "Consensus safe budget floor. Only needs 1 point in Monaco for budget increase. Only 1 DNF all season (Australia). Cheapest reliable option. All creators recommend him as a near-guaranteed hold. Some seat rumors but expected to stay past Monaco."
-      },
-      {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "~7.0M",
+        "price": "~4.8M",
         "team_colour": "52E252",
-        "note": "ZachGP names him as one of three favorite budget builders alongside Colapinto and Bottas. Sauber/Audi car has shown decent pace. Note: F1FantasyPolePosition flags him as needing 25+ points to avoid price fall \u2014 a sell candidate by that metric. Disagreement among creators."
-      }
-    ],
-    "consider": [
+        "note": "Dirt cheap budget enabler. Needs just 1 point to gain 0.6M. Only two career retirements at Monaco. Just has to survive. Multiple creators recommend him."
+      },
       {
         "name": "Lance Stroll",
         "acronym": "STR",
         "price": "~5.4M",
         "team_colour": "229971",
-        "note": "Back-to-back finishes, only needs -8 for max price rise. ZachGP is bullish. F1FantasyPolePosition less confident due to Aston Martin reliability concerns and lack of Q2 upside. High risk/reward differential at 1.2% top-500 ownership."
+        "note": "Budget building candidate \u2014 needs -8 points for max 0.6M price rise. Usually keeps it clean. Back-to-back finishes suggest vibration/reliability issues resolved. Some creators nervous about Aston Martin reliability. Short-term 1-2 race punt."
       },
       {
-        "name": "Gabriel Bortoletto",
+        "name": "Gabriel Bortoleto",
         "acronym": "BOR",
         "price": "~5.4M",
-        "team_colour": "52E252",
-        "note": "Q3 upside with Sauber/Audi improving. Needs only 3 points to avoid price fall. F1FantasyPolePosition prefers him over Stroll due to better qualifying potential. Has averaged 11th in qualifying."
+        "team_colour": "C92D4B",
+        "note": "Top 10 in FP2, Audi looked like best-of-rest in P8-P10 area. Quali average of 11th gives Q3 upside. Needs 3 points to avoid price fall, 8 for max rise. FanAmp concerned about Audi reliability and poor race starts at a no-overtaking track."
+      },
+      {
+        "name": "Oliver Bearman",
+        "acronym": "BEA",
+        "price": "~7.0M",
+        "team_colour": "B6BABD",
+        "note": "P10 in FP2, Haas very reliable. Solid budget balancing option with some points upside. Needs 8 points to avoid price fall \u2014 tight at Monaco but achievable if he qualifies well."
+      }
+    ],
+    "consider": [
+      {
+        "name": "Liam Lawson",
+        "acronym": "LAW",
+        "price": "~7.5M",
+        "team_colour": "6692FF",
+        "note": "Consensus hold/buy-for-Barcelona rather than Monaco. Needs 11 points to avoid drop \u2014 very hard at Monaco. His Miami DNF drops off his 3-race average after Monaco. Excellent buy candidate for Spain where he'll be at top of price gain list at a high-overtake circuit."
       },
       {
         "name": "Esteban Ocon",
         "acronym": "OCO",
-        "price": "~7.5M",
-        "team_colour": "6692FF",
-        "note": "F1FantasyPolePosition has him as a buy option. Got a podium at Monaco in 2023 (35 fantasy points as a midfield driver). Needs 5 points to avoid price fall. Alpine's pace has improved. Solid if you can't afford Colapinto."
-      },
-      {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
         "price": "~7.0M",
-        "team_colour": "6692FF",
-        "note": "Good point scorer but needs 15 points in Monaco to avoid price fall \u2014 very difficult at a low-overtake track. F1FantasyPolePosition explicitly warns against holding into Monaco if planning Limitless. Better buy candidate AFTER Monaco."
+        "team_colour": "B6BABD",
+        "note": "Needs only -4 points to lose just 0.2M. Historic Monaco podium in 2023 but P17 in FP2 this weekend. More of a hold than a buy."
       }
     ],
     "avoid": [
-      "Fernando Alonso \u2014 DNF risk with Aston Martin reliability, needs 25+ points to avoid price fall, expected -0.6M drop",
-      "Sergio Perez \u2014 needs 11 points to avoid fall, Red Bull have not been consistent, risky at low-overtake circuit",
-      "Pierre Gasly \u2014 needs 36 points to avoid price fall per F1FantasyPolePosition, virtually impossible at Monaco",
-      "Alex Albon \u2014 3 consecutive Canadian GP DNFs, needs 13 points to avoid fall, unreliable",
-      "Isack Hadjar \u2014 needs 25+ points to avoid price fall, sell candidate",
-      "Doohan/Limblad \u2014 needs 25+ points to avoid price fall, sell candidate"
+      "Alex Albon \u2014 negative score trajectory, needs 13 points to avoid price fall, very unlikely at Monaco",
+      "Sergio Perez \u2014 brake fire in FP2, expected -0.6M price drop, sell candidate",
+      "Fernando Alonso \u2014 crashed in FP1, expected -0.6M drop, DNF risk with Aston Martin reliability",
+      "Nico Hulkenberg \u2014 toxic asset, needs 25+ points to avoid price fall despite flashes of pace",
+      "Arvid Lindblad \u2014 needs 25+ points to avoid price fall, unusable",
+      "Isaac Hadjar \u2014 crashed in FP1, half a second off Antonelli, budget not looking good",
+      "Pierre Gasly \u2014 needs 25+ points to avoid price fall, sell",
+      "McLaren drivers (Norris/Piastri) \u2014 reliability issue for Norris in FP2, both outside top 5 all day, well behind Ferrari/Mercedes/Verstappen"
     ]
   },
   "chips": [
     {
       "name": "Limitless",
       "rec": "use",
-      "reason": "Strong consensus this is the best race of the season for Limitless \u2014 same as 2025. Midfield drivers barely score (avg 5.26 pts at Monaco over last 3 years), so the gap between normal teams and Limitless teams is maximized. FormulaFantasyHub says even with 2 toxic assets dropping 0.6M, the chip is still worth using. Few viable Limitless weekends remain (maybe Silverstone or Hungary). If you have multiple assets expected to lose value, this is the time. Caveat: if heavy rain is forecast, consider holding \u2014 but current forecasts suggest mostly dry qualifying."
+      "reason": "Strong consensus that Limitless is excellent at Monaco. Big delta swing because most managers can't afford Hamilton+Leclerc+Verstappen+Mercedes+Ferrari together. Viable even with 1-2 toxic assets (Albon, Perez) dropping in value \u2014 creators agree you come out ahead on points. Optimal Limitless team: Leclerc (2x), Hamilton, Verstappen, Antonelli, Russell + Ferrari + Mercedes. ZachGP says don't use if you have both Albon AND Alonso. Multiple creators note very few viable Limitless weekends remain (Silverstone, Hungary at best)."
     },
     {
       "name": "Final Fix",
       "rec": "maybe",
-      "reason": "Excellent option if your 2x driver qualifies P4 or lower. FanAmp specifically recommends keeping ~0.6M extra budget to swap to the pole sitter (e.g., swap Leclerc for Antonelli or vice versa). Worked brilliantly at Baku 2025 when Piastri qualified P7. At Monaco where qualifying = race result, this chip has outsized value."
+      "reason": "Excellent candidate weekend. Start with Antonelli (cheaper, likely price gain regardless), then swap to Leclerc or Hamilton if they take pole. Saves a transfer and preserves budget. However, ReinFantasy argues saving Final Fix for later-season grid penalties (e.g., engine penalties at Monza) may be higher value. FanAmp and ZachGP lean toward using it. F1FantasyPolePosition comfortable using it. Disagreement exists but consensus is it's a strong play if needed."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "Not the ideal week to wildcard unless your team is in dire shape. Multiple creators (ZachGP, ReinFantasy) suggest saving for the dense European swing. ReinFantasy used his wildcard before Canada specifically to set up for Monaco with the right assets."
-    },
-    {
-      "name": "No Negative",
-      "rec": "save",
-      "reason": "Low-scoring weekend means less downside to protect against. DNF risk exists but is average (~2.5 per race). Better saved for a sprint weekend or a race with higher variance."
+      "reason": "No creator recommends Wildcard this week. Better saved for a bigger team overhaul, possibly around the summer break or when grid penalties shuffle the order."
     }
   ],
   "watch_items": [
-    "FP1/FP2 performance of Mercedes around Monaco \u2014 are they competitive in slow-speed corners or do they fall back significantly? This determines Antonelli vs Leclerc as 2x captain.",
-    "Weather forecast evolution \u2014 Friday looks wetter than Saturday/Sunday. If qualifying is wet, it could scramble the grid and make Final Fix essential. Rain on Sunday would increase safety car probability and pit lane chaos with 22 cars.",
-    "Aston Martin and Cadillac reliability in practice \u2014 determines whether Stroll and Bottas are safe budget holds or DNF risks.",
-    "FIA compression ratio testing effective June 1st \u2014 may not show impact at Monaco (low power sensitivity) but could change competitive order from Barcelona onwards.",
-    "Straight mode zone placements \u2014 unusual circuit may create unexpected deployment patterns that favor certain cars.",
-    "McLaren strategy decisions \u2014 after Canada's disastrous intermediate tire call, will they play it safe or try something aggressive at a track where pit strategy is the only way to gain positions?"
+    "FP3 and qualifying results will determine Final Fix usage \u2014 if Leclerc or Hamilton takes pole, swap from Antonelli immediately",
+    "McLaren reliability: Norris retired in FP2 with a failure, Piastri also slow \u2014 complete sell on McLaren constructor and drivers this weekend",
+    "Audi reliability at Monaco: Bortoleto looked fast but Audi has poor race starts and reliability concerns \u2014 a DNF at a no-overtake track is devastating",
+    "Perez brake fire in FP2 \u2014 monitor whether his car is repaired and race-ready, though he's a sell regardless",
+    "Driver of the Day: worth 10 points at a low-scoring track \u2014 Leclerc has won it two years running at Monaco, but Hamilton could steal it with a first Ferrari win",
+    "Overtaking data: only 4 overtakes in 2025, 17 in 2024 \u2014 new smaller 2026 cars may allow slightly more, but don't bank on overtake-dependent B-tier strategies",
+    "Weather: 25% rain chance on Sunday \u2014 rain at Monaco would completely reshuffle the order and reward those who held Final Fix"
   ],
-  "arc": "Monaco is the lowest-scoring race of the season for midfield drivers and the most polarizing weekend for chip strategy. It serves as the gateway to the dense European swing: Barcelona follows immediately and is a high-downforce, high-overtaking circuit where Mercedes should reassert dominance \u2014 making any kneejerk sales of Mercedes assets at Monaco premature. The June 1st FIA compression ratio testing may not show effects until Barcelona/Austria, but could reshape the competitive order for the remainder of the European leg. Budget management is critical: assets like Colapinto are approaching 10M and may need to be sold after Austria. Players who successfully deploy Limitless here and protect their budget builders will have a significant advantage heading into the Silverstone sprint weekend. Lawson becomes an excellent buy candidate AFTER Monaco when his rolling average resets.",
+  "arc": "Monaco is the tightest budget weekend of the season and a defining moment for chip usage. After this race, the calendar shifts to Barcelona (Spain GP), a high-speed, high-overtake circuit where Mercedes are expected to reassert dominance and McLaren should bounce back. Liam Lawson becomes a priority buy for Spain as his Miami DNF drops off his rolling average. Managers who used Limitless here can rebuild budget through Spain and Austria with Colapinto, Stroll, and Bottas. Those saving Final Fix should watch for engine/battery grid penalties emerging around Silverstone and the summer break, as multiple teams (Russell, McLaren) have already used spare components early. The key post-Monaco question is whether to pivot back to McLaren or stay heavy on Ferrari \u2014 Barcelona's track characteristics should clarify the pecking order.",
   "sources": [
     {
       "channel": "ZachGP",
-      "title": "BEST TEAMS FOR F1 FANTASY - MONACO 2026",
-      "url": "https://www.youtube.com/watch?v=xzj5UzFlAkk"
+      "title": "F1 FANTASY POST FP2 FINAL THOUGHTS - MONACO 2026",
+      "url": "https://www.youtube.com/watch?v=DnjfXExiMqY"
     },
     {
-      "channel": "FanAmp",
-      "title": "F1 Fantasy: Best Lineups for the Monaco GP 2026 | The Fantasy Formula",
-      "url": "https://www.youtube.com/watch?v=isbO2exRcsg"
+      "channel": "FanAmp (The Fantasy Formula)",
+      "title": "F1 Fantasy: Final Thoughts for the Monaco GP 2026 | The Fantasy Formula",
+      "url": "https://www.youtube.com/watch?v=3_QyrX31IQ8"
     },
     {
       "channel": "ReinFantasy",
-      "title": "The best F1 Fantasy asset might surprise you... | Monaco GP Team Selection | F1 Fantasy Tips 2026",
-      "url": "https://www.youtube.com/watch?v=1tUvkz3ZBYo"
+      "title": "FINAL FIX FERRARI? | Monaco GP Final Thoughts | F1 Fantasy Tips 2026",
+      "url": "https://www.youtube.com/watch?v=sFiSaHRXdZ8"
     },
     {
       "channel": "FormulaFantasyHub",
@@ -168,19 +157,19 @@
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "\ud83c\uddf2\ud83c\udde8 MY F1 FANTASY MONACO GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\uddf2\ud83c\udde8",
-      "url": "https://www.youtube.com/watch?v=QR33G47tTYk"
+      "title": "\ud83e\udde0 MONACO GP FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
+      "url": "https://www.youtube.com/watch?v=v6Lkk4Xcl5g"
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "\ud83c\udfaf MONACO GP F1 FANTASY DRIVERS TO BUY | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
+      "title": "\ud83c\udfaf MY F1 FANTASY MONACO GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
       "url": "https://www.youtube.com/watch?v=dicWPGx7fQ8"
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "\ud83e\udde0 CANADIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
-      "url": "https://www.youtube.com/watch?v=qpIKHE92HI4"
+      "title": "\ud83c\uddf2\ud83c\udde8 MY F1 FANTASY MONACO GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\uddf2\ud83c\udde8",
+      "url": "https://www.youtube.com/watch?v=QR33G47tTYk"
     }
   ],
-  "_source_hash": "533c0b3dc8658166ad7b2c5183f966f759f8255cc1486d9c6c55a98ad0a1e625"
+  "_source_hash": "79642ad89027807f88f6600805773652edb6678c2d0020b54770f7b7e319d698"
 }
