@@ -3,20 +3,26 @@
   "round": 7,
   "season": 2026,
   "sprint": false,
-  "deadline": "Saturday before qualifying",
-  "central_unknown": "Whether the F1 Fantasy game will correct Hulkenberg's price to 3.2M before the deadline (he should be at the price floor but the game currently shows 3.5M), and whether Alpine's right of review on Gasly's Monaco penalty will be upheld, potentially changing his price thresholds.",
+  "deadline": "Saturday before qualifying (exact time not specified)",
+  "central_unknown": "Whether F1 Fantasy will retroactively apply Gasly's reinstated Monaco P3 points before the Barcelona deadline, which affects his price trajectory and the Gasly vs Hadjar decision for the B-tier/4A-light slot. Secondary uncertainty is McLaren's reliability \u2014 strong pace in FP2 but ongoing DNF concerns make them a risky constructor pick.",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Ferrari (4A-light with Hadjar/Gasly)",
+    "name": "Antonelli x2 + Mercedes + Ferrari (4A-light with budget builders)",
     "budget_tiers": [
       {
-        "budget": "~105-107M",
-        "core": "Antonelli (x2), Mercedes, Ferrari, Lawson, Colapinto/Hadjar",
-        "fills": "Hulkenberg (3.2M budget floor), Bottas/Bortoleto",
+        "budget": "109.9M",
+        "core": "Antonelli x2, Mercedes, Ferrari, Gasly/Hadjar",
+        "fills": "Lawson, Lindblad, Hulkenberg as budget builders",
         "optimal": true
       },
       {
-        "budget": "~110M+",
-        "core": "Antonelli (x2), Hamilton, Mercedes, Ferrari, Hadjar/Gasly",
+        "budget": "~107-108M",
+        "core": "Antonelli x2, Mercedes, Ferrari",
+        "fills": "Lawson, Hulkenberg, Colapinto or Bortoleto",
+        "optimal": false
+      },
+      {
+        "budget": "~112M+",
+        "core": "Russell x2 or Antonelli x2, Mercedes, Ferrari, Hadjar",
         "fills": "Lawson, Hulkenberg",
         "optimal": false
       }
@@ -30,132 +36,125 @@
       "price": "~25.0M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Five consecutive wins, championship leader, dominant in active-aero circuits. Consensus pick across all channels. Scoring at >2 points per million spent. Must-have 2x option."
+      "reason": "Won five GPs in a row, podium in every race, best car on the grid, massively underpriced at 2+ points per million. Universal consensus across all channels \u2014 absolute must-have and must-captain."
+    },
+    {
+      "label": "Differential",
+      "name": "George Russell",
+      "acronym": "RUS",
+      "price": "~21.0M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "P2 in FP2 with best first sector of anyone. Vegas betting lines have Mercedes 1-2 favored. Could be a bounceback race but unlikely to get Driver of the Day over Antonelli. ZachGP and FanAmp flag him as a differential."
     },
     {
       "label": "Differential",
       "name": "Lewis Hamilton",
       "acronym": "HAM",
-      "price": "~20.0M",
+      "price": "~24.0M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "P2 in championship, two consecutive P2 finishes and podiums (42pts in round 5, 27pts in Monaco). In rich vein of form since joining Ferrari. Only other Tier A driver with consistent 8+ points every race alongside Antonelli."
-    },
-    {
-      "label": "Differential",
-      "name": "Oscar Piastri",
-      "acronym": "PIA",
-      "price": "~18.0M",
-      "team": "McLaren",
-      "team_colour": "FF8000",
-      "reason": "Two 40+ point scores this season, more than Leclerc. McLaren won 1-2 at Barcelona in 2025. High risk due to McLaren reliability but huge differential upside if car holds together."
+      "reason": "Two consecutive P2 podiums, best driving since joining Ferrari. FormulaFantasyHub highlights him as a differential 2x option. Ferrari brought 8 upgrades including new front wing and floor."
     }
   ],
   "btier": {
     "buy": [
       {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "~3.2M (pending correction)",
-        "team_colour": "52E252",
-        "note": "At or near the 3M price floor \u2014 maximum downside is -0.2M. Needs only 8 points for max 0.6M rise. Unlocks budget for midfield upgrades. Two consecutive race finishes. Four top-10 finishes at Barcelona historically. Consensus top budget pick across all channels."
-      },
-      {
         "name": "Liam Lawson",
         "acronym": "LAW",
-        "price": "~8.1M",
+        "price": "8.1M",
         "team_colour": "6692FF",
-        "note": "Only Tier B driver with a negative target for max price gain (-9 points needed). P5 in Monaco. Double-digit points in 3 of last 4 races. DNF from Miami drops off his rolling average for Austria, making him a strong multi-week hold. 56% ownership in top 500."
+        "note": "Needs only -9 points for max 0.6M price rise. Double-digit points in 3 of last 4 races. 56% ownership in top 500. Long-term hold through Austria as well. Gearbox issue in FP2 is a reliability concern but still consensus top B-tier pick."
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "3.2M (price floor after correction)",
+        "team_colour": "52E252",
+        "note": "Can only lose 0.2M max \u2014 effectively risk-free on budget. Universal consensus pick for budget building. Needs 8-9 points for max rise at corrected price. Cooling concerns at hot Barcelona track noted but negligible budget downside."
       },
       {
         "name": "Isack Hadjar",
         "acronym": "HAD",
-        "price": "~11.5M",
+        "price": "11.5M",
         "team_colour": "3671C6",
-        "note": "First podium in Monaco (23 pts). Needs only 3 points for 0.2M rise, 13 for max rise. In a top-4 car (Red Bull). Enables 4A-light builds. Preferred over Gasly long-term due to better price trajectory into Austria. Strong Barcelona debut (P7 last season with Racing Bulls)."
+        "note": "Only needs 3 points for min price rise, 13 for max. In a top-4 car at Red Bull. Preferred over Gasly by F1FantasyPolePosition for long-term hold due to better forward price trajectory. Key piece of 4A-light builds."
       }
     ],
     "consider": [
       {
-        "name": "Franco Colapinto",
-        "acronym": "COL",
-        "price": "~9.4M",
-        "team_colour": "0093CC",
-        "note": "Needs just 1 point to avoid price fall, 9 for max rise. Two top-10s in last 3 races. Alpine bringing season-defining update package. However, approaching price ceiling where gains slow \u2014 may need to transfer out after Barcelona for Austria. Good short-term, questionable long-term hold."
-      },
-      {
         "name": "Pierre Gasly",
         "acronym": "GAS",
-        "price": "~11.6M",
+        "price": "11.6M",
         "team_colour": "0093CC",
-        "note": "Five double-digit fantasy scores this season, P9 in championship. Needs only 4 points for min price rise. Monaco penalty under appeal (right of review) \u2014 if reversed, his price thresholds could change. Slightly worse long-term trajectory than Hadjar."
+        "note": "If Monaco P3 points are applied, could see a large 0.8M retroactive price increase making him a fantastic early pickup. Needs 4 points for min rise, 14 for max. Alpine bringing season-defining upgrade. FanAmp's top lineup features him. ZachGP says pick Gasly if points are applied, Hadjar if not."
       },
       {
-        "name": "Esteban Ocon",
-        "acronym": "OCO",
-        "price": "~10.1M",
-        "team_colour": "B6BABD",
-        "note": "P2 for overtakes on the season, 8+ fantasy points in every race (alongside only Antonelli and Hamilton). Finished every race \u2014 but DNF regression risk. Needs 8 points to avoid fall, 17 for max rise \u2014 higher threshold than alternatives."
+        "name": "Franco Colapinto",
+        "acronym": "COL",
+        "price": "9.4M",
+        "team_colour": "0093CC",
+        "note": "Only needs 1 point to avoid price fall, 9 for max rise. Most consistent B-tier driver per FanAmp. But F1FantasyPolePosition warns he's a short-term hold \u2014 likely needs transferring out after Barcelona when his Canada 25-pointer drops off."
       },
       {
         "name": "Gabriel Bortoleto",
         "acronym": "BOR",
-        "price": "~5.6M",
+        "price": "5.6M",
         "team_colour": "52E252",
-        "note": "Consistent 3-7 point scorer. Needs 6 to avoid fall, 11 for max rise. Audi bringing update package. Cooling concerns flagged. Good budget option if paired with Hulkenberg for double-Audi strategy but watch FP sessions for reliability signals."
+        "note": "Consistent 5-7 points recent races. Needs 6 to avoid fall, 11 for max rise. Audi bringing updates and had success at Barcelona in 2025. Cooling concerns flagged. Pairs well with Hulkenberg for double-Audi budget build."
+      },
+      {
+        "name": "Arvid Lindblad",
+        "acronym": "LIN",
+        "price": "~6.5M",
+        "team_colour": "6692FF",
+        "note": "Looked good in FP2 top 10. If he scores 8 points, his future price rise targets become very achievable. Racing Bulls reliability is a concern after Lawson's FP2 gearbox issue. Good long-term budget builder."
       }
     ],
     "avoid": [
-      "Lando Norris \u2014 retired from as many races (3) as he's completed. McLaren reliability is terrible. Avoid until he proves he can finish races consistently.",
-      "George Russell \u2014 dreadful form, needs 48 points to avoid -0.3M price drop. Not the benchmark at Mercedes anymore; Antonelli is clearly superior.",
-      "Lance Stroll \u2014 poor Monaco result, not in the picture until Silverstone at earliest.",
-      "Valtteri Bottas \u2014 started from pit lane in Monaco. Can go down -0.6M. Not recommended unless extremely budget-constrained. Not in picture until Silverstone.",
-      "Charles Leclerc \u2014 DNF in Monaco, will drop in price. Not recommended as 2x option this week; hold if you have him but don't prioritize as captain over Antonelli."
+      "Lando Norris \u2014 strong pace (P1 FP2) but will lose ~0.3M in price regardless of result, needs 58+ points to rise which is virtually impossible. McLaren reliability concerns.",
+      "Oscar Piastri \u2014 McLaren reliability too risky for his price point. Two DNFs in recent races from the team.",
+      "Charles Leclerc \u2014 will lose price this week after Monaco DNF. Still expected to outscore Piastri but not worth 2x. FormulaFantasyHub keeps him in tier list but not as a buy."
     ]
   },
   "chips": [
     {
+      "name": "Limitless",
+      "rec": "save",
+      "reason": "Consensus to save \u2014 reliability issues are hitting every team making Limitless very risky. FanAmp and community suggest targeting Zandvoort after summer break (sprint weekend, reliability should be sorted). Joe Malazo comment endorsed by FanAmp."
+    },
+    {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "No compelling reason to wildcard this week. Clean weather forecast, no grid penalties expected. Save for a week with more disruption or when 4A builds become accessible in 3-4 weeks."
+      "reason": "Multiple creators suggest saving wildcard for when 4A builds become affordable in 3-4 weeks. F1FantasyPolePosition prefers rolling transfers over using wildcard now."
     },
     {
       "name": "Final Fix",
       "rec": "save",
-      "reason": "Save for grid penalties and engine penalties later in the season. Antonelli is the clear 2x pick so unlikely to need a last-minute captain swap. Only use if something dramatic happens in qualifying."
-    },
-    {
-      "name": "Limitless",
-      "rec": "save",
-      "reason": "Not recommended this week. Recent Limitless plays in Canada and Monaco were catastrophic due to DNFs. Barcelona has historically low DNF rates (4 across 4 races). Wait for a sprint weekend or higher-scoring opportunity."
-    },
-    {
-      "name": "Negative Can",
-      "rec": "save",
-      "reason": "Clear skies and warm weather forecast. No rain expected. Save for a wet/chaotic race weekend where DNF risk is higher."
+      "reason": "ReinFantasy argues saving for grid/engine penalties later. F1FantasyPolePosition acknowledges it can be used if qualifying reveals a clear swap (e.g., Antonelli to Leclerc or vice versa) but prefers saving."
     }
   ],
   "watch_items": [
-    "Hulkenberg price correction: Will F1 Fantasy fix his price from 3.5M to 3.2M before the deadline? This significantly impacts his value proposition and team-building flexibility.",
-    "Alpine's right of review on Gasly's Monaco pit lane speeding penalty \u2014 if reversed, Gasly's Monaco score and price thresholds change, potentially making him more attractive than Hadjar.",
-    "Audi cooling issues flagged in updates \u2014 monitor FP1/FP2 for reliability signals before committing to double-Audi builds (Hulkenberg + Bortoleto).",
-    "Alpine bringing a season-defining update package to Barcelona \u2014 could boost Colapinto and Gasly significantly if competitive step is real.",
-    "Barcelona is 8th on the calendar for overtakes over the last 4 seasons \u2014 favors drivers who gain positions (Lawson 2.8 avg, Colapinto 1.3 avg, Hulkenberg 4.2 overtakes/race).",
-    "Pirelli going one step softer (C2/C3/C4 vs last year's C1/C2/C3) \u2014 could open up more tire strategy and potentially more overtakes.",
-    "McLaren reliability \u2014 continue avoiding until consistent finishes resume. Norris has 3 retirements in 6 races.",
-    "Track temperature impact: 30\u00b0C+ forecast could stress cooling for multiple teams, particularly Audi."
+    "F1 Fantasy retroactive points correction for Gasly's Monaco P3 \u2014 confirmed won't happen before Barcelona deadline, but could trigger a 0.8M price increase post-race",
+    "McLaren vs Red Bull potential counter-appeals to the Monaco FIA ruling \u2014 could reverse Gasly's reinstatement entirely",
+    "Racing Bulls reliability \u2014 Lawson lost power/gearbox in FP2, team has 2 GP DNFs and 2 sprint DNFs this season",
+    "Ferrari's 8-component upgrade package (new front wing, new floor) \u2014 biggest upgrade of any team this weekend; could shift constructor pecking order",
+    "Alpine's season-defining upgrade package \u2014 could elevate Gasly and Colapinto's scoring potential",
+    "Audi cooling issues flagged in Barcelona heat (30\u00b0C+) \u2014 monitor FP3 before committing to double-Audi build",
+    "Hulkenberg price correction from 3.5M to 3.2M \u2014 F1 Fantasy must fix before deadline or strategy changes",
+    "Tires one step softer (C2/C3/C4 vs last year's C1/C2/C3) \u2014 could open multi-stop strategies and increase overtaking"
   ],
-  "arc": "Barcelona represents a return to active-aero circuits where Mercedes are expected to reassert dominance after Monaco's low-speed anomaly. The key strategic arc is building toward 4A lineups (two A-tier drivers + two A-tier constructors) within 3-4 weeks. Hulkenberg at the price floor is the unlock \u2014 his minimal downside frees budget to upgrade midfield slots to Hadjar or Gasly, who bridge the gap to full 4A builds. Barcelona and the following Austria race form a natural two-week hold window for Lawson (whose Miami DNF drops off) and potentially Hadjar. Colapinto is a one-week play here before likely needing removal for Austria as his Monaco zero weighs down his rolling average. The season has been unusually volatile with DNFs, meaning rank swings are larger than normal \u2014 managers who fell behind in Monaco (especially Limitless users or Leclerc holders) can recover over the long 24-race season, but need to prioritize consistent budget growth now rather than chasing weekly points.",
+  "arc": "Barcelona is a pivotal budget-building race that sets up a crucial two-race stretch. The key strategic arc is transitioning toward 4A-light builds (two A-tier drivers + two A-tier constructors) over the next 3-4 weeks. Lawson and Hulkenberg are long-term holds through Austria (next race), while Colapinto is a one-week rental whose value drops when his Canada 25-pointer falls off the rolling average. The Gasly vs Hadjar decision may resolve after Barcelona when F1 Fantasy processes the Monaco correction \u2014 whoever gets the points boost becomes the preferred bridge to eventually affording a true 4A lineup (e.g., Antonelli + Leclerc + Mercedes + Ferrari). Austria follows immediately as a back-to-back, so rolling a transfer into that race is valuable. Silverstone (sprint weekend) comes three weeks later and could be a chip opportunity if reliability stabilizes.",
   "sources": [
     {
       "channel": "ZachGP",
-      "title": "BEST TEAMS FOR F1 FANTASY - BARCELONA 2026",
-      "url": "https://www.youtube.com/watch?v=GNbrYiNfRDM"
+      "title": "F1 FANTASY POST FP2 FINAL THOUGHTS - BARCELONA 2026",
+      "url": "https://www.youtube.com/watch?v=5aqWDCLY5W4"
     },
     {
       "channel": "FanAmp",
-      "title": "F1 Fantasy: Best Lineups for the Barcelona-Catalunya GP 2026 | The Fantasy Formula",
-      "url": "https://www.youtube.com/watch?v=Tfv0o5_a6cQ"
+      "title": "F1 Fantasy: Final Thoughts for the Barcelona-Catalunya GP 2026 | The Fantasy Formula",
+      "url": "https://www.youtube.com/watch?v=U8puq3Yr5CE"
     },
     {
       "channel": "ReinFantasy",
@@ -183,5 +182,5 @@
       "url": "https://www.youtube.com/watch?v=v6Lkk4Xcl5g"
     }
   ],
-  "_source_hash": "695657548ff7b8b52775b420590501ea39ae614c673f4a1498a3c8550676dbe8"
+  "_source_hash": "d4ae1570ef3a9a6c2c24408d03a119fc483997c323e8f2ce21f4bba604a3605c"
 }
