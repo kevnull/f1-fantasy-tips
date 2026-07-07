@@ -3,22 +3,28 @@
   "round": 12,
   "season": 2026,
   "sprint": true,
-  "deadline": "Saturday (earlier than usual due to sprint format)",
-  "central_unknown": "McLaren's reliability and competitiveness remain the biggest wildcard \u2014 they won here last season with a 1-2 but have been inconsistent all year with battery and mechanical issues. Whether Ferrari can keep pace on Silverstone's long straights (where they've historically suffered clipping) or fall back behind Red Bull and McLaren is the other key question.",
+  "deadline": "Saturday before sprint race",
+  "central_unknown": "Can Ferrari's pace hold up at Silverstone despite their known straight-line deficit, or will Red Bull's overnight development ability allow them to close the gap? Hamilton vs Antonelli for 2x boost is the key captain decision, with Hamilton taking sprint pole but Antonelli leading the championship.",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Ferrari/McLaren",
+    "name": "Antonelli/Hamilton x2 + Mercedes + Ferrari",
     "budget_tiers": [
       {
-        "budget": "~117M+",
-        "core": "Antonelli (captain), Hamilton or Verstappen as Tier A, Mercedes constructor",
-        "fills": "Hadjar, Hulkenberg, Lindblad/Colapinto/Lawson",
+        "budget": "~115M",
+        "core": "Antonelli or Hamilton (2x), Mercedes constructor, Ferrari constructor",
+        "fills": "Hadjar, Lindblad/Bortoleto, Hulkenberg",
         "optimal": true
       },
       {
-        "budget": "~110-115M",
-        "core": "Antonelli (captain), Hulkenberg, Mercedes constructor",
-        "fills": "Lawson, Lindblad or Bortoleto, Colapinto or Hadjar",
+        "budget": "~119M+",
+        "core": "4A lineup: Antonelli + Hamilton + Mercedes + Ferrari",
+        "fills": "Hulkenberg + Lindblad + Bottas/Latifi (3M driver)",
         "optimal": false
+      },
+      {
+        "budget": "~110-115M",
+        "core": "Antonelli (2x), Mercedes constructor, Ferrari constructor",
+        "fills": "Hadjar/Lawson, Lindblad/Bortoleto, Hulkenberg",
+        "optimal": true
       }
     ]
   },
@@ -27,112 +33,107 @@
       "label": "Primary",
       "name": "Kimi Antonelli",
       "acronym": "ANT",
-      "price": "~16.5M",
+      "price": "~26M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Consensus pick across all channels. Championship leader with 40-point gap, looked 'far and away the best boost option' in Austria FP2 despite a DNF in the race. Betting odds have him neck-and-neck with Russell at the top for Silverstone. All analysts agree he's the clear captain choice."
+      "reason": "Championship leader, consistently the safest 2x option all season, majority of the field will boost him making him the consensus safe pick. Strong Mercedes package at Silverstone."
     },
     {
       "label": "Differential",
       "name": "Lewis Hamilton",
       "acronym": "HAM",
-      "price": "~22M",
+      "price": "~24.5M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "Record 9 wins and 15 podiums at Silverstone, 12 straight podiums before last season's P4. Only Tier A driver on track for a max price rise. FanAmp and ZachGP both highlight his home race pedigree, though Ferrari's form at Silverstone is a concern with long straights and potential clipping issues."
+      "reason": "Sprint pole, topped FP1, nine-time winner at Silverstone, lower target for 0.3M price gain, most likely driver of the day. FanAmp explicitly recommends Hamilton as 2x differential. Ferrari looked competitive despite pre-race straight-line concerns."
     }
   ],
   "btier": {
     "buy": [
       {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "3.0M",
-        "team_colour": "52E252",
-        "note": "Price floor \u2014 cannot lose budget. 82% ownership in global top 500. Finished on podium at Silverstone last season (P3 from P19). Consensus must-own across all channels. Once Barcelona DNF drops off rolling average, he becomes a strong budget builder."
-      },
-      {
-        "name": "Isack Hadjar",
+        "name": "Isaac Hadjar",
         "acronym": "HAD",
-        "price": "~8-9M",
-        "team_colour": "6692FF",
-        "note": "Strong recent form, solidified P8 in championship. On track for a good price rise needing only ~9 points at Silverstone. Multiple analysts recommend Gasly-to-Hadjar swap as a key move this week. Better long-term hold than Gasly due to rolling average."
+        "price": "~12.7M",
+        "team_colour": "3671C6",
+        "note": "Four consecutive top-6 finishes, needs only 9 points for another 0.6M price rise. Strong consensus buy across all channels. Red Bull improving and Hadjar adapting well to the car."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
-        "price": "~5.0M",
+        "price": "~6.4M",
         "team_colour": "6692FF",
-        "note": "Preferred budget option over Bortoleto per F1FantasyPolePosition. Needs only -2 points for min price rise at Silverstone. 28 points over last two races (14 per race avg). Racing Bulls car looks competitive in midfield. Strong overtaking and position gain stats."
-      }
-    ],
-    "consider": [
-      {
-        "name": "Franco Colapinto",
-        "acronym": "COL",
-        "price": "~10M",
-        "team_colour": "00E701",
-        "note": "Dropped in Austria but not as badly as feared. Needs 8 points for min price rise, 17 for max. Sprint weekend helps. Some analysts moving away from him to fund other upgrades."
+        "note": "Cheap Racing Bulls driver averaging 9-10 points in non-DNF races. Strong budget builder, expected max price rise this weekend. Good complement to Lawson or standalone pick."
       },
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
-        "price": "~5.5M",
+        "price": "~9.5M",
         "team_colour": "6692FF",
-        "note": "Averaging 13 points per non-DNF race. Good hold but not exciting \u2014 described as a 'luxury transfer' to move away from. Needs 7 points for min price rise at Silverstone. VCARB looked like top-of-midfield fifth fastest team."
+        "note": "Averaging 13 points per race in non-DNF races. Racing Bulls look like solid fifth-fastest team. Good hold if already owned."
       },
       {
         "name": "Gabriel Bortoleto",
         "acronym": "BOR",
         "price": "~6.0M",
         "team_colour": "52E252",
-        "note": "Consistent 5-7 point floor but lacks double-digit upside. No double-digit score since first race. Lindblad preferred by most analysts if choosing between the two."
+        "note": "Cheap Audi option, 5 points for 0.2M rise. Audi reliability has improved. Decent floor option for budget-constrained teams."
+      }
+    ],
+    "consider": [
+      {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~3.0M",
+        "team_colour": "52E252",
+        "note": "Cannot lose value at 3M floor. Has his only F1 podium at Silverstone (2025). Essential for 4A lineup builds. Audi reliability much better than Cadillac. 19 points needed for minimum price rise - stretch target but safe hold."
       },
       {
-        "name": "Max Verstappen",
-        "acronym": "VER",
-        "price": "~24M",
-        "team_colour": "3671C6",
-        "note": "Runner-up in Austria moved him level with Hamilton in betting odds. Red Bull showing resurgence. Noted that Silverstone might be 'a completely different track' with new regs. Needs 11 points for min price rise \u2014 tough but possible on sprint weekend."
+        "name": "Franco Colapinto",
+        "acronym": "COL",
+        "price": "~10.0M",
+        "team_colour": "0093CC",
+        "note": "FanAmp ranks him distant sixth among Tier B buys. Averaging 10 points but Alpine looked poor on Friday. Consider only if budget allows."
       }
     ],
     "avoid": [
-      "Valtteri Bottas \u2014 three consecutive mechanical DNFs with Cadillac, massive price drops (down 1.5M from purchase). Even at 3.0M, must see him finish a race before considering.",
-      "Sergio Perez \u2014 Cadillac reliability risk at 6.2M is not worth it when Lindblad and Bortoleto are cheaper and safer. Best teams in fantasy have zero Cadillac or Aston Martin exposure.",
-      "Cadillac (constructor) \u2014 both cars DNF'd in Austria with mechanical failures. Unreliable and uncompetitive.",
-      "Aston Martin (constructor) \u2014 described as 'still wank' by ZachGP, no competitive upside.",
-      "Esteban Ocon \u2014 specifically called out as disappointing differential option, avoid."
+      "Valtteri Bottas \u2014 Three consecutive mechanical DNFs with Cadillac, extreme reliability risk. Do not bring in until he finishes a race.",
+      "Lance Stroll \u2014 Aston Martin still extremely uncompetitive, will drop to 3M after Silverstone.",
+      "Pierre Gasly \u2014 Alpine looked poor in Friday sessions, trending downward since Barcelona. Barely completed qualifying sims. Sell for Hadjar if possible.",
+      "Ollie Bearman \u2014 Haas drifting toward backmarker territory rather than catching midfield. Expected to drop in price again."
     ]
   },
   "chips": [
     {
-      "name": "Triple Captain (3x)",
+      "name": "Limitless",
       "rec": "use",
-      "reason": "ReinFantasy strongly advocates using 3x chip at Silverstone. Sprint weekend means more scoring opportunities, Antonelli is a near-consensus captain lock, and upcoming non-sprint weekends offer fewer points. The combination of sprint points + strong captain pick makes this one of the best remaining windows for the chip."
+      "reason": "FanAmp calls this 'the last great opportunity to play limitless in 2026.' Silverstone has historically 3rd-fewest overtakes (behind Monaco and Australia), creating bigger gaps between limitless and regular teams. Stable top-5 running order after Friday gives confidence in team selection. FormulaFantasyHub also sees strong arguments for limitless with differential 2x captain upside."
+    },
+    {
+      "name": "3x Boost (Extra DRS)",
+      "rec": "save",
+      "reason": "FormulaFantasyHub calls it a 'trap.' FanAmp projects only ~40 point edge over best non-chip team, well below the 75-80 point threshold to justify usage. Key issue: if you trust Hamilton, you should also trust Ferrari constructor, but 3x forces you into a Tier B constructor like Racing Bulls which is projected 50+ points behind Ferrari. Save for Zandvoort or Singapore where 4A lineup with 3x is more achievable."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "FanAmp discusses chip options but the consensus leans toward saving the wildcard. Budget positions are still evolving and the summer break after Belgium could be a better restructuring point."
+      "reason": "No channel recommended wildcard usage this weekend. Better saved for post-summer break when major upgrades and team shakeups are expected."
     },
     {
-      "name": "Limitless",
-      "rec": "save",
-      "reason": "No channel recommends using Limitless this weekend. Better saved for a weekend with clearer form differentials or a non-sprint race where squad construction is more constrained."
+      "name": "No Negative",
+      "rec": "maybe",
+      "reason": "Silverstone historically has moderate DNF rate (~3.75 per race over last 4 seasons). Could be useful if running risky assets like Bottas, but most channels don't actively recommend it this week."
     }
   ],
   "watch_items": [
-    "FP1 is the ONLY practice session before sprint qualifying \u2014 decisions must be made quickly with very limited data.",
-    "McLaren battery reliability: Norris may or may not have received the new Mercedes battery fix. If McLaren sort reliability, they become a top constructor pick.",
-    "Ferrari clipping on Silverstone's long straights \u2014 Leclerc finished P14 in the last two British GPs and lost positions in four straight races here. Watch FP1 pace closely before committing to Ferrari constructor.",
-    "Mercedes constructor vs McLaren constructor decision: George Russell had car issues in Austria FP2 while McLaren looked strong. If Russell shows pace in FP1, Mercedes is safer; if not, McLaren is tempting but risky.",
-    "Weather: Currently forecasted 26\u00b0C, cloudy, 3% rain chance on Sunday. Ralfulo on X says virtually no rain expected \u2014 removes wet weather variable.",
-    "Pirelli compounds are C1/C2/C3 (hardest available) \u2014 could produce 2-3 stop races. Track has averaged 3.75 DNFs per race over last four seasons.",
-    "Red Bull upgrades not clicking for Hadjar in Austria (radio complaints about car feel) \u2014 monitor if resolved at Silverstone before committing.",
-    "Gasly to Hadjar transfer is a key move many analysts are planning \u2014 if you haven't done it, this may be the week.",
-    "Hulkenberg's Barcelona -50 DNF score drops off rolling average soon, making him a strong budget builder in coming weeks."
+    "Hamilton vs Antonelli head-to-head battle \u2014 Hamilton on sprint pole, but Antonelli P2 and championship leader. Sunday race result will determine price movements for both.",
+    "Red Bull overnight development \u2014 Verstappen P3 in sprint quali, P6 in FP1. Red Bull historically finds pace overnight. Could become strong final fix candidate for Sunday qualifying/race.",
+    "Alpine's Friday struggles \u2014 Gasly and Colapinto barely completed qualifying sims. If Alpine continues to underperform, it validates the Gasly-to-Hadjar swap that multiple channels recommend.",
+    "Ferrari straight-line pace \u2014 Hamilton warned it could be worse at Silverstone, but P1 and P4 in sprint qualifying suggests they're competitive. Monitor race pace closely.",
+    "McLaren special livery weekend (1000th GP) \u2014 Norris had bodywork damage in SQ2 but made top 10. McLaren not convincing enough to replace Mercedes/Ferrari constructors.",
+    "Final fix strategy \u2014 Keep budget reserve for Sunday. If Red Bull shows strong Saturday qualifying pace, Verstappen becomes a potential final fix upgrade. Multiple channels emphasize this flexibility.",
+    "Sprint race results \u2014 Sprint points can trigger price changes before Sunday. Monitor Hadjar and Lindblad closely for budget-building opportunities."
   ],
-  "arc": "Silverstone is one of the last sprint weekends before the summer break, making it a critical scoring and budget-building opportunity. The decisions made here \u2014 particularly around constructor choice (Mercedes vs McLaren vs Ferrari) and whether to deploy the 3x captain chip \u2014 will shape lineups heading into the Belgian GP at Spa, which is a very long track where budget builders like Lindblad and Bortoleto may struggle to hit price rise thresholds. After Belgium, the summer break offers a natural reset point. Players who nail Silverstone's sprint weekend with the right captain and chip deployment will enter the second half of the season with a significant leaderboard and budget advantage. The Gasly-to-Hadjar transition and Bottas-to-Hulkenberg cleanup are moves that need to happen now to stop falling behind the top 500 meta.",
+  "arc": "Silverstone is a pivotal sprint weekend that sets up the summer break transition. Budget building remains critical as teams approach the 4A lineup threshold (Antonelli + Hamilton + Mercedes + Ferrari). After Silverstone, Belgium at Spa follows with softer tires (C2-C4) promising more strategic variety. The Gasly-to-Hadjar transition and Bottas/Stroll floor-price assets become increasingly important for enabling 4A builds post-summer break. Channels agree that patience in building budget now pays off with better midfield assets when 4A becomes universally achievable around Zandvoort. The Hamilton vs Antonelli captain debate will likely carry forward, with Hamilton's Ferrari potentially gaining ground at high-downforce Spa. Limitless users should strongly consider deploying this weekend as opportunities diminish in the second half of the season.",
   "sources": [
     {
       "channel": "ZachGP",
@@ -141,8 +142,8 @@
     },
     {
       "channel": "FanAmp",
-      "title": "F1 Fantasy: Best Lineups for the British GP 2026 | The Fantasy Formula",
-      "url": "https://www.youtube.com/watch?v=ZDjPvhdHK0Y"
+      "title": "Hamilton IN, Antonelli OUT? | British GP Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=NrwmXG1zqKw"
     },
     {
       "channel": "ReinFantasy",
@@ -150,20 +151,25 @@
       "url": "https://www.youtube.com/watch?v=gQPS68nZ_qs"
     },
     {
+      "channel": "FormulaFantasyHub",
+      "title": "USING 3X BOOST IS A TRAP \ud83d\udc40 | FINAL THOUGHTS \u2013 BRITISH GP \ud83d\udd12| F1 Fantasy 2026 Tips and Advice",
+      "url": "https://www.youtube.com/watch?v=kaTjN9IDScI"
+    },
+    {
       "channel": "F1FantasyPolePosition",
-      "title": "THE BEST F1 FANTASY TEAM FOR THE BRITISH GP | F1 Fantasy 2026 Tips, Picks, & Strategy",
+      "title": "MY F1 FANTASY BRITISH GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy",
       "url": "https://www.youtube.com/watch?v=_j9aH-R9xP8"
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "AUSTRIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy",
-      "url": "https://www.youtube.com/watch?v=jwxIZw93-hA"
+      "title": "NERVOUS FOR NORRIS? | BELGIAN GP TEAM SELECTION (Silverstone retrospective data)",
+      "url": "https://www.youtube.com/watch?v=fNomdTgmyWo"
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "MY F1 FANTASY AUSTRIAN GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy",
-      "url": "https://www.youtube.com/watch?v=8cex1zRfG2k"
+      "title": "AUSTRIAN GP F1 FANTASY FINAL THOUGHTS (pre-Silverstone context)",
+      "url": "https://www.youtube.com/watch?v=jwxIZw93-hA"
     }
   ],
-  "_source_hash": "a1109e4a4ce9abf80560e24a74415234a9eb9218ffc168ccbe0a68b822c2260c"
+  "_source_hash": "061866275335e2476ef0e6a363225fd2113b63ee3bc74abcc074f4b40ba1599e"
 }
