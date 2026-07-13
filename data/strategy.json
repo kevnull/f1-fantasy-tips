@@ -1,23 +1,23 @@
 {
   "race": "Belgian GP",
-  "round": 13,
+  "round": 12,
   "season": 2026,
   "sprint": false,
   "deadline": "July 18",
-  "central_unknown": "Can Ferrari's improved straight-line speed and battery management hold up at Spa's long straights, or will the longest lap on the calendar expose lingering power deployment weaknesses? Also, Spa's microclimate weather could introduce rain uncertainty that reshuffles the order.",
+  "central_unknown": "Whether Ferrari's improved straight-line speed and battery management translates to genuine competitiveness at Spa's long straights and high energy-deployment demands, potentially challenging Mercedes' status as the outright best car on the grid.",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Ferrari",
+    "name": "Antonelli 2x + Mercedes + Ferrari + VCARB/Red Bull budget core",
     "budget_tiers": [
       {
-        "budget": "~107-110M",
-        "core": "Antonelli (2x), Hadjar, Lindblad/Lawson, Hulkenberg/Bortoleto, Mercedes, Ferrari",
-        "fills": "Hulkenberg (price floor) or Bortoleto if budget allows; Colapinto as a stretch option",
+        "budget": "~105-108M",
+        "core": "Antonelli (2x), Hamilton or Verstappen, Mercedes, Ferrari",
+        "fills": "Hadjar + Lindblad + Lawson or Bortoleto/Hulkenberg",
         "optimal": true
       },
       {
-        "budget": "~104-106M",
-        "core": "Antonelli (2x), Lindblad, Lawson, Hulkenberg, Mercedes, Ferrari",
-        "fills": "Bortoleto over Hulkenberg if affordable; bank budget for final fix flexibility",
+        "budget": "~100-103M",
+        "core": "Antonelli (2x), Mercedes, Ferrari",
+        "fills": "Hadjar + Lindblad + Hulkenberg or Bortoleto",
         "optimal": false
       }
     ]
@@ -29,8 +29,8 @@
       "acronym": "ANT",
       "price": "~16.5M",
       "team": "Mercedes",
-      "team_colour": "6CD3BF",
-      "reason": "Mercedes expected to be strong at Spa (historical success, best car on grid). Antonelli has monopolized fastest lap points (3 of 4 sprints, majority of GPs), providing floor on bad weekends. After Hamilton was the Silverstone differential, consensus shifts back to Antonelli as the safe primary 2x for Belgium."
+      "team_colour": "27F4D2",
+      "reason": "Best car on the grid, monopoly on fastest lap points (sprint and race), secured fastest laps at Silverstone in both sprint and GP. Mercedes historically strong at Spa. Consensus primary 2x pick across all channels after Hamilton took the differential 2x role at Silverstone."
     },
     {
       "label": "Differential",
@@ -39,7 +39,7 @@
       "price": "~15.4M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "Hamilton showed strong form at Silverstone (sprint pole, P3 in GP). Ferrari's improved straight-line speed bodes well for Spa's long straights. Better budget increase thresholds than Antonelli. However, FormulaFantasyHub notes Antonelli owners are 'in the box seat this weekend,' making Hamilton the clear differential rather than primary pick."
+      "reason": "Better budget-increasing thresholds than Antonelli, Ferrari's improved straight-line speed bodes well for Spa's long straights. Cheaper than Antonelli allowing more flexible budget builds. Worked well as differential 2x at Silverstone (66 pts). However, consensus leans toward Antonelli for Belgium."
     }
   ],
   "btier": {
@@ -48,29 +48,22 @@
         "name": "Isaac Hadjar",
         "acronym": "HAD",
         "price": "~13.3M",
-        "team_colour": "6692FF",
-        "note": "Four or five consecutive top-6 finishes; has outqualified Verstappen three times this season. Strong budget builder with low thresholds (~-2 for min rise, ~10 for max). Consensus top B-tier pick across all channels."
+        "team_colour": "3671C6",
+        "note": "Out-qualified Verstappen three times this season, four or five consecutive top-6 finishes. Only needs -2 points for minimum price rise, 10 for max. Consensus must-own across all channels. Red Bull car is strong and consistent."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
         "price": "~6.8M",
         "team_colour": "6692FF",
-        "note": "Fourth consecutive double-points finish for VCARB. Excellent budget builder at rock-bottom price. Racing Bulls form as fifth-fastest team cements his value."
+        "note": "Fourth consecutive double-points finish for VCARB. Excellent budget builder at rock-bottom price. Needs -5 for min rise, 1 for max. Consensus strong buy paired with Lawson for double VCARB."
       },
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
         "price": "~9.5M",
         "team_colour": "6692FF",
-        "note": "Consistent points finisher, averaging ~13 points in non-DNF races. VCARB's form is strong. Slightly harder budget thresholds than Lindblad but solid hold."
-      },
-      {
-        "name": "Gabriel Bortoleto",
-        "acronym": "BOR",
-        "price": "~6.6M",
-        "team_colour": "52E252",
-        "note": "Strong 16-point haul at Silverstone. Budget thresholds very favorable (-3 for min, 3 for max). FormulaFantasyHub recommends him over Hulkenberg if budget allows."
+        "note": "Averaging 13 points per non-DNF race. VCARB cemented as top of midfield/fifth fastest team. Good budget builder with consistent points finishes. Needs -3 for min rise, 6 for max."
       }
     ],
     "consider": [
@@ -79,63 +72,84 @@
         "acronym": "COL",
         "price": "~10.4M",
         "team_colour": "0093CC",
-        "note": "Best price-rise thresholds among B-tier drivers (-8 for 0.2 rise, 1 for 0.6 rise). F1FantasyPolePosition calls him a popular target. More expensive than alternatives but strong budget upside. Alpine's form has been trending down since Barcelona however."
+        "note": "Best budget thresholds of any B-tier driver (-8 for 0.2 rise, 1 for 0.6 rise). Popular transfer target. However, Alpine pace inconsistent and he may struggle at Spa."
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~6.6M",
+        "team_colour": "52E252",
+        "note": "Strong 16 pts at Silverstone, cheap price point helps enable premium builds. Needs -3 for min rise, 3 for max. FormulaFantasyHub recommends over Hulkenberg if budget allows. However hasn't consistently scored double digits."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
-        "price": "3.0M",
+        "price": "~3.0M",
         "team_colour": "52E252",
-        "note": "Price floor asset \u2014 cannot lose value. Audi reliability appears fixed. Had a DNF at Silverstone but still the cheapest enabler for premium builds. If he scores ~5 points, he'll be on for a price rise at Hungary."
+        "note": "Price floor asset, cannot drop further. Audi reliability has stabilized. If he scores ~5 points at Spa, he'll be on for a price rise in Hungary. Useful budget enabler but limited upside."
       },
       {
         "name": "Esteban Ocon",
         "acronym": "OCO",
-        "price": "~5.5M",
-        "team_colour": "FF87BC",
-        "note": "F1FantasyPolePosition notes he consistently gets minimum price rises. Consolation pick if 0.1M short of Colapinto. Not a priority target."
+        "price": "~7.5M",
+        "team_colour": "0093CC",
+        "note": "Keeps quietly delivering minimum price rises. Needs 2 for min rise, 11 for max. Not flashy but reliable if you're 0.1M short of a preferred target."
       }
     ],
     "avoid": [
-      "Valtteri Bottas \u2014 Three consecutive mechanical DNFs; Cadillac reliability a disaster. Wait until he finishes a race before considering.",
-      "Pierre Gasly \u2014 Alpine trending in wrong direction since Barcelona; replaced by Hadjar in most optimal builds.",
-      "Ollie Bearman \u2014 Haas drifting toward backmarker range rather than closing on midfield; likely another price drop.",
-      "Sergio Perez / Cadillac \u2014 Cadillac cars literally falling apart; DNF risk too high."
+      "Valtteri Bottas \u2014 three consecutive mechanical DNFs with Cadillac, massive reliability risk, dropped 1.5M from buy-in price. Need to see him finish a race before considering.",
+      "Sergio Perez \u2014 Cadillac unreliable, car falling apart at multiple recent races.",
+      "Oliver Bearman \u2014 Haas drifting away from midfield competitiveness toward backmarker territory, likely to drop in price again at Spa."
     ]
   },
   "chips": [
     {
       "name": "Limitless",
-      "rec": "save",
-      "reason": "Multiple sources (FanAmp, ZachGP) identified Silverstone as the last great Limitless opportunity. If you used it there, great. If not, Spa is less ideal because it's not a sprint weekend, reducing the points ceiling that makes Limitless worthwhile. Save for a future sprint weekend with clearer top-5 separation."
+      "rec": "maybe",
+      "reason": "ZachGP used Limitless at Silverstone. If you haven't used it yet, Belgium could work with Antonelli, Hamilton, Russell, Verstappen all viable premium picks plus Mercedes and Ferrari constructors. However, it's not a sprint weekend so slightly less value than Silverstone was."
     },
     {
-      "name": "3x Boost (Extra DRS)",
-      "rec": "save",
-      "reason": "FanAmp specifically recommends saving for Zandvoort or Singapore where a 4A lineup becomes more viable and projected advantage over non-chip teams is larger. Without a sprint, the 3x multiplier at Spa won't generate enough edge (~40 points) to justify the chip."
+      "name": "3x Boost",
+      "rec": "maybe",
+      "reason": "ReinFantasy advocated using 3x at Silverstone (sprint weekend). If you saved it, Belgium is viable with Antonelli as a strong 3x target given Mercedes pace and his fastest-lap consistency. However, some channels suggest waiting for a sprint weekend to maximize value."
     },
     {
       "name": "Autopilot",
       "rec": "save",
-      "reason": "ZachGP notes more sprint races are coming with better B-tier options. Wait for a sprint weekend where the autopilot algorithm can capture both sprint and race points with a cleaner driver pool."
+      "reason": "Better saved for a sprint weekend where automated optimal swaps across more sessions yield more value. Belgium is a standard weekend."
     },
     {
       "name": "Wildcard",
-      "rec": "maybe",
-      "reason": "If you're significantly behind on budget building and need to restructure (e.g., still carrying Bottas or missed the Hadjar/Lindblad wave), Belgium could be a reset point before the summer break. Otherwise, save."
+      "rec": "save",
+      "reason": "No major restructuring needed for most teams. Save for when 4A lineups become more viable or a significant regulation/price shift occurs."
+    },
+    {
+      "name": "4A Build",
+      "rec": "save",
+      "reason": "ZachGP notes 4A is close to being usable but still risky due to unreliable cheap drivers (Bottas DNF risk). Wait until budget floor drivers stabilize before committing."
     }
   ],
   "watch_items": [
-    "Ferrari straight-line speed at Spa: improved battery management and energy deployment seen at Silverstone needs to hold on F1's longest lap. Watch FP1/FP2 speed trap data through sectors 1 and 3.",
-    "Spa microclimate weather: 25% rain chance on Sunday. Mixed conditions could reshuffle the order and create DNF/overtake chaos \u2014 monitor forecasts closely before deadline.",
-    "VCARB (Racing Bulls) reliability: Four consecutive double-points finishes for both drivers. Any mechanical issue would hurt the most popular B-tier stack. Watch for signs of stress on the longest circuit.",
-    "Red Bull overnight improvements: FanAmp notes no team is better at finding pace overnight. Verstappen could jump into contention after Friday \u2014 keep budget for a potential final fix to Red Bull constructor.",
-    "Alpine's continued decline: Gasly and Colapinto have been trending down since Barcelona. If Alpine show life in practice, Colapinto becomes more attractive; if not, confirms the pivot to Racing Bulls B-tier stack.",
-    "Cadillac/Bottas reliability: Need to see a clean race finish before anyone considers bringing Bottas back, even at 3.0M price floor.",
-    "Pirelli going a step softer (C2/C3/C4) at Spa: Could introduce multi-stop strategies and more varied racing, potentially benefiting overtaking and midfield shuffles."
+    "Ferrari straight-line speed improvement \u2014 formula-timer.com data shows Ferrari closing gap on straights and improving battery/energy deployment, which is critical at Spa's long straights through sectors 1 and 3.",
+    "Spa microclimate weather \u2014 25% rain chance on Sunday, temperatures cooling from 26\u00b0C Friday to 21\u00b0C Sunday. Rain at Spa can completely scramble strategies and create DNFs.",
+    "VCARB (Racing Bulls) form continuation \u2014 four consecutive double-points finishes, cemented as fifth fastest team. Key question is whether this carries over to Spa's very different track characteristics.",
+    "Red Bull reliability \u2014 Hadjar and Verstappen have been strong but Red Bull has had intermittent reliability concerns. Monitor FP sessions closely.",
+    "Cadillac/Bottas reliability \u2014 need to see if mechanical failures have been resolved before considering any Cadillac assets.",
+    "Multiple DRS/straight-mode zones at Spa \u2014 potentially five or more zones, which could significantly boost overtaking and affect overtake-dependent scoring.",
+    "Pirelli going one step softer (C2-C3-C4 vs last year's C1-C2-C3) \u2014 could introduce multi-stop strategies and more strategic variability."
   ],
-  "arc": "Belgium is a transitional race before the summer break and the back-half sprint cluster. The consensus is to consolidate gains from Silverstone \u2014 lock in Antonelli as your 2x, secure the Racing Bulls B-tier trio (Hadjar/Lindblad/Lawson), and pair Mercedes with Ferrari as constructors. Budget building remains critical: Hadjar, Lindblad, and Bortoleto all have favorable thresholds. The 4A lineup strategy (four Tier-A level drivers) is not yet viable because B-tier options like Hulkenberg/Bottas don't reliably finish races, but it becomes a real possibility at Zandvoort or Singapore where sprint weekends and better B-tier reliability could unlock the 3x Boost or Extra DRS chips. Save your premium chips \u2014 Hungary and the late-season sprints at Zandvoort and Singapore are the targets. Use Belgium to bank budget, roll a transfer forward, and position for aggressive moves after the summer break.",
+  "arc": "Belgium is a pivotal race for establishing the mid-season trajectory. Ferrari's improved straight-line speed could make them genuinely competitive against Mercedes at a power-dependent circuit, potentially reshaping the constructor meta. If Ferrari delivers, the Mercedes-Ferrari dual constructor strategy remains rock solid heading into Hungary (a very different, low-speed circuit where Mercedes should dominate). VCARB's consistency is building toward Lindblad and Lawson becoming long-term holds through the summer stretch. Budget builders should be targeting Hadjar's continued rise and Colapinto/Lindblad as the best value assets. The 4A lineup concept is getting closer to viability \u2014 if Cadillac reliability stabilizes and budget floor assets like Hulkenberg can contribute, it may become usable by Hungary or the Dutch GP. Managers who have been conservative with transfers should look to be more aggressive in Belgium, as the rolling averages are becoming more predictable and the midfield hierarchy is stabilizing.",
   "sources": [
+    {
+      "channel": "ZachGP",
+      "title": "F1 FANTASY POST SPRINT QUALI FINAL THOUGHTS - BRITAIN 2026",
+      "url": "https://www.youtube.com/watch?v=6DQR_7dxgmU"
+    },
+    {
+      "channel": "ReinFantasy",
+      "title": "USE YOUR 3X CHIP IN SILVERSTONE! | British GP Team Selection | F1 Fantasy Tips 2026",
+      "url": "https://www.youtube.com/watch?v=gQPS68nZ_qs"
+    },
     {
       "channel": "FormulaFantasyHub",
       "title": "IS VCARB WORTH IT? \ud83d\udee0\ufe0f | TEAM SELECTION \u2013 BELGIAN GP \u2705 | F1 Fantasy 2026 Tips and Advice",
@@ -147,25 +161,15 @@
       "url": "https://www.youtube.com/watch?v=fNomdTgmyWo"
     },
     {
-      "channel": "ZachGP",
-      "title": "F1 FANTASY POST SPRINT QUALI FINAL THOUGHTS - BRITAIN 2026",
-      "url": "https://www.youtube.com/watch?v=6DQR_7dxgmU"
-    },
-    {
-      "channel": "FanAmp",
-      "title": "Hamilton IN, Antonelli OUT? | British GP Final Thoughts | F1 Fantasy",
-      "url": "https://www.youtube.com/watch?v=NrwmXG1zqKw"
-    },
-    {
-      "channel": "ReinFantasy",
-      "title": "USE YOUR 3X CHIP IN SILVERSTONE! | British GP Team Selection | F1 Fantasy Tips 2026",
-      "url": "https://www.youtube.com/watch?v=gQPS68nZ_qs"
-    },
-    {
       "channel": "F1FantasyPolePosition",
       "title": "\ud83c\uddec\ud83c\udde7 MY F1 FANTASY BRITISH GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\uddec\ud83c\udde7",
       "url": "https://www.youtube.com/watch?v=_j9aH-R9xP8"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83e\udde0 AUSTRIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
+      "url": "https://www.youtube.com/watch?v=jwxIZw93-hA"
     }
   ],
-  "_source_hash": "a37771e86b466421d71bef490e8e5e91cccb3b09315cf5d7ea034b23e86877ca"
+  "_source_hash": "5e97dd8193646f898bc8cd911bc6f34004440d50503e59932330040b2c241910"
 }
