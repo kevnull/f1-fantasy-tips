@@ -4,26 +4,26 @@
   "season": 2026,
   "sprint": false,
   "deadline": "July 19",
-  "central_unknown": "Isaac Hajar's exact grid penalty position (P21 vs P22 vs pit lane) and whether Lando Norris's 10-place grid penalty generates enough overtake/position-gain points to justify a Final Fix chip or 2x boost over the safer Antonelli pick.",
+  "central_unknown": "Isaac Hadjar's exact starting position (P21 or P22) after his back-of-grid engine penalty, and whether Red Bull's strong FP1/FP2 pace is genuine or whether Mercedes/Ferrari will reassert dominance by qualifying \u2014 this determines the ceiling on Hadjar's overtake-fueled scoring and whether Red Bull constructor is worth picking over Ferrari.",
   "meta_template": {
-    "name": "Antonelli x2 + Hajar + Mercedes + budget midfield trio",
+    "name": "Antonelli x2 + Mercedes + Ferrari/Red Bull + Budget B-tiers",
     "budget_tiers": [
       {
-        "budget": "~117-120M",
-        "core": "Antonelli (2x), Hajar, Lindblad, Lawson, Bortoleto/Hulkenberg, Mercedes, Ferrari",
-        "fills": "Hulkenberg or Bortoleto as 5th driver depending on budget; Ferrari constructor held if swap to Red Bull costs too much",
-        "optimal": true
-      },
-      {
-        "budget": "~120-122M",
-        "core": "Antonelli (2x), Hajar, Lindblad, Lawson/Bortoleto, Colapinto, Mercedes, Red Bull",
-        "fills": "Red Bull constructor as differential over Ferrari; Colapinto if budget allows over Lawson",
+        "budget": "~117M",
+        "core": "Antonelli x2, Lindblad, Hadjar, Lawson, Ferrari, Mercedes",
+        "fills": "Hulkenberg or Bottas as price-floor fifth driver",
         "optimal": false
       },
       {
-        "budget": "~115-117M (lower budget)",
-        "core": "Antonelli (2x), Hajar, Lindblad, Lawson, Hulkenberg, Mercedes, Ferrari",
-        "fills": "Hulkenberg at floor price as safe budget filler; Ferrari held to avoid transfer cost",
+        "budget": "~120M",
+        "core": "Antonelli x2, Hadjar, Lindblad, Bortoleto, Ferrari, Mercedes",
+        "fills": "Lawson or Colapinto as alternative to Bortoleto",
+        "optimal": true
+      },
+      {
+        "budget": "~122M+",
+        "core": "Antonelli x2, Hadjar, Lindblad, Bortoleto/Colapinto, Mercedes, Red Bull",
+        "fills": "Red Bull constructor as differential over Ferrari; Lawson as budget sacrifice to fund double premium constructors",
         "optimal": false
       }
     ]
@@ -36,129 +36,141 @@
       "price": "~25.3M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Consensus #1 2x pick across all channels. Topped FP2, expected to qualify front row and fight for the win. Has taken fastest lap in 6 of 9 races. Estimated 30-35 points. Safest and highest-floor option."
+      "reason": "40.1 avg points this season, topped FP2, won at Silverstone comfortably, fastest lap in 6 of 9 races. Unanimous consensus across all channels as the clear-cut 2x captain. Even with Hadjar's penalty upside, Antonelli's floor is higher and more reliable."
     },
     {
       "label": "Differential",
-      "name": "Isaac Hajar",
+      "name": "Isaac Hadjar",
       "acronym": "HAD",
       "price": "~13.3M",
-      "team": "Red Bull Racing",
-      "team_colour": "3671C6",
-      "reason": "Starting P21/P22 due to engine penalty. Could gain 12-14 positions with massive overtake points (24+ from position gains alone). Driver of the day candidate. Multiple channels note Autopilot chip viability on Hajar as he could challenge Antonelli's total. ZachGP calls him a viable Autopilot 2x pick."
+      "team": "Racing Bulls",
+      "team_colour": "6692FF",
+      "reason": "Starting P21/P22 due to back-of-grid engine penalty. Betting lines predict ~P8 finish, meaning 13-14 positions gained plus massive overtake points. Multiple channels flag him as potential Autopilot chip candidate to challenge Antonelli's score. Five straight top-6 finishes. Red Bull looked strong in FP1 (P4) and FP2 (P5)."
+    },
+    {
+      "label": "Differential",
+      "name": "Charles Leclerc",
+      "acronym": "LEC",
+      "price": "~21.5M",
+      "team": "Ferrari",
+      "team_colour": "E80020",
+      "reason": "Cheapest A-tier driver, strong favored-driver bias for Driver of the Day. Good 4-race setup option paired with Antonelli. ZachGP highlights him as the meta shift differential for budget builders. However, was 8/10ths off Hamilton in FP2 \u2014 needs to find pace."
     }
   ],
   "btier": {
     "buy": [
       {
-        "name": "Isaac Hajar",
+        "name": "Isaac Hadjar",
         "acronym": "HAD",
         "price": "~13.3M",
-        "team_colour": "3671C6",
-        "note": "Must-have across all channels. Back-of-grid penalty with top-10 expected finish (betting lines say P8). Five straight top-6 finishes. Needs only -2 points for min price rise. Massive overtake/position-gain upside."
-      },
-      {
-        "name": "Arvid Lindblad",
-        "acronym": "LIN",
-        "price": "~6.8M",
         "team_colour": "6692FF",
-        "note": "Universal must-have. Needs only 1 point for max price rise of 0.6M. Racing Bulls looked strong in top 10 across FP1/FP2. Best points-per-million asset available."
+        "note": "Back-of-grid penalty creates one of the biggest B-tier scoring opportunities of the season. Five straight top-6 finishes. FanAmp says 'do whatever it takes to get him in your lineup.' All channels agree he is the must-have B-tier asset this week."
       },
       {
         "name": "Gabriel Bortoleto",
         "acronym": "BOR",
         "price": "~6.6M",
         "team_colour": "52E252",
-        "note": "Popular Hulkenberg replacement. P10 in FP1. Needs 3 points for max price rise. Audi brought Spa-spec rear wing. Multiple channels prefer him over Hulkenberg for cost cap upside."
+        "note": "Needs only 3 points for max 0.6M price rise. P10 in FP1. Audi brought Spa-spec rear wing. Consistent scorer and strong budget builder. Multiple channels recommend swapping Hulkenberg for Bortoleto this week."
+      },
+      {
+        "name": "Arvid Lindblad",
+        "acronym": "LIN",
+        "price": "~6.8M",
+        "team_colour": "6692FF",
+        "note": "Needs just 1 point for max 0.6M price rise. No negative points since Canada (5 races ago). Racing Bulls look strong at Spa. ZachGP's favorite budget pick. P9 in FP2."
       }
     ],
     "consider": [
-      {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
-        "price": "~9.5M",
-        "team_colour": "6692FF",
-        "note": "Consistent midfield scorer, needs 6 points for max rise which is easily attainable. V-Carb entrenched in top 10 in FP sessions. Slight discount to Colapinto with similar upside."
-      },
       {
         "name": "Franco Colapinto",
         "acronym": "COL",
         "price": "~10.4M",
         "team_colour": "0093CC",
-        "note": "Best price-rise thresholds (-8 for min, 1 point for max 0.6M rise). Quicker Alpine on Friday. But Alpine languished P15 in FP1; some channels prefer Lawson at a discount. FanAmp notes sacrificing one max price increase for Hajar's points is worthwhile."
+        "note": "Needs only 1 point for max 0.6M price rise (-8 for minimum rise). Best price thresholds of any B-tier driver. Was quicker Alpine in FP1/FP2. FanAmp and F1FantasyPolePosition both highlight him. However, Alpine were P15 in FP1 \u2014 less inspiring than Racing Bulls/Audi."
+      },
+      {
+        "name": "Liam Lawson",
+        "acronym": "LAW",
+        "price": "~9.5M",
+        "team_colour": "6692FF",
+        "note": "Consistent scorer needing 6 points for max rise. Racing Bulls entrenched in top 10 both practice sessions. May be the sacrifice to fund double premium constructors but still a strong hold. FormulaFantasyHub notes 6 points is 'very easily attainable' for Lawson."
       },
       {
         "name": "Esteban Ocon",
         "acronym": "OCO",
         "price": "~10.3M",
         "team_colour": "B6BABD",
-        "note": "One of only two drivers (with Hamilton) to score 7+ points every race. 6.4 overtakes per race. Needs only 2 points for min rise. Consolation if 0.1M short of Colapinto."
+        "note": "One of only two drivers (with Hamilton) to score 7+ points in every race this season. 6.4 overtakes per race. Needs only 2 points for 0.2M rise. Good consolation if 0.1M short of Colapinto."
       },
       {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "~3.0M",
-        "team_colour": "52E252",
-        "note": "Floor price, cannot drop. Audi brought Spa rear wing so should compete around top 10. Multiple channels are moving off him to Bortoleto but he remains viable for lowest-budget builds."
+        "name": "Ollie Bearman",
+        "acronym": "BEA",
+        "price": "~7.2M",
+        "team_colour": "B6BABD",
+        "note": "No reliability issues since Monaco. Consistent points scorer. 3.1M cheaper than Ocon. ZachGP rates him alongside Lindblad and Bortoleto as top budget trio. Needs 6 points for minimum rise \u2014 tighter threshold than others."
       },
       {
-        "name": "Lando Norris",
-        "acronym": "NOR",
-        "price": "~25.7M",
-        "team_colour": "FF8000",
-        "note": "10-place grid penalty. FanAmp ran the numbers: best case ~30 pts on Sunday vs Antonelli's typical 35. Betting lines predict P7 finish. Consensus is he's NOT worth 2x boost or Final Fix chip. Nice to have alongside Antonelli but not as primary captain."
+        "name": "Red Bull Constructor",
+        "acronym": "RBR",
+        "price": "~25-26M",
+        "team_colour": "3671C6",
+        "note": "Verstappen topped FP1, Hadjar P4. Removed problematic 'Macarena wing.' Hadjar's back-of-grid start means huge overtake/positions-gained points for constructor too. FanAmp calls it 'a great differential play.' FormulaFantasyHub notes it as a viable swap from Ferrari for teams that can't afford Hadjar as a driver."
       }
     ],
     "avoid": [
-      "Lance Stroll \u2014 P22 regardless of penalty, not a points source; wait for Aston Martin Hungary upgrades",
-      "Fernando Alonso \u2014 said his goal Sunday is to get home to watch Spain in the World Cup final; wait for Hungary upgrades",
-      "Sergio Perez \u2014 no channel mentions him as viable",
-      "Pierre Gasly \u2014 heavy FP2 crash, 13M price too high vs Hajar at similar cost",
-      "Carlos Sainz \u2014 not mentioned as viable by any channel",
-      "Alex Albon \u2014 fighting to escape Q1, not viable"
+      "Fernando Alonso \u2014 Goal is to 'get home to watch Spain in the World Cup final.' Aston Martin upgrades not until Hungary. Multiple channels say wait one more week.",
+      "Lance Stroll \u2014 3M price floor but 'lives and breathes P22.' DNFs in 3 of last 4 races. Not a points source even with grid penalty.",
+      "Sergio Perez \u2014 Reliability concerns, no fantasy upside.",
+      "Alex Albon \u2014 Not competitive enough for his price.",
+      "Carlos Sainz \u2014 Not competitive enough for his price.",
+      "Pierre Gasly \u2014 13M price tag too expensive relative to Hadjar at similar price. Heavy crash in FP2, car damage. Alpine not inspiring on pace.",
+      "Lando Norris \u2014 Only 10-place grid penalty, not enough overtake upside to justify 2x or Final Fix. FanAmp ran the numbers: best-case ~30 pts on Sunday vs Antonelli's typical ~35. Betting lines predict P7 finish. All channels agree he is NOT a viable 2x candidate."
     ]
   },
   "chips": [
     {
       "name": "Autopilot",
       "rec": "maybe",
-      "reason": "Multiple channels highlight this as the best Autopilot weekend of the season. Hajar starting P21/P22 could outscore Antonelli on race day, making the chip valuable if you believe Hajar's race points exceed Antonelli's total. FormulaFantasyHub and F1FantasyPolePosition both seriously considering it. ZachGP notes Hajar is a viable Autopilot play. Use only if you genuinely believe Hajar will be the weekend's top scorer."
+      "reason": "Multiple channels (FanAmp, F1FantasyPolePosition, FormulaFantasyHub) flag this as a strong Autopilot week. With Hadjar starting P21/P22 and potentially challenging Antonelli's score, Autopilot lets you hedge between Antonelli 2x and Hadjar 2x. FormulaFantasyHub explicitly titles their video 'USE AUTOPILOT THIS WEEK.' Best used if you have both Antonelli and Hadjar in your squad."
     },
     {
       "name": "Final Fix",
       "rec": "save",
-      "reason": "Strong consensus to save. FanAmp ran detailed numbers: Norris's best-case Sunday (~30 pts) doesn't beat a typical Antonelli Sunday (~35 pts). ZachGP acknowledges it's a 'nice option' but recommends holding. F1FantasyPolePosition calls Final Fix a 'break glass in case of emergency' chip worth preserving."
+      "reason": "FanAmp ran detailed analysis on using Final Fix to swap in Norris on Sunday \u2014 concluded it's not worth it. Norris's ceiling with a 10-place penalty (~30 pts best case) doesn't exceed a typical Antonelli Sunday (~35 pts). Save for a true emergency. Note: using Autopilot locks you out of Final Fix for the weekend."
     },
     {
       "name": "No Negative",
       "rec": "maybe",
-      "reason": "FanAmp notes No Negative is 'always in play at Spa' due to the circuit's history of incidents and DNFs. Worth considering if you have high-risk assets, but not explicitly recommended over Autopilot this week."
+      "reason": "FanAmp notes No Negative is 'always in play at Spa' due to the track's history of incidents and DNFs. However, DNFs have calmed down this season according to ZachGP. Consider if you're running risky assets or reliability-prone cars."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "No channel recommends using Wildcard this week. Hungary with Aston Martin upgrades may be a better deployment."
+      "reason": "No channel recommends using Wildcard this week. The meta transition to 4A lineups is not yet optimal \u2014 F1 Fantasy Tools sims and multiple channels suggest holding off one more week until Hungary when Aston Martin bring upgrades and the picture is clearer."
     }
   ],
   "watch_items": [
-    "George Russell was 1.2 seconds off Antonelli in FP2 qualifying sims and complained about grip \u2014 if he doesn't solve this, Mercedes constructor value drops and Red Bull becomes more attractive",
-    "Charles Leclerc was nearly 0.8s behind Hamilton in FP2 \u2014 Ferrari constructor risk if Leclerc continues to struggle",
-    "Oscar Piastri suffered a hydraulic pressure issue in FP1 \u2014 monitor McLaren reliability",
-    "Pierre Gasly crashed heavily at the end of FP2 \u2014 Alpine expect him back Saturday but monitor",
-    "Red Bull removed the 'Macarena wing' that reportedly caused Verstappen's recent retirements \u2014 Max topped FP1 and looked strong, boosting Red Bull constructor case",
-    "Exact Hajar penalty position (P21 vs P22) depends on penalty stacking with Stroll \u2014 affects overtake ceiling",
-    "Weather: increasing cloudiness, 25% rain chance Sunday \u2014 Spa microclimate could scramble the grid"
+    "George Russell was 1.2 seconds off Antonelli in FP2 qualifying sims \u2014 needs to find grip overnight. If he doesn't solve it, Mercedes constructor value drops and Red Bull becomes more attractive.",
+    "Charles Leclerc was nearly 8/10ths behind Hamilton in FP2 \u2014 Ferrari constructor could be weaker if the gap persists into qualifying.",
+    "Oscar Piastri suffered a late hydraulic pressure issue in FP1 \u2014 monitor McLaren reliability.",
+    "Pierre Gasly crashed heavily in FP2 bringing out a red flag \u2014 Alpine expect him back Saturday but car damage extent unclear.",
+    "Red Bull removed the 'Macarena wing' that reportedly led to Verstappen's recent retirements \u2014 Verstappen looked more comfortable and topped FP1.",
+    "Audi brought a Spa-specification rear wing \u2014 both Hulkenberg and Bortoleto expected to compete around top 10.",
+    "Weather: 25% chance of rain on Sunday, cooling temperatures through the weekend. Spa's microclimate means conditions can change rapidly.",
+    "Exact grid penalty order: Hadjar (back of grid), Norris (10 places), and Stroll (penalty) \u2014 final starting positions affect overtake scoring calculations.",
+    "Aston Martin upgrades confirmed for Hungary (next race), NOT Spa \u2014 factor into multi-race planning."
   ],
-  "arc": "Belgium sets up a critical transition into Hungary. Aston Martin are bringing upgrades to the Hungaroring, potentially making Alonso and Stroll viable budget assets for the first time. Teams should prioritize budget building this week through Lindblad, Colapinto, and Bortoleto price rises while capturing Hajar's massive one-off scoring opportunity. The Red Bull constructor case strengthens if Verstappen maintains front-row form and Hajar delivers from the back. Hungary is a tighter, Monaco-style circuit where overtaking is harder, so the grid-penalty bonanza at Spa is a unique opportunity \u2014 capture the points now and pivot to a more qualifying-focused strategy for the Hungaroring. Hold Final Fix and Wildcard chips for future deployment when the value equation is clearer.",
+  "arc": "Spa is the final race before Hungary, which is shaping up as a major inflection point. Aston Martin are bringing upgrades to the Hungaroring (where they were 3rd-best team in 2025), potentially making Alonso/Stroll viable again. Multiple channels note that the transition to 4A lineups (4 premium drivers) is approaching but not yet optimal \u2014 F1 Fantasy Tools sims suggest holding off one more week. Hungary is also a track where Verstappen historically excels, and the overtaking dynamics with new 2026 regs are unknown, making it a potential shake-up. For now, the strategy is to maximize budget building at Spa through Hadjar's penalty-fueled scoring and cheap B-tier price rises (Lindblad, Bortoleto, Colapinto all needing ~1 point for max rises), then reassess the meta for Hungary with upgraded Aston Martin data and clearer constructor pecking order.",
   "sources": [
     {
       "channel": "ZachGP",
-      "title": "F1 FANTASY POST FP2 FINAL THOUGHTS - BELGIUM 2026",
-      "url": "https://www.youtube.com/watch?v=wO7ozR2z6fA"
+      "title": "BEST TEAMS F1 FANTASY - HUNGARY 2026",
+      "url": "https://www.youtube.com/watch?v=qMJLS78qxlU"
     },
     {
       "channel": "FanAmp",
-      "title": "F1 Fantasy: Final Thoughts for the Belgian GP 2026 | The Fantasy Formula",
+      "title": "Lando's Penalty: Boost or Bail? | Belgian GP Final Thoughts | F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=KtPUF6KeWjo"
     },
     {
@@ -173,6 +185,11 @@
     },
     {
       "channel": "F1FantasyPolePosition",
+      "title": "\ud83e\udde0 BELGIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
+      "url": "https://www.youtube.com/watch?v=VCdHfmcP6Ig"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
       "title": "\ud83c\udfaf MY F1 FANTASY BELGIAN GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
       "url": "https://www.youtube.com/watch?v=0WzEMCQSgzI"
     },
@@ -180,12 +197,7 @@
       "channel": "F1FantasyPolePosition",
       "title": "\ud83c\udde7\ud83c\uddea MY F1 FANTASY BELGIAN GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\udde7\ud83c\uddea",
       "url": "https://www.youtube.com/watch?v=fNomdTgmyWo"
-    },
-    {
-      "channel": "F1FantasyPolePosition",
-      "title": "\ud83d\udc40 MY F1 FANTASY REACTIONS TO BELGIAN GP PRACTICE | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83d\udc40",
-      "url": "https://www.youtube.com/watch?v=VCdHfmcP6Ig"
     }
   ],
-  "_source_hash": "5d915b2864b170b47ae47268cccd0c0360ee5272e00ae0253a39c6ae69c1c725"
+  "_source_hash": "1abb1718525fb5f0b803068b0e68df4ec8cce0bda4a07fcb80d4bc1c43b47c58"
 }
