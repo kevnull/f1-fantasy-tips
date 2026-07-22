@@ -12,8 +12,10 @@ on:
     branches: [main]
     paths:
       - "data/strategy.json"
+      - "data/archive/**"
       - "src/render.py"
       - "src/main.py"
+      - "src/archive.py"
       - ".github/workflows/generate.yml"
   workflow_dispatch:
   schedule:
