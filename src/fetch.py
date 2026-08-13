@@ -20,6 +20,8 @@ CHANNELS = [
     {"name": "ReinFantasy",          "url": "https://www.youtube.com/@ReinFantasy/videos"},
     {"name": "FormulaFantasyHub",    "url": "https://www.youtube.com/@formulafantasyhub/videos"},
     {"name": "F1FantasyPolePosition","url": "https://www.youtube.com/@f1fantasypoleposition/videos"},
+    {"name": "LF1FantasyStrategy",   "url": "https://www.youtube.com/@LF1FantasyStrategy/videos"},
+    {"name": "BoxBoxF1Fantasy",      "url": "https://www.youtube.com/@BoxBoxF1Fantasy/videos"},
 ]
 
 YTDLP = os.environ.get("YTDLP_PATH", "yt-dlp")
@@ -133,7 +135,7 @@ def fetch_transcripts(race_name: str, output_dir: str = "transcripts") -> list[d
 
         # Score and pick best match; for F1FantasyPolePosition grab top 3 (they post multiple per race)
         scored = sorted(videos, key=lambda v: score_video(v["title"], race_name), reverse=True)
-        top_n = 3 if channel["name"] == "F1FantasyPolePosition" else 1
+        top_n = 3 if channel["name"] in ("F1FantasyPolePosition", "BoxBoxF1Fantasy") else 1
         picks = [v for v in scored if score_video(v["title"], race_name) > 0][:top_n]
 
         # Fall back to most recent if no race-specific match
