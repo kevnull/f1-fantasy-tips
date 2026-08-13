@@ -22,6 +22,7 @@ from fetch import fetch_transcripts
 from synthesize import synthesize
 from render import render
 from archive import save as save_archive, render_all as render_archive_all
+from boxbox import fetch_boxbox_source
 
 TRANSCRIPT_DIR = "transcripts"
 STRATEGY_CACHE = "data/strategy.json"
@@ -121,6 +122,12 @@ def main():
     if not transcripts:
         print("[error] No transcripts fetched. Exiting.")
         sys.exit(1)
+
+    # Append BoxBoxF1Fantasy ML predictions as an additional structured source.
+    # Failure is non-fatal — ML source is a bonus, not a dependency.
+    bb = fetch_boxbox_source(args.race)
+    if bb:
+        transcripts.append(bb)
 
     # Step 2: Synthesize (skip if source hash matches cached strategy)
     source_hash = _hash_sources(transcripts, args.race)

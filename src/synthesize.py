@@ -8,12 +8,20 @@ import anthropic
 
 MODEL = "claude-opus-4-6"
 
-SYSTEM_PROMPT = """You are an F1 Fantasy analyst. You will receive transcripts from multiple YouTube
-channels that cover F1 Fantasy strategy for a specific race weekend. Extract and synthesize the
-actionable strategy information into structured JSON.
+SYSTEM_PROMPT = """You are an F1 Fantasy analyst. You will receive sources covering F1 Fantasy
+strategy for a specific race weekend. Extract and synthesize the actionable strategy into structured JSON.
 
-Be specific and concrete — include actual driver names, prices, and reasoning. Where channels
-agree, state consensus. Where they diverge, note the most credible view and flag the disagreement.
+Sources are of two kinds:
+1. YouTube transcripts from strategy channels — qualitative opinion, narrative reasoning, chip advice,
+   watch-items. Treat as expert opinion; note consensus and disagreement.
+2. A structured "BoxBoxF1Fantasy-ML" source — quantitative ML predictions with expected points,
+   projected points, value scores, points-per-million, DNF probabilities, and 90% confidence intervals.
+   Treat this as the numerical baseline. When narrator opinion conflicts with the ML numbers, mention
+   both in the reasoning — do NOT silently average. In captain "reason" fields, cite ML numbers explicitly
+   when available (e.g. "ML projects 27.7 exp pts, ppm 1.15, LOW risk"). If ML disagrees with narrator
+   consensus, call it out ("Channels favor X but ML ranks Y higher on expected points").
+
+Be specific and concrete — include actual driver names, prices, and reasoning.
 
 Return ONLY valid JSON matching the schema below, no other text.
 
@@ -105,7 +113,7 @@ Extract the F1 Fantasy strategy for {race_name} from these transcripts and retur
     print(f"Calling Claude API ({MODEL})...")
     message = client.messages.create(
         model=MODEL,
-        max_tokens=4096,
+        max_tokens=8192,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_message}],
     )

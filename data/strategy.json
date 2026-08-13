@@ -3,33 +3,27 @@
   "round": 14,
   "season": 2026,
   "sprint": true,
-  "deadline": "Saturday morning before sprint race \u2014 12:00 PM local / 11:00 AM UK / 6:00 AM US Eastern",
-  "central_unknown": "How much pace Aston Martin's massive upgrade package (chassis from Hungary + Honda engine upgrade at Zandvoort) delivers, and whether their improved form is sustainable enough to make Alonso/Stroll viable budget picks over traditional B-tier options like Racing Bulls and Audi drivers.",
+  "deadline": "August 23",
+  "central_unknown": "Can Aston Martin's massive upgrade package (chassis from Hungary + Honda engine upgrade at Zandvoort) vault them into consistent midfield points, and will Mercedes maintain dominance at a circuit that historically suits them, or can McLaren's upgraded package challenge them?",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Ferrari (4A if budget allows, otherwise 3A + Hadjar)",
+    "name": "Antonelli x2 + Mercedes + Ferrari",
     "budget_tiers": [
       {
-        "budget": "~127.8M",
-        "core": "Antonelli x2, Leclerc, Mercedes, Ferrari, one price-floor driver",
-        "fills": "Hulkenberg or Stroll at price floor",
+        "budget": "~125-128M",
+        "core": "Antonelli (2x), Hamilton/Leclerc, Hadjar, Mercedes, Ferrari",
+        "fills": "One or two of Lindblad/Bortoleto/Lawson + one price-floor (Hulkenberg/Stroll)",
         "optimal": true
       },
       {
-        "budget": "~123M",
-        "core": "Antonelli x2, Leclerc, Mercedes, Ferrari, two price-floor drivers",
-        "fills": "Hulkenberg + Bottas/Stroll at price floor",
+        "budget": "~118-122M",
+        "core": "Antonelli (2x), Hadjar, Mercedes, Ferrari",
+        "fills": "Lindblad + Bortoleto/Lawson + Hulkenberg/Stroll",
         "optimal": false
       },
       {
-        "budget": "~118-121M",
-        "core": "Antonelli x2, Hadjar, Mercedes, Ferrari",
-        "fills": "Bortoleto/Lindblad/Lawson + Hulkenberg",
-        "optimal": false
-      },
-      {
-        "budget": "~114-118M",
-        "core": "Antonelli x2 or Hamilton x2, Hadjar, Mercedes, Ferrari",
-        "fills": "Lindblad + Hulkenberg or Bortoleto + price-floor driver",
+        "budget": "~114-117M",
+        "core": "Antonelli (2x), Hadjar, Mercedes, Ferrari",
+        "fills": "Two price-floor drivers (Hulkenberg + Bottas/Stroll) + one mid-tier budget builder",
         "optimal": false
       }
     ]
@@ -39,19 +33,19 @@
       "label": "Primary",
       "name": "Kimi Antonelli",
       "acronym": "ANT",
-      "price": "~24.5M",
+      "price": "~25.7M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Consensus top 2x pick across all channels. Dominant 2026 form, consistently delivers from any grid position, and sprint weekends amplify his scoring ceiling. Won recent races and podiumed even when starting P7 with a grid penalty in Hungary."
+      "reason": "Unanimous consensus across all channels. ML projects 27.7 exp pts, ppm 1.15, LOW risk, predicted P1 quali \u2192 P1 finish, 90% CI [-2.0, 55.0]. Despite a quiet Hungary FP2 (no flying lap on softs), every narrator still ranks him #1 captain. Sprint weekend amplifies his upside. Antonelli has been 'on another level' per FormulaFantasyHub \u2014 winning or podiuming from any grid slot. ZachGP has him as top-2 captain, FanAmp refuses to move 2x off him, ReinFantasy maintains Antonelli-Hadjar core."
     },
     {
       "label": "Differential",
       "name": "Lewis Hamilton",
       "acronym": "HAM",
-      "price": "~21.5M",
+      "price": "~24.9M",
       "team": "Ferrari",
-      "team_colour": "E80020",
-      "reason": "ZachGP's top 2x pick at Hungary citing strong circuit form and 2026 revival. If Ferrari look dominant in FP1/FP3 at Zandvoort and Mercedes struggle, Hamilton could outscore Antonelli. Has risen in price every week since Canadian GP. Budget-friendlier than Antonelli for 4A builds."
+      "team_colour": "E8002D",
+      "reason": "ML projects 26.3 exp pts, ppm 1.07, LOW risk, predicted P4\u2192P3, 90% CI [-3.5, 55.0]. ZachGP's #1 pick for 2x at Hungary citing Hamilton's form in 2026 and Ferrari's strong showing. Ferrari looked dominant in Hungary FP sessions. Hamilton has risen in price every week since Canadian GP per F1FantasyPolePosition. Only 1.4 fewer expected points than Antonelli per ML \u2014 viable differential if you believe Ferrari's cornering advantage carries to Zandvoort. Channels note Ferrari 1-2 in FP2 Hungary."
     }
   ],
   "btier": {
@@ -60,105 +54,117 @@
         "name": "Isack Hadjar",
         "acronym": "HAD",
         "price": "~14.5M",
-        "team_colour": "3671C6",
-        "note": "Consensus must-own for non-4A builds. Quasi-A-tier driver at B-tier price. Guaranteed price rise unless DNF. Podiumed at Zandvoort in 2025. BUT: his big 38-point score drops off 3-race average after Zandvoort, so likely last week to hold before Monza becomes difficult for price rises."
+        "team_colour": "6692FF",
+        "note": "ML projects 10.4 exp pts, ppm 1.75 (highest among all drivers), MEDIUM risk. Every channel calls him a must-hold \u2014 pseudo-A-tier driver at B-tier price. Guaranteed price rise unless DNF per ReinFantasy. However, F1FantasyPolePosition warns his 38-pt score falls off rolling average after Zandvoort, making this likely the last week to hold before needing huge scores. Podium at Zandvoort in 2025."
       },
       {
         "name": "Fernando Alonso",
         "acronym": "ALO",
         "price": "~5.6M",
         "team_colour": "229971",
-        "note": "Aston Martin upgrade package showing real gains \u2014 qualified Q2 for first time in 2026 at Hungary, scored max price rise. Only needs 2-8 points for price rise at Zandvoort. Engine upgrade from Honda also arriving. Ground-floor budget opportunity if AM has genuinely jumped Haas/Williams/Cadillac."
-      },
-      {
-        "name": "Lance Stroll",
-        "acronym": "STR",
-        "price": "~5.5M (near price floor)",
-        "team_colour": "229971",
-        "note": "Massive swing outcomes but huge upside \u2014 scored 15-16 points at Hungary qualifying P20 and finishing P13 (F1 Fantasy gold). Needs -11 for min price rise, -9 for max after Zandvoort. High-risk high-reward differential; F1FantasyPolePosition is backing him."
+        "note": "Aston Martin's 16-part upgrade showed real pace in Hungary (Q2 for first time this season, P14 race). Needs only 2 pts for min price rise, 8 for max. Honda engine upgrade expected at Zandvoort per F1FantasyPolePosition. Very low ownership (1.8% top 500) \u2014 ground floor differential. Sprint weekend means more points available."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
-        "price": "~3.0M (price floor)",
+        "price": "~3.0M",
         "team_colour": "52E252",
-        "note": "Cannot drop further in price. His poor Silverstone score drops off 3-race average after this race, putting him in strong position for price gain at Zandvoort/Monza. Audi showing improved pace. Safe floor pick when you need budget."
+        "note": "Price floor \u2014 cannot lose value. ZachGP upgraded him to a hold; FanAmp notes his Silverstone score drops off rolling average after this race, putting him in strong position for price gain. ML data not in top 8 but channels consistently recommend as safe budget filler. Audi showed pace in Hungary per ZachGP."
+      },
+      {
+        "name": "Lance Stroll",
+        "acronym": "STR",
+        "price": "~3.0M",
+        "team_colour": "229971",
+        "note": "Price floor with massive swing potential per F1FantasyPolePosition. Scored 15-16 pts in Hungary (Q20\u2192P13 \u2014 'F1 Fantasy gold'). If he scores just 5 pts at Zandvoort, he's set for a massive price rise at Monza. Aston Martin upgrade + Honda engine update at Zandvoort. High variance pick \u2014 could DNF or could score 20."
       },
       {
         "name": "Gabriel Bortoleto",
         "acronym": "BOR",
         "price": "~8.5M",
         "team_colour": "52E252",
-        "note": "Rising every single week since Canadian GP. Audi closing on Racing Bulls as top midfield team. Needs 4-10 points for price rise. Good sprint weekend scorer historically."
+        "note": "One of only two drivers to rise every week since Canadian GP (alongside Hamilton). Scored 10 pts in Hungary exceeding expectations. Audi getting closer to Racing Bulls pace per FormulaFantasyHub. Needs 4-10 pts for price rise."
       }
     ],
     "consider": [
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
-        "price": "~9.5M",
+        "price": "~8.8M",
         "team_colour": "6692FF",
-        "note": "Racing Bulls have strong overall midfield form. Good budget gains but his big scores may also start dropping off rolling average. ZachGP ranks him top B-tier pick."
+        "note": "Racing Bulls form strong overall. ZachGP rates him best B-tier option for form. Good budget game with easy price rise thresholds. Slight concern that sprint weekends can be volatile for midfielders."
+      },
+      {
+        "name": "Liam Lawson",
+        "acronym": "LAW",
+        "price": "~10.0M",
+        "team_colour": "6692FF",
+        "note": "FanAmp bumped him back to buy category after Hungary. However, F1FantasyPolePosition warns his big British GP score drops off rolling average after Zandvoort, needing 15-24 pts for price rise at Monza. Potential sell candidate after this race."
       },
       {
         "name": "Oliver Bearman",
         "acronym": "BEA",
         "price": "~7.6M",
         "team_colour": "B6BABD",
-        "note": "Reliable Haas option, could be decent sprint weekend hold. BUT F1FantasyPolePosition flags growing frustration and Haas now potentially behind Aston Martin in pecking order. Needs 10-17 points for price rise \u2014 tough at a low-overtake circuit."
+        "note": "Safe reliability pick per ZachGP. F1FantasyPolePosition notes frustration growing and car falling behind Aston Martin's upgrade. Could be good hold for sprint weekend (15.8 avg sprint pts) but trending downward over last 5 races."
       },
       {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
-        "price": "~10.3M",
-        "team_colour": "6692FF",
-        "note": "FanAmp bumped him back to buy category after Hungary. But his big British GP score drops off after Zandvoort making future price rises very difficult (needs 15-24 points). May be time to sell after this race."
+        "name": "Franco Colapinto",
+        "acronym": "COL",
+        "price": "~11.5M",
+        "team_colour": "FF87BC",
+        "note": "Good budget builder but ZachGP got 'shaky on him' after Hungary crash. Getting expensive \u2014 may be time to sell per BoxBoxF1Fantasy. Low-overtake circuits hurt midfield scorers."
       }
     ],
     "avoid": [
-      "Alex Albon \u2014 Williams going nowhere, worse quali/race averages over last 5 races, -2 points per race on sprint weekends, 3 sprint weekend DNFs. Albon himself admitted Williams' Baku update won't match Aston Martin's.",
-      "Sergio Perez \u2014 Keeps dropping in price (4.4M), had DNF at Belgium, unreliable.",
-      "Franco Colapinto \u2014 Crash concerns flagged by ZachGP, would need 15-25 points for price rise after Zandvoort making him a sell candidate.",
-      "Valtteri Bottas \u2014 At price floor but terrible reliability track record, multiple large negative scores."
+      "Sergio Perez \u2014 price keeps dropping (4.4M), DNFs, unreliable. Every channel says avoid.",
+      "Alex Albon \u2014 Williams going backwards. Albon himself admitted Aston Martin's upgrade far surpasses their upcoming Baku package. -2 avg pts on sprint weekends, 3 sprint weekend DNFs. F1FantasyPolePosition: 'just skip him entirely.'",
+      "Valtteri Bottas \u2014 price floor but horrendous reliability (-20, -18 scores). BoxBoxF1Fantasy warns against despite cheap price."
     ]
   },
   "chips": [
     {
       "name": "No Negative",
       "rec": "maybe",
-      "reason": "FanAmp strongly leans toward saving it for Zandvoort specifically \u2014 sprint weekends have produced the 4 highest-scoring weekends of 2026, and if weather turns wet (as in 2023's 243-overtake race), no negative protects against DNF chaos while capturing massive upside."
+      "reason": "FanAmp's top chip recommendation for Zandvoort \u2014 sprint weekends have produced the 4 highest scoring weekends of the season, and if weather turns wet (as in 2023's 243-overtake edition), no negative provides massive insurance. Multiple channels flag this as the ideal sprint-weekend chip."
     },
     {
       "name": "3x Boost",
       "rec": "use",
-      "reason": "Multiple channels recommend using 3x at Zandvoort. Triple points across a sprint weekend is too much upside to ignore. FanAmp and F1FantasyPolePosition both target this race. Best applied to Antonelli."
+      "reason": "Multiple channels (FanAmp, F1FantasyPolePosition) identify Zandvoort sprint weekend as prime 3x territory. Triple points across sprint + race on a top driver is 'too much upside to ignore' per FanAmp. ML projects Antonelli at 45.1 proj pts \u2014 tripling that ceiling is enormous."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "FanAmp recommends saving wildcard rather than burning it to force a 4A lineup. Better to plan transfers organically into 4A and preserve wildcard for a future emergency or optimal restructuring window."
+      "reason": "FanAmp leans toward saving wildcard and using No Negative at Zandvoort instead. FormulaFantasyHub used his at Hungary. If you haven't used it, save for restructuring into 4A lineup at Monza/Baku when more upgrade packages arrive. Only use if you're far from a competitive lineup and must completely rebuild."
     },
     {
       "name": "Final Fix",
       "rec": "save",
-      "reason": "FormulaFantasyHub's Hungary final fix (Antonelli\u2192Norris) only yielded 12-point delta. Consensus is final fix is best saved for 'break glass' emergencies, not speculative plays."
+      "reason": "FormulaFantasyHub's Hungary experience showed final fix is best as 'break glass emergency' \u2014 his Antonelli\u2192Norris final fix only gained 12 pts. Save for a clearer qualifying-to-race discrepancy later in season."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "No channel recommended Limitless for Zandvoort. Better saved for a race where you need maximum budget flexibility for a one-week rental strategy."
+      "reason": "No channel recommends Limitless here. Better saved for a standalone race weekend where budget constraints bite hardest and you can load up on premium drivers without sprint complications."
+    },
+    {
+      "name": "Autopilot",
+      "rec": "save",
+      "reason": "Consensus across channels: autopilot is the weakest chip. ReinFantasy calls it 'absolutely useless.' Save indefinitely or burn at a throwaway weekend."
     }
   ],
   "watch_items": [
-    "FP1 is the ONLY practice session before sprint qualifying \u2014 all team/driver decisions must be informed by this single session plus historical data",
-    "Aston Martin Honda engine upgrade arriving at Zandvoort on top of Hungary's chassis upgrade \u2014 watch Alonso/Stroll pace in FP1 closely",
-    "Hadjar's 38-point Belgium score drops off 3-race rolling average after Zandvoort \u2014 likely last week to hold him before price rise thresholds become prohibitive",
-    "McLaren upgraded floor from Hungary \u2014 monitor whether they can challenge Mercedes over race stints; if yes, McLaren constructor becomes viable over Mercedes",
-    "Weather at Zandvoort \u2014 historically capable of producing wet/mixed conditions (2023 had 243 overtakes in rain); check forecast before deadline as it changes chip strategy dramatically",
-    "Lawson's big British GP score dropping off rolling average makes him a sell candidate after this race \u2014 plan replacement",
-    "Sprint weekend deadline is Saturday morning \u2014 US-based players need early alarm (6 AM Eastern)"
+    "FP1 is the ONLY practice session before sprint qualifying \u2014 decisions must be made with minimal data. Watch Mercedes vs Ferrari vs McLaren pace hierarchy closely.",
+    "Aston Martin Honda engine upgrade debut at Zandvoort: if Alonso/Stroll show genuine midfield pace, they become elite value picks for the rest of the season.",
+    "Hadjar's 38-point score dropping off his 3-race rolling average after Zandvoort \u2014 likely last week to hold before selling.",
+    "McLaren's new floor upgrade performance: FanAmp asks 'can McLaren actually beat Mercedes over a full race stint?' If yes, McLaren constructor becomes viable over Mercedes.",
+    "Weather at Zandvoort \u2014 the 2023 rain edition produced 243 overtakes (vs typical 13th-worst for overtakes). Any rain forecast dramatically changes midfield driver value and No Negative chip calculus.",
+    "Sprint qualifying order will determine whether Antonelli 2x or a Ferrari driver 2x is optimal \u2014 limited time to react.",
+    "Liam Lawson's British GP big score falls off rolling average post-Zandvoort \u2014 evaluate whether to sell after this race.",
+    "Russell's MEDIUM risk flag from ML (DNF prob 0.18) \u2014 Mercedes constructor is top-ranked but Russell's reliability drags it compared to Ferrari's LOW risk rating."
   ],
-  "arc": "The Dutch GP is the final race before the calendar continues with Italy (Monza), making it a pivotal transition point. Sprint weekends have been the highest-scoring weekends of 2026, so chip deployment here (3x, no negative) carries outsized importance. Budget-wise, this is the last comfortable week to hold Hadjar before his price rise thresholds spike; after Zandvoort, teams should look to convert remaining B-tier value into full 4A lineups. Aston Martin's dual upgrade (chassis + engine) could reshape the midfield hierarchy \u2014 if Alonso and Stroll deliver at Zandvoort, they become the premier ground-floor budget assets for the second half of the season, potentially replacing Racing Bulls drivers whose price rise windows are closing. The key strategic tension is whether to go all-in on 4A now (Antonelli + Leclerc/Hamilton + two price-floor drivers) or hold Hadjar one more week for his near-guaranteed price rise and transition to 4A at Monza.",
+  "arc": "Zandvoort is the last sprint weekend before a run of standard-format races (Monza, Baku, Singapore). The summer break allows teams to bring major upgrades \u2014 Aston Martin's engine upgrade debuts here, and Williams targets Baku for their package. This creates a transitional period where current budget builders (Hadjar, Lawson, Colapinto) are approaching price ceilings and their big historical scores are dropping off rolling averages. The strategic play is to use Zandvoort's sprint weekend to maximize chip value (3x or No Negative), extract one final price rise from Hadjar, and position for a 4A lineup by Monza. Aston Martin's trajectory is the biggest wildcard: if the chassis + engine upgrades combine effectively, Alonso at ~5.6M and Stroll at 3.0M could become the budget-enabling foundation that allows premium 4A builds through the autumn flyaway races.",
   "sources": [
     {
       "channel": "ZachGP",
@@ -196,10 +202,30 @@
       "url": "https://www.youtube.com/watch?v=mPuUOT0FujU"
     },
     {
+      "channel": "LF1FantasyStrategy",
+      "title": "Japan GP F1 Fantasy FP2: Mercedes MUST-OWN? Transfers, Limitless & Team Picks",
+      "url": "https://www.youtube.com/watch?v=wy0AmlyWnUw"
+    },
+    {
       "channel": "BoxBoxF1Fantasy",
       "title": "Drivers to TRANSFER in and out + Why! - Belgian GP - 2026 F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=i8sMEiFZJog"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "Final Thoughts Post FP1 and SQ - British Grand Prix - 2026 F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=9WM_WJsmtog"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "F1 Fantasy Final THOUGHTS - Austrian Grand Prix - 2026 F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=EL7GTUId6mc"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy-ML",
+      "title": "BoxBoxF1Fantasy ML predictions \u2014 Dutch Grand Prix",
+      "url": "https://boxboxf1fantasy.com/picks/dutch-gp-2026/"
     }
   ],
-  "_source_hash": "5fbb32ab3316f5387aaaeb2cfad0e8ba101e1638aa7ed17ac47c803f87bb3ea3"
+  "_source_hash": "8a93eee885467f2b51b0d66a2ad9bd82d9202bf645b7aeca298f64bd5edd867b"
 }
