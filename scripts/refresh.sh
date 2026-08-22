@@ -20,29 +20,37 @@ echo "=== $(date '+%Y-%m-%d %H:%M:%S %Z') refresh starting ==="
 TMP_LOG="$(mktemp -t f1-refresh.XXXXXX)"
 trap 'rm -f "$TMP_LOG"' EXIT
 
-notify_success() {
+push_ntfy() {
+  # Push-only notification (no email — Gmail handles email separately).
   [[ -z "${NTFY_TOPIC:-}" ]] && return 0
-  local race="$1" summary_file="$2"
-  local subject="F1 Fantasy — ${race} updated"
-  local headers=(-H "Title: ${subject}" -H "Tags: checkered_flag" -H "Click: https://kevnull.github.io/f1-fantasy-tips/")
-  [[ -n "${NTFY_EMAIL:-}" ]] && headers+=(-H "Email: ${NTFY_EMAIL}")
-  curl -fsS --max-time 15 "${headers[@]}" \
-    --data-binary @"$summary_file" \
+  local title="$1" body="$2" tag="${3:-checkered_flag}"
+  curl -fsS --max-time 15 \
+    -H "Title: ${title}" \
+    -H "Tags: ${tag}" \
+    -H "Click: https://kevnull.github.io/f1-fantasy-tips/" \
+    --data-binary "${body}" \
     "https://ntfy.sh/${NTFY_TOPIC}" >/dev/null \
-    || echo "[warn] ntfy success notify failed"
+    || echo "[warn] ntfy push failed"
+}
+
+send_gmail() {
+  [[ -z "${GMAIL_FROM:-}" || -z "${GMAIL_APP_PASSWORD:-}" ]] && return 0
+  local subject="$1" body_file="$2"
+  .venv/bin/python scripts/send_email.py "${subject}" "${body_file}" \
+    || echo "[warn] Gmail send failed"
+}
+
+notify_success() {
+  local race="$1" summary_file="$2"
+  push_ntfy "F1 Fantasy — ${race} updated" \
+            "Tap for the full page. Details in your email." \
+            "checkered_flag"
+  send_gmail "F1 Fantasy — ${race} updated" "${summary_file}"
 }
 
 notify_failure() {
-  [[ -z "${NTFY_TOPIC:-}" ]] && return 0
   local race="${1:-refresh}" tail_text="$2"
-  local subject="F1 refresh FAILED — ${race}"
-  curl -fsS --max-time 15 \
-    -H "Title: ${subject}" \
-    -H "Tags: warning" \
-    -H "Click: https://kevnull.github.io/f1-fantasy-tips/" \
-    --data-binary "${tail_text}" \
-    "https://ntfy.sh/${NTFY_TOPIC}" >/dev/null \
-    || echo "[warn] ntfy failure notify failed"
+  push_ntfy "F1 refresh FAILED — ${race}" "${tail_text}" "warning"
 }
 
 # Run the whole pipeline, tee'ing to log so we can extract failure tails.
