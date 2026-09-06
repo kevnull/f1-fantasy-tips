@@ -3,27 +3,27 @@
   "round": 15,
   "season": 2026,
   "sprint": false,
-  "deadline": "September 5",
-  "central_unknown": "The size and impact of Kimi Antonelli's confirmed engine grid penalty at his home race \u2014 whether it's a 10-place or 20-place drop \u2014 will determine how many overtake points he can accumulate and whether the 3x chip should be deployed here or saved for Singapore.",
+  "deadline": "September 6",
+  "central_unknown": "Kimi Antonelli's ability to slice through the field from the back of the grid with a 20-place engine penalty \u2014 can he convert positions gained into a 40-75 point ceiling, or will traffic, damage, or tire strategy limit his upside?",
   "meta_template": {
-    "name": "Antonelli x2 + Ferrari + McLaren",
+    "name": "Antonelli 3x + Leclerc + Mercedes + Ferrari",
     "budget_tiers": [
       {
-        "budget": "~123-125M",
-        "core": "Antonelli (2x), Leclerc/Hamilton, Norris, Ferrari, McLaren",
-        "fills": "Hulkenberg, Stroll, Alonso from B-tier budget builders",
+        "budget": "~124-126M",
+        "core": "Antonelli (captain) + Leclerc + Mercedes + Ferrari",
+        "fills": "Alonso / Hulkenberg / Stroll / Albon for budget building",
         "optimal": true
       },
       {
         "budget": "~120-122M",
-        "core": "Antonelli (2x), Leclerc, Ferrari, McLaren",
-        "fills": "Hulkenberg, Stroll, Alonso/Pourchaire",
+        "core": "Antonelli (captain) + Norris/Hamilton + Mercedes/McLaren + Ferrari",
+        "fills": "Stroll / Pourchaire / Lindblad for budget floor",
         "optimal": false
       },
       {
-        "budget": "~126-128M",
-        "core": "Antonelli (2x), Norris, Hamilton, Ferrari, Mercedes",
-        "fills": "Stroll, Hulkenberg, Alonso",
+        "budget": "Limitless chip",
+        "core": "Antonelli + Russell + Hamilton + Leclerc + Norris + Mercedes + Ferrari",
+        "fills": "Triple Mercedes + Triple Ferrari + Norris for maximum ceiling",
         "optimal": false
       }
     ]
@@ -36,16 +36,16 @@
       "price": "~26.0M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "ML projects 29.4 exp pts (proj 40.6), ppm 1.32, LOW risk, DNF 0.07 \u2014 top-ranked driver by expected points. With a confirmed engine grid penalty at his home Italian GP, Antonelli will start well down the grid and carve through 12-15 cars for massive overtake points. Historical grid penalty data shows 35-77 fantasy points for top drivers starting from the back (Verstappen Belgium 2022-2024, Norris Belgium 2026). Italian driver at the Italian GP makes him a strong driver-of-the-day candidate. All channels unanimously agree Antonelli is the must-own 2x (or 3x) captain this weekend."
+      "reason": "ML projects 45.5 exp pts (50.9 projected), ppm 1.32, LOW risk, DNF 0.07. Starting from back with 20-place grid penalty \u2014 predicted to qualify P2 but finish P5, yielding massive positions-gained and overtake points. Historical precedent: Norris scored 40 pts from 10-place penalty at Spa, Hadjar 38 from 30-place, Verstappen 77 from 5-place at Interlagos. Italian driver at Italian GP is strong DOTD candidate. All channels unanimously agree Antonelli is the captain pick. 90% CI goes up to 72 pts. Best 3x chip target of the season if available."
     },
     {
       "label": "Differential",
-      "name": "Lando Norris",
-      "acronym": "NOR",
-      "price": "~26.4M",
-      "team": "McLaren",
-      "team_colour": "FF8000",
-      "reason": "ML projects 20.9 exp pts (proj 26.8), ppm 1.69, MEDIUM risk, DNF 0.15. Back-to-back race winner coming off victories in Hungary and Zandvoort. McLaren brought revised rear wing structures and have strong momentum. Monza is a low-downforce power circuit that historically suits McLaren (Norris won here in 2024). If Antonelli is starting from the back, Norris could inherit a front-row or pole position, maximizing his points ceiling. Channels like ZachGP and FormulaFantasyHub rank Norris as the top non-penalty captain option."
+      "name": "George Russell",
+      "acronym": "RUS",
+      "price": "~27.6M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "ML projects 27.1 exp pts, pred quali P1 \u2192 finish P1, MEDIUM risk, DNF 0.17. Topped FP2 and looked comfortable all weekend. May receive a tow from Antonelli in qualifying to push for pole. Only 3.8% ownership in global top 500 \u2014 massive differential if he wins. Channels note he is likely race winner but lacks DOTD upside compared to Antonelli. If Antonelli's penalty play fails, Russell is the safety valve (especially with Autopilot chip)."
     }
   ],
   "btier": {
@@ -55,116 +55,88 @@
         "acronym": "ALO",
         "price": "~6.8M",
         "team_colour": "229971",
-        "note": "Scored 24 pts at Zandvoort. Needs -15 for 0.2 rise, -9 for 0.6 rise \u2014 virtually guaranteed price increase. Honda PU upgrade showing results. Strong budget builder. Multiple channels call him a must-own B-tier asset."
+        "note": "Needs only -9 pts for max 0.6M price rise \u2014 virtually guaranteed if he finishes the race. Enables access to triple Mercedes or Mercedes+Ferrari premium builds. 28.5% of global top 500 own him. Aston Martin looked weak in FP2 (P19) but low threshold makes him a budget lock."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
-        "price": "~3.6M",
+        "price": "~6.6M",
         "team_colour": "52E252",
-        "note": "First price rise of the season at Zandvoort despite sprint DNF. Needs only -4 for 0.2 rise, -1 for 0.6 rise \u2014 can't lose value. Audi showed strong midfield pace. FormulaFantasyHub notes he's one of the strongest midfield cars right now."
-      },
-      {
-        "name": "Lance Stroll",
-        "acronym": "STR",
-        "price": "~3.0M",
-        "team_colour": "229971",
-        "note": "At price floor \u2014 zero downside risk. Still needs only 4/6 pts for min/max price rise despite Zandvoort DNF thanks to strong Hungary trailing average. Enables 4A builds at rock-bottom cost. Monza's low-downforce profile is a concern for Aston Martin but the price floor protects you."
+        "note": "Needs only -1 pt for max price rise. Near-automatic budget gain if he avoids DNF. High DNF history is a concern but threshold is so low it's hard to pass up."
       }
     ],
     "consider": [
       {
-        "name": "Charles Leclerc",
-        "acronym": "LEC",
-        "price": "~24.2M",
-        "team_colour": "E8002D",
-        "note": "ML projects 20.3 exp pts, ppm 1.50, pred P4\u2192P4. Ferrari's home race at Monza. Floor/diffuser upgrades from Zandvoort could suit this circuit. Cheaper than other A-tier drivers, enabling stronger B-tier fills. Channels split between Leclerc and Hamilton as the second A-tier driver."
+        "name": "Lance Stroll",
+        "acronym": "STR",
+        "price": "~5.5M",
+        "team_colour": "229971",
+        "note": "At price floor, needs 4 pts for min rise, 6 for max. Aston Martin weak at low-downforce Monza. Insurance of price floor means no downside risk, but 8 DNFs on the season is alarming."
       },
       {
-        "name": "Lewis Hamilton",
-        "acronym": "HAM",
-        "price": "~25.1M",
-        "team_colour": "E8002D",
-        "note": "ML projects 22.5 exp pts, ppm 0.93, LOW risk, DNF 0.05 \u2014 actually ranked #2 by expected points above Russell. Multiple channels note Hamilton showed stronger FP1 pace than Leclerc at Zandvoort. Could benefit from Antonelli's penalty pushing Mercedes into single-car strategy mode favoring Russell tow, but Hamilton may get the cleaner air."
-      },
-      {
-        "name": "Theo Pourchaire",
-        "acronym": "POU",
-        "price": "~3.3M",
-        "team_colour": "B6BABD",
-        "note": "Needs 7/14 pts for min/max price rise. Cheap enough to enable 4A builds. F1FantasyPolePosition lists him among the remaining budget builders."
+        "name": "Alex Albon",
+        "acronym": "ALB",
+        "price": "~5.2M",
+        "team_colour": "1868DB",
+        "note": "Also taking an engine penalty (starting behind Antonelli). Good Monza history (12, 6, 15 pts last 3 years). Needs 9 pts for min price rise, 13 for max. BoxBoxF1Fantasy switched Alonso to Albon on one team, citing higher scoring potential. Budget enabler for Russell+Antonelli builds."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
-        "price": "~4.5M",
+        "price": "~7.8M",
         "team_colour": "6692FF",
-        "note": "Needs 11 pts for min price rise. Alpine upgrades have closed the gap but Lindblad still competitive. Scored 12th at Zandvoort \u2014 struggled to make moves. Consider holding if already owned but don't buy fresh."
+        "note": "Racing Bulls car traditionally strong at Monza. Finished P7 in FP2. Good middle-ground option between budget builders and scorers. ML has Racing Bulls constructor at exp 23.3 pts with LOW risk."
       }
     ],
     "avoid": [
-      "Franco Colapinto \u2014 no budget increase potential, Cadillac well off the pace",
-      "Sergio Perez \u2014 expensive, unreliable, poor points-per-million",
-      "Esteban Ocon \u2014 Alpine improved but still not scoring enough to justify price",
-      "Carlos Sainz \u2014 ML pred P18, -1.5 pts expected, 13M price is dead weight",
-      "Alex Albon \u2014 Williams going backwards, 0.5 pts/race average, Albon himself said their update is worse than Aston Martin's",
-      "Ollie Bearman \u2014 Haas declining relative to midfield, frustration growing, car now inferior to Aston Martin and Audi",
-      "Max Verstappen \u2014 ML projects 15.3 exp pts but at 27.5M price, ppm 0.63, Red Bull nowhere near the front three teams"
+      "Isack Hadjar \u2014 injured wrist, confirmed out for Italian GP and Madrid, expected return at Baku",
+      "Liam Lawson (Racing Bulls asset) \u2014 wrong team asset, get him out if you still have him",
+      "Sergio Perez \u2014 reliability issues in FP1, poor overall performance",
+      "Valtteri Bottas \u2014 low ceiling, no budget value"
     ]
   },
   "chips": [
     {
       "name": "3x Boost",
+      "rec": "use",
+      "reason": "Highest-upside chip deployment of the season. Antonelli starting from back with 20-place penalty at his home GP. ML projects 45.5 exp pts with 90% CI up to 72 \u2014 with 3x that's a ceiling of ~216 pts from one driver. All channels unanimously recommend using 3x here if you still have it. BoxBoxF1Fantasy activated 3x on all teams except one. Historical precedent strongly supports grid-penalty captains producing massive scores."
+    },
+    {
+      "name": "Autopilot",
       "rec": "maybe",
-      "reason": "Strong case for Monza IF Antonelli takes a 20-place grid penalty \u2014 historical data shows 35-77 fantasy points for top drivers with grid penalties. FormulaFantasyHub and F1FantasyPolePosition both highlight this as a prime 3x opportunity. However, if it's only a 10-place penalty, the upside is reduced. The alternative is saving for Singapore (last sprint weekend) but multiple channels note Singapore is a low-overtaking street circuit making it less ideal. Consensus leans toward using 3x here on Antonelli if the penalty is 20+ places."
+      "reason": "FanAmp suggests pairing Autopilot with Antonelli as insurance \u2014 if Antonelli's race goes wrong (damage, traffic), the 2x boost automatically shifts to your next-best driver (Russell, Leclerc, Norris). Good hedge if you don't have the 3x chip. FanAmp notes it's a 'crapshoot chip' but the risk-reward profile is favorable this weekend."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "Best saved for a sprint weekend or a low-overtaking non-sprint circuit (Monaco profile). FanAmp recommended using Limitless at Zandvoort. If you still have it, Monza is a standard weekend without sprint scoring \u2014 not optimal. Consider Baku or Singapore instead."
-    },
-    {
-      "name": "No Negative",
-      "rec": "save",
-      "reason": "Monza historically has moderate DNF risk (9 DNFs over last 4 seasons) but weather looks dry. No major rain-related chaos expected. Save for a wet race weekend or higher-attrition venue."
+      "reason": "BoxBoxF1Fantasy ran the numbers: Limitless scores ~372 pts vs 3x chip scoring ~380 pts on his budget. The 3x chip actually outperforms Limitless this week due to Antonelli's extreme upside. If you must use Limitless, go triple Mercedes + triple Ferrari + Norris, but 3x is the better play. Save Limitless for a sprint weekend or more balanced field."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "Unless you need to completely restructure after buying temporary assets for Zandvoort (e.g., you bought Lawson's Red Bull asset and now need to sell), save the Wildcard for a bigger restructuring window later in the season."
+      "reason": "No channel recommends using Wildcard this week. Save for Baku where Williams upgrades arrive and Russell may take his engine penalty, creating a better restructuring opportunity."
     }
   ],
   "watch_items": [
-    "Exact size of Antonelli's engine grid penalty \u2014 10-place vs 20-place dramatically changes 3x chip calculus and his projected overtake points",
-    "Whether Mercedes use Antonelli as a qualifying tow for Russell since Antonelli's grid position won't matter \u2014 could boost Russell's qualifying position",
-    "Aston Martin performance at low-downforce Monza \u2014 Honda PU upgrade looked strong at high-downforce Zandvoort but Monza is the opposite extreme; Alonso and Stroll budget building potential could be at risk",
-    "McLaren reliability \u2014 Piastri DNF'd in Hungary, reliability concerns persist; ML gives Norris 0.15 DNF probability and Piastri 0.12",
-    "Hadjar's wrist recovery \u2014 rumored to return for Monza; if he doesn't, his asset remains inactive for another -20 points penalty",
-    "Russell's DNF risk \u2014 ML flags 0.17 DNF probability (MEDIUM risk) despite being projected P2; channels note Mercedes reliability has been strong but the number is notable",
-    "Ferrari floor/diffuser/lower beam wing upgrades from Zandvoort \u2014 their effectiveness at a power-dominant circuit like Monza could shift the constructor pecking order",
-    "FP1 and FP2 long-run pace data Friday \u2014 critical for confirming whether Ferrari or McLaren is the better second constructor alongside Mercedes"
+    "George Russell engine penalty \u2014 strong rumors he may also take a grid penalty at Monza; if confirmed, triple Mercedes becomes absolute must-have and both drivers become captain candidates",
+    "Ferrari upgraded ADUO engine \u2014 reported 10-15 extra horsepower, could cut Mercedes PU deficit in half; Leclerc looked P2 in FP2 and topped FP1",
+    "Aston Martin reliability at Monza \u2014 Alonso has 8 career DNFs at Monza including -15 pts last year; four straight-mode zones stress the PU; critical for budget builders relying on Alonso/Stroll finishing",
+    "Mercedes qualifying team game \u2014 Antonelli may give Russell a tow in Q3 since his own qualifying position is irrelevant with the penalty; could push Russell to pole",
+    "Alex Albon engine penalty \u2014 also starting from back, likely pushes Antonelli to P21 start instead of P22; monitor Albon's scoring potential if you need a cheap fill",
+    "Isack Hadjar return timeline \u2014 expected back at Baku after missing Italian GP and Madrid; wrist injury more serious than initially thought",
+    "FP3 and qualifying pace \u2014 Mercedes dominated FP1/FP2 but Ferrari upgrades looked legitimate; final qualifying order will determine positions-gained scoring for Antonelli"
   ],
-  "arc": "The Italian GP is the pivotal race for 3x chip deployment, with Antonelli's grid penalty creating a unique scoring opportunity that may not repeat until Singapore (which is a less favorable low-overtaking street circuit). After Monza, the calendar shifts to Madrid (unknown street circuit with uncertain overtaking characteristics), then Baku (one long straight but limited passing zones), then Singapore. Budget building is entering its final stretch \u2014 Alonso, Hulkenberg, and Stroll are approaching ceilings soon, so squeezing the last price rises out of them over the next 2-3 races is essential before pivoting to pure points maximization for the run-in. The 4A lineup structure (2 premium drivers, 2 premium constructors) is now firmly established as the meta, and Monza should confirm whether Ferrari+McLaren or Ferrari+Mercedes is the optimal constructor pairing going forward.",
+  "arc": "The Italian GP is the marquee 3x chip weekend of the 2026 season, driven entirely by Antonelli's engine penalty at his home race. After Monza, the calendar moves to Madrid (where Hadjar remains out and Lindblad could rise further) and then a week off before Baku \u2014 where Williams bring their season-defining upgrade, Russell is rumored to take his engine penalty, and Hadjar is expected to return. Managers should be thinking about rolling a transfer through Monza into Madrid if possible, and saving the Wildcard for the Baku restructuring window. Ferrari's ADUO engine upgrade could reshape the constructor meta if it closes the gap to Mercedes, making Ferrari assets increasingly attractive for the run into the Middle East races. Budget builders should target Alonso's easy price rise this week but be ready to pivot him out before Baku where Aston Martin's form may not hold on a street circuit.",
   "sources": [
     {
-      "channel": "ZachGP",
-      "title": "F1 FANTASY POST SPRINT QUALI FINAL THOUGHTS - NETHERLANDS 2026",
-      "url": "https://www.youtube.com/watch?v=d4WQupDCCwI"
-    },
-    {
       "channel": "FanAmp",
-      "title": "Hadjar Is OUT: Now What? | Dutch GP Final Thoughts | F1 Fantasy",
-      "url": "https://www.youtube.com/watch?v=uKTEZrd4PBI"
+      "title": "Playing Kimi From the Back \u2795 Ferrari's BIG Upgrades | Italian GP Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=vjdckPKLdDA"
     },
     {
-      "channel": "ReinFantasy",
-      "title": "HADJAR INJURED, TSUNODA TO RACE FOR VCARB | Dutch GP Team Selection | F1 Fantasy Tips 2026",
-      "url": "https://www.youtube.com/watch?v=MJeQRyXYGv8"
-    },
-    {
-      "channel": "FormulaFantasyHub",
-      "title": "ANTONELLI PENALTY = MUST OWN \ud83d\ude80 | TEAM SELECTION \u2013 ITALIAN GP \u2705 | F1 Fantasy 2026 Tips and Advice",
-      "url": "https://www.youtube.com/watch?v=tW5X1L8pZJs"
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83c\udfaf MY F1 FANTASY ITALIAN GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
+      "url": "https://www.youtube.com/watch?v=iXNMryEZjPY"
     },
     {
       "channel": "F1FantasyPolePosition",
@@ -173,23 +145,18 @@
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "\ud83e\udde0 DUTCH GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
-      "url": "https://www.youtube.com/watch?v=XU_f6L4uHTg"
-    },
-    {
-      "channel": "F1FantasyPolePosition",
-      "title": "\ud83c\udfaf MY F1 FANTASY DUTCH GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
-      "url": "https://www.youtube.com/watch?v=U1h6HVwWGO0"
+      "title": "\ud83d\udc40 ITALIAN GP F1 FANTASY PRACTICE REACTIONS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83d\udc40",
+      "url": "https://www.youtube.com/watch?v=3zq6j40pAuY"
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "4A Activated! Dutch Grand Prix Final Thoughts for F1 Fantasy",
-      "url": "https://www.youtube.com/watch?v=oTKy-073tFk"
+      "title": "GRANDE KIMI! Early Thoughts for the Monza Italian Grand Prix - 2026 F1 Fantasy Tips and Tricks",
+      "url": "https://www.youtube.com/watch?v=lx2neePNiEc"
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "Drivers to TRANSFER in and out + Why! - Belgian GP - 2026 F1 Fantasy",
-      "url": "https://www.youtube.com/watch?v=i8sMEiFZJog"
+      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy - 2026 F1 Fantasy Tips & Tricks",
+      "url": "https://www.youtube.com/watch?v=dSPcjpghfbs"
     },
     {
       "channel": "BoxBoxF1Fantasy-ML",
@@ -197,5 +164,5 @@
       "url": "https://boxboxf1fantasy.com/picks/italian-gp-2026/"
     }
   ],
-  "_source_hash": "9a2f3cde932eb98e71b8e03ef59ce3f9008216c80401407f98d4d4b9b850ac22"
+  "_source_hash": "c9a45b8718a62df6d46e6c1cc4e73c176459169358ea781d66ca88bae90eecf9"
 }
