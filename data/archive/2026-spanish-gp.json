@@ -3,27 +3,27 @@
   "round": 16,
   "season": 2026,
   "sprint": false,
-  "deadline": "September 13",
-  "central_unknown": "The Madring is a brand-new circuit with no historical data; 19 red flags during F3 testing suggest high DNF risk, but the severity of crashes and mechanical failures in F1 remains unclear until qualifying and the race itself.",
+  "deadline": "September 12",
+  "central_unknown": "The Madring is a brand-new circuit with no historical data; 19 red flags in the F3 test and multiple crashes in FP2/FP3 create extreme uncertainty around DNFs, safety cars, and whether any driver can avoid incident. Leclerc running an older power unit spec (est. -15 HP) adds further unpredictability to the Ferrari pecking order.",
   "meta_template": {
-    "name": "Antonelli x2 + Triple Mercedes + Ferrari",
+    "name": "Antonelli x2 + Triple Mercedes or Russell + McLaren hybrid",
     "budget_tiers": [
       {
         "budget": "~130M+",
-        "core": "Antonelli (2x), Russell, Norris/Hamilton, Mercedes, Ferrari",
-        "fills": "Hulkenberg, Perez, Albon/Lindblad",
+        "core": "Antonelli (x2), Russell, Norris/Hamilton, Mercedes constructor",
+        "fills": "Hulkenberg, Perez, Albon/Limblad + Ferrari or McLaren constructor",
         "optimal": true
       },
       {
-        "budget": "~120M",
-        "core": "Antonelli (2x), Hamilton or Norris, Mercedes, Ferrari",
-        "fills": "Hulkenberg, Perez, Lindblad/Borleto",
+        "budget": "~115-125M",
+        "core": "Antonelli (x2), Norris or Hamilton, Mercedes constructor",
+        "fills": "Hulkenberg, Perez, Limblad/Borletto + Ferrari constructor",
         "optimal": false
       },
       {
-        "budget": "~110M",
-        "core": "Antonelli (2x), Mercedes, Ferrari",
-        "fills": "Hulkenberg, Lawson, Lindblad, Perez",
+        "budget": "~105-115M",
+        "core": "Antonelli (x2), Hamilton, Ferrari constructor, Mercedes constructor",
+        "fills": "Hulkenberg, Perez, Borletto/Limblad",
         "optimal": false
       }
     ]
@@ -36,7 +36,7 @@
       "price": "~26.6M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Unanimous consensus across all channels as the set-and-forget 2x captain. ML projects 23.6 exp pts (proj 41.7 pts with 2x), ppm 2.07, LOW risk, DNF 0.05. Championship leader, topped FP2, Mercedes brought biggest upgrade package. Every narrator locks him in without hesitation."
+      "reason": "Universal consensus across all channels as the set-and-forget 2x captain. Topped FP2, 66-point championship lead, Mercedes brought biggest upgrade package. ML projects 23.6 exp pts for Baku (next race data available), ppm 2.07, LOW risk, DNF 0.05. Every narrator independently named him as the lock captain. Has scored 93 pts (Monza) recently and Mercedes are the dominant constructor."
     },
     {
       "label": "Differential",
@@ -45,7 +45,16 @@
       "price": "~27.8M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Russell topped FP1, has back-to-back podiums since summer break, and said Madrid could be one of his stronger races. ML projects 18.7 exp pts, ppm 1.1, MEDIUM risk. Only ~3.8% ownership in global top 500 makes him a strong differential. FanAmp and PolePosition both highlight him as premium alternative if budget allows."
+      "reason": "Back-to-back podiums since summer break, topped FP1, said in press conference Madrid suits him. Triple Mercedes build enables rolling transfers into Baku. ML projects 18.7 exp pts (Baku data), ppm 1.10, MEDIUM risk. FanAmp and FormulaFantasyHub both rank him as the #2 option behind Antonelli. Expensive but strong floor given Mercedes dominance."
+    },
+    {
+      "label": "Differential",
+      "name": "Lando Norris",
+      "acronym": "NOR",
+      "price": "~27.0M",
+      "team": "McLaren",
+      "team_colour": "FF8000",
+      "reason": "Track compared to Budapest and Zandvoort where Norris won this season. Betting lines still have him top-5 despite poor FP2 (gearbox issue). 1M cheaper than Russell. ML projects 16.4 exp pts (Baku), ppm 1.38, MEDIUM risk. Channels note McLaren underperformed in practice but expect Saturday/Sunday improvement. FanAmp specifically highlights Norris as the budget alternative to Russell."
     }
   ],
   "btier": {
@@ -55,94 +64,96 @@
         "acronym": "PER",
         "price": "~3.0M",
         "team_colour": "6692FF",
-        "note": "Price floor asset; needs only -12 pts for min price rise, -10 for max. Multiple channels (BoxBox, PolePosition) recommend swapping Stroll for Perez. Cadillac reliability showing slight improvement."
+        "note": "Price floor asset; needs only -12 pts for minimum price rise, -10 for max. BoxBox and PolePosition both explicitly recommend bringing Perez in over Stroll/Botas. Zero downside budget risk. First time channels are saying 'play Caddy'."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
         "price": "~5.5M",
         "team_colour": "52E252",
-        "note": "~98% owned in global top 500. Needs only -7/-3 for price rise thresholds. Easy hold, consistent budget builder averaging ~6 pts/race ex-DNF."
+        "note": "Easy hold, ~98% owned in top 500. Needs -7/-3 for price rise thresholds. Audi car showing consistent midfield pace. Scored 14 pts at Monza. Strong budget builder."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
         "price": "~8.0M",
         "team_colour": "6692FF",
-        "note": "Racing Bulls car consistently strong; multiple Q3 appearances. Needs only 4 pts for min price rise. Crashed in FP2 but was flying before that \u2014 monitor FP3/quali fitness reports. Good midfield upside pick per FanAmp and PolePosition."
+        "note": "Strong Q3 record this season, needs only 4 pts for min price rise. Racing Bulls looked competitive. Had FP2 crash (tire failure) but expected to be fine. Good midfield upside if he avoids walls. BoxBox sims project ~8 pts."
       }
     ],
     "consider": [
       {
-        "name": "Alexander Albon",
-        "acronym": "ALB",
-        "price": "~5.0M",
-        "team_colour": "1868DB",
-        "note": "Was a top budget builder but had a very poor FP3 (only 2 laps). BoxBox specifically warns to dump Albon after FP3 struggles. Williams using sessions partly for 2027 development. Monitor Saturday closely before locking in."
+        "name": "Lewis Hamilton",
+        "acronym": "HAM",
+        "price": "~24.9M",
+        "team_colour": "E8002D",
+        "note": "FanAmp prefers Hamilton over Leclerc due to newer power unit spec. However, crashed in FP3 \u2014 car damage creates uncertainty for qualifying. ML projects 16.7 exp pts (Baku data), LOW risk. 2.5M cheaper than Russell as a tier-A option. Monitor car repair status before deadline."
       },
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
         "price": "~15.1M",
         "team_colour": "3671C6",
-        "note": "Filling in for Hadjar at Red Bull again. ML projects 13.0 exp pts, value 0.86, LOW risk. FanAmp ranks him as great midfield upside. 37% odds of max price rise per budget builder."
+        "note": "Driving the Red Bull again with Hajar still injured. FanAmp lists him as midfield upside pick. ML projects 13.0 exp pts (Baku), value 0.86, LOW risk. Temporary asset \u2014 Hajar expected back for Baku. Needs 0/14 pts for min/max price rise."
       },
       {
-        "name": "Yuki Tsunoda",
-        "acronym": "TSU",
-        "price": "~7.0M",
-        "team_colour": "6692FF",
-        "note": "Back in Racing Bulls seat; FP1 issue sorted by FP2. FanAmp lists alongside Lawson and Lindblad as midfield upside plays."
+        "name": "Alexander Albon",
+        "acronym": "ALB",
+        "price": "~6.0M",
+        "team_colour": "1868DB",
+        "note": "Was a strong budget builder (+1.2M over 2 weeks) but had terrible FP3 \u2014 only 2 laps completed. BoxBox explicitly warns to dump Albon. Williams using sessions for 2027 development. Only hold if you trust recovery; needs just 2 pts for max price rise. High risk at this circuit."
       },
       {
-        "name": "Gabby Bortoleto",
+        "name": "Gabriele Borletto",
         "acronym": "BOR",
-        "price": "~4.5M",
+        "price": "~5.0M",
         "team_colour": "52E252",
-        "note": "Needs 5 pts for min price rise, 12 for max. Scored 14 pts at Monza. Good budget hold but PolePosition notes he may be hard to justify over Lindblad's higher ceiling."
+        "note": "Needs 5/12 pts for min/max price rise. Scored 14 pts at Monza. Audi improving. PolePosition considering him as a budget hold. Decent floor at new circuit where DNFs ahead gift positions."
       }
     ],
     "avoid": [
-      "Lance Stroll \u2014 Double DNF at Monza, Aston Martin Honda reliability crisis at power circuits, multiple channels calling for immediate transfer out. PolePosition: 'I can't do this anymore, Lance.'",
-      "Fernando Alonso \u2014 Budget builder data shows he won't be a good hold after Spanish GP. Aston Martin reliability concerns persist. DNF risk elevated at street-style circuits.",
-      "Oscar Piastri \u2014 FanAmp moved to sell category; hasn't shown expected pace in practice. ML projects 15.7 exp pts but channels note McLaren underperformance in FP1/FP2.",
-      "Charles Leclerc \u2014 Running older power unit spec (missing ~15hp from ADO2 upgrade damaged in Monza crash). FanAmp and ReinFantasy both recommend Hamilton over Leclerc if choosing one Ferrari driver. Vision concerns post-Monza crash add uncertainty.",
-      "Alex Albon (conditional) \u2014 Only if FP3 issues persist; BoxBox explicitly says dump him after 2-lap FP3."
+      "Lance Stroll \u2014 Double DNF at Monza, Honda reliability concerns amplified at high-strain Madring circuit. Multiple channels explicitly transferring him out. Aston Martin at highest mechanical risk.",
+      "Charles Leclerc \u2014 Running older power unit (~15 HP deficit), vision concerns post-Monza crash. FanAmp, ReinFantasy, and PolePosition all moving away. Ferrari practice pace likely inflated as seen at Monza.",
+      "Oscar Piastri \u2014 Hasn't shown expected pace in FP1/FP2. Behind Norris as the McLaren pick. Not worth the premium over cheaper alternatives.",
+      "Fernando Alonso \u2014 Double DNF at Monza, Honda reliability worst on grid. Points forecast shows he's a poor hold after Spanish GP. Transfer out candidate.",
+      "Valtteri Bottas \u2014 Bottom-barrel 3M asset that multiple channels are abandoning. PolePosition explicitly moving away from 3M assets after rank damage.",
+      "Alexander Albon \u2014 Only completed 2 laps in FP3, BoxBox says 'dump Albon'. Williams using sessions for 2027 development. Very risky hold at this circuit."
     ]
   },
   "chips": [
     {
       "name": "No Negative",
       "rec": "use",
-      "reason": "Near-unanimous recommendation across all channels. 19 red flags in F3 testing, Hamilton crashed in FP3, Lindblad crashed in FP2, drivers and team principals warn of high crash risk. BoxBox: 'If you have no negative activated, no questions asked, activate it.' FanAmp and FormulaFantasyHub also strongly advocate use. Even cautious Hamilton put it in the wall. DNF probabilities elevated across the grid per ML sims. Only reservation: saving for rain or Singapore sprint, but multiple channels argue this is the best opportunity."
+      "reason": "Strongest consensus across ALL channels. 19 red flags in F3 testing, Hamilton crashed in FP3, Limblad crash in FP2, Russell/Vowels quotes about danger. BoxBox says 'no questions asked, activate it.' FanAmp, FormulaFantasyHub, PolePosition, and ReinFantasy all seriously considering or recommending it. New circuit with walls everywhere, sustained G-forces threatening mechanical failures. Even cautious/reliable Hamilton put it in the wall. If you have this chip, this is arguably the best remaining opportunity outside of rain or Singapore sprint."
     },
     {
       "name": "Wildcard",
       "rec": "save",
-      "reason": "No channel recommends using Wildcard here. Better saved for Baku or a race with Russell's expected engine penalty, allowing major team restructure."
+      "reason": "No channel recommends using Wildcard here. Save for the upcoming triple-header block (Baku-Malaysia-Singapore) where flexibility will be crucial."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "No channel recommends Limitless for the Spanish GP. Most players have already used it. Save for a clearer high-scoring opportunity."
+      "reason": "Not a sprint weekend and no clear ceiling-raising scenario. Save for a sprint weekend or a race with more predictable high-scoring conditions."
     },
     {
       "name": "3x Captain",
       "rec": "save",
-      "reason": "Most top players already used 3x at Monza/Zandvoort. If you still have it, the high DNF risk at Madring makes it risky to deploy here despite Antonelli's dominance. ReinFantasy notes the grindy phase of the season is here \u2014 save for a safer circuit."
+      "reason": "Most channels have already used their 3x (Monza/Zandvoort). If you still have it, the unpredictability of a new circuit makes it risky to deploy. Save for a more predictable Antonelli domination weekend."
     }
   ],
   "watch_items": [
-    "Charles Leclerc fitness: Ferrari assessing after FP1 \u2014 vision issues post-Monza crash. If Leclerc is replaced by Antonio Giovinazzi, Ferrari becomes a clear avoid and McLaren/Red Bull stock rises.",
-    "Leclerc power unit: Running older spec without ADO2 upgrade (~15hp deficit). Monitor if any grid penalty materializes despite Ferrari's denials.",
-    "Lando Norris gearbox: Had gearbox replaced in FP2. McLaren expected to use old parts Saturday but monitor for any penalty or reliability concerns.",
-    "Alex Albon FP3 disaster: Only completed 2 laps. Assess qualifying performance before locking him in \u2014 may need emergency swap to Perez.",
-    "Lewis Hamilton FP3 crash: Put car in the wall. Monitor if car is repaired in time for qualifying; if he misses quali, his points ceiling drops dramatically.",
-    "F2/F3 sprint races Saturday morning: FanAmp using these as a litmus test for No Negative chip decision \u2014 if more carnage, confirms chip usage.",
-    "McLaren race pace vs practice: Multiple channels note McLaren looked slow in FP1/FP2 but betting lines and track comparisons (Budapest, Zandvoort, Jeddah) favor them. Watch FP3 and qualifying for true pace.",
-    "Red flag frequency: Track characteristics (walls, high-speed corners, 22 turns) suggest qualifying and race could see multiple red flags affecting points via safety cars and position shuffles."
+    "Hamilton car repair status after FP3 crash \u2014 may affect qualifying participation and starting position",
+    "Leclerc physical condition (vision issues post-Monza crash) \u2014 Ferrari reassessing after FP1, Giovinazzi on standby",
+    "Leclerc older power unit (-15 HP estimated) \u2014 confirmed running non-upgraded spec due to Monza crash damage",
+    "Hajar injury status \u2014 expected back for Baku but no official confirmation yet; impacts Lawson/Tsunoda positioning",
+    "F2/F3 sprint races Saturday morning \u2014 key indicator for No Negative chip decision if still undecided",
+    "McLaren FP3 pace \u2014 channels expect significant improvement from poor FP2 showing (Norris gearbox replacement)",
+    "Albon status after limited FP3 running \u2014 only 2 laps completed, Williams may be using sessions for 2027 development",
+    "Safety car/red flag frequency \u2014 James Vowels warned about sustained G-forces and car system failures at this circuit",
+    "Pit lane incidents \u2014 550m pit lane with 100m building in middle and a braking zone; potential for pit lane crashes"
   ],
-  "arc": "The Spanish GP at the Madring is a high-variance, high-risk round that rewards insurance chips like No Negative. With Hadjar expected back for Baku (Round 17), Lawson returns to Racing Bulls and team compositions will shift. George Russell is rumored to take an engine penalty at Baku, which could mirror Antonelli's Monza back-of-grid-to-win scenario and be a 3x opportunity. Williams are bringing a major season-defining upgrade for Baku that could elevate Albon's ceiling. Budget building is becoming increasingly difficult as the season enters its grind phase \u2014 most top players have used their high-value chips, so consistent weekly optimization matters more than chip-driven rank swings. The Madring's chaos should be treated as a points-protection weekend (No Negative) rather than a ceiling-chasing one, with Baku offering a cleaner high-upside target.",
+  "arc": "The Spanish GP at the Madring is a high-variance minefield that sets up a crucial transition into the final third of the season. With the triple-header block of Baku, Malaysia/Bahrain, and Singapore approaching immediately after, this weekend is about capital preservation and smart budget building rather than aggressive point maximization. Channels universally recommend using No Negative here to protect against the inevitable chaos, while banking transfers for Baku where the Thursday-Friday-Saturday schedule creates a tight deadline. Key portfolio decisions center on exiting Leclerc/Stroll/Aston Martin exposure before the power-circuit demands of Baku, pivoting toward McLaren (who historically perform well at street circuits) and locking in Perez at the price floor. The Williams upgrade package expected for Baku could make Albon a valuable hold if he survives Madrid, and Hajar's return would necessitate Lawson/Tsunoda transfers. The drivers' championship gap (Antonelli +66 over Russell) makes the Mercedes captain choice stable through the rest of the season, allowing managers to focus tactical energy on tier-B optimization during the grueling nine-race run-in.",
   "sources": [
     {
       "channel": "ZachGP",
@@ -176,8 +187,8 @@
     },
     {
       "channel": "F1FantasyPolePosition",
-      "title": "ITALIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy",
-      "url": "https://www.youtube.com/watch?v=3zq6j40pAuY"
+      "title": "MY F1 FANTASY AZERBAIJAN GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy",
+      "url": "https://www.youtube.com/watch?v=2OQ45K0mY5I"
     },
     {
       "channel": "LF1FantasyStrategy",
@@ -186,7 +197,7 @@
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "USE NO NEGATIVE- Madness in the Madring - Spanish Grand Prix Final Thoughts for F1 Fantasy",
+      "title": "USE NO NEGATIVE- Madness in the Madring - Spanish Grand Prix Early Thoughts for F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=ZLRC1DaREa4"
     },
     {
@@ -205,5 +216,5 @@
       "url": "https://boxboxf1fantasy.com/picks/azerbaijan-gp-2026/"
     }
   ],
-  "_source_hash": "b1bd20ee90b8f7237a4d7027cfd994ec6668ff2c36ac8284a6a830554ffcc9af"
+  "_source_hash": "30c480852704ad6c2aaf2089300fd4abd6780a54115745335e4ba5a510bad7d4"
 }
