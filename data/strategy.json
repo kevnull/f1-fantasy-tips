@@ -3,27 +3,27 @@
   "round": 17,
   "season": 2026,
   "sprint": false,
-  "deadline": "Friday September 26 (1:00 PM UK / 8:00 AM US Eastern \u2014 qualifying day, NOT Saturday)",
-  "central_unknown": "Whether Ferrari will take Charles Leclerc's engine penalty at Baku remains unconfirmed after FP1/FP2; if taken, he'd start ~P20 (behind two Aston Martin penalty-takers), dramatically changing his overtake ceiling and fantasy ceiling. Additionally, Lawson's return to Racing Bulls creates pricing algorithm uncertainty.",
+  "deadline": "September 26 (Friday, 1:00 PM UK / 8:00 AM US Eastern \u2014 qualifying day, NOT Saturday)",
+  "central_unknown": "Whether Ferrari will take Charles Leclerc's engine penalty at Baku remains unconfirmed after FP1/FP2. If he takes it, he becomes a massive overtake-points play starting from ~P18-P20; if not, his fantasy ceiling is significantly lower. Additionally, Lawson's return to Racing Bulls creates pricing algorithm uncertainty.",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + McLaren/Ferrari",
+    "name": "3A / 3.5A \u2014 Escape $3M assets, load up on quality B-tier",
     "budget_tiers": [
       {
-        "budget": "~107-110M",
-        "core": "Antonelli (C) + Russell/Norris + Mercedes + McLaren or Ferrari constructor",
-        "fills": "Albon, Colapinto, or Hulkenberg as B-tier; avoid $3M price-floor assets",
+        "budget": "~107M",
+        "core": "Antonelli x2 + Mercedes + McLaren, plus one of Russell/Norris/Leclerc",
+        "fills": "Albon, Colapinto, Hulkenberg, or Lindblad as B-tier picks",
         "optimal": true
       },
       {
-        "budget": "~100-105M",
-        "core": "Antonelli (C) + Leclerc + Mercedes + Ferrari constructor",
-        "fills": "Albon + Hulkenberg/Colapinto; budget freed from dropping to 3A/3.5A to get better B-tier drivers",
+        "budget": "~103M",
+        "core": "Antonelli x2 + Mercedes + Ferrari, plus Leclerc (if penalty) or Russell",
+        "fills": "Hulkenberg, Albon, Bearman as budget options",
         "optimal": false
       },
       {
-        "budget": "~95-100M",
-        "core": "Antonelli (C) + Leclerc or Verstappen + Mercedes",
-        "fills": "Lawson (if Racing Bulls price ~9.7M) + Albon or Colapinto + budget constructor",
+        "budget": "~110M+ (4A heavy)",
+        "core": "Antonelli x2 + Russell + Norris/Verstappen + Mercedes + McLaren",
+        "fills": "Forced into $3M assets (Stroll/P\u00e9rez/Cadillac) \u2014 consensus strongly against this approach",
         "optimal": false
       }
     ]
@@ -36,7 +36,7 @@
       "price": "~26.6M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "Consensus #1 captain across all channels. ML projects 24.0 exp pts (30.2 projected), ppm 2.07, LOW risk, DNF prob only 0.05. Monza 93-pt haul inflates projections slightly but his floor is high. FP1 hydraulics issue resolved by FP2 where he ran near the top. Every source agrees he is the clear 1A captain choice."
+      "reason": "Consensus #1 captain across all channels. ML projects 23.4 exp pts, ppm 2.07, LOW risk, DNF only 5%, pred P3\u2192P3. Massive Monza score (93 pts) inflates projections but his floor is high. FanAmp labels him 1A. BoxBox ML ranks him #3 on expected but #1 on value (ppm 2.07) with lowest risk of all top drivers."
     },
     {
       "label": "Primary",
@@ -45,7 +45,7 @@
       "price": "~27.8M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "P1 in both FP1 and FP2 \u2014 dominant Thursday. ML projects 21.4 exp pts, 37.1 projected (highest raw projected points of any driver), pred quali P1 \u2192 finish P1, MEDIUM risk. FanAmp ranks him best #2 option if Leclerc doesn't take penalty. Strong alternative captain if you don't own Antonelli."
+      "reason": "ML's #1 recommended captain: exp 24.7 pts, proj 37.1 pts, ppm 1.1, MEDIUM risk, pred P1\u2192P1. Topped FP1 and FP2 timing sheets. Betting lines moved him up to match Norris. FanAmp ranks him best #2 option if Leclerc doesn't take penalty. Channels favor Antonelli as captain but ML ranks Russell higher on raw expected points."
     },
     {
       "label": "Differential",
@@ -54,7 +54,7 @@
       "price": "~27.3M",
       "team": "Red Bull",
       "team_colour": "3671C6",
-      "reason": "FanAmp highlights Verstappen as the top differential \u2014 P2 in FP1, P3 in FP2, sneaking ahead of Ferraris in betting lines. ML projects 17.1 exp pts, ppm 0.76, MEDIUM risk, DNF 0.17. Channels favor him more than ML does (ML ranks him 5th on exp pts), but his upside at a track he's historically strong at makes him a viable differential captain pick at lower ownership."
+      "reason": "FanAmp highlights Verstappen as top differential \u2014 P2 and P3 in FP1/FP2, betting odds moved ahead of Ferraris. However, ML is cautious: exp 15.2 pts, MEDIUM risk, DNF 0.17, pred P2\u2192P6. Channels favor him but ML ranks him only #7 on expected points. High ceiling but notable downside risk."
     },
     {
       "label": "Differential",
@@ -63,7 +63,7 @@
       "price": "~24.0M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "If engine penalty is taken, becomes a high-ceiling overtake machine from ~P20, potentially a 1B to Antonelli's 1A per FanAmp. ML is more cautious: 15.3 exp pts, ppm 0.64, MEDIUM risk, DNF 0.15, pred P5\u2192P6 (no penalty scenario). Cheapest of the top-tier drivers at 24.0M, freeing budget for better B-tiers. Historical Baku specialist. Key uncertainty: penalty or no penalty changes his profile entirely."
+      "reason": "IF engine penalty is taken, becomes a 1B captain alongside Antonelli \u2014 massive overtake potential from P18-P20 on a street circuit with 2 DRS zones. FanAmp strongly advocates. Without penalty, still frees up budget vs. Russell/Norris. ML is bearish without penalty context: exp 12.1 pts, pred P5\u2192P8. But penalty scenario could dramatically outperform ML baseline. Historical Baku specialist."
     }
   ],
   "btier": {
@@ -73,109 +73,98 @@
         "acronym": "ALB",
         "price": "~6.4M",
         "team_colour": "1868DB",
-        "note": "Strong Baku history (2, 12, 13 pts last 3 years). Williams bringing major chassis/weight-strip upgrade. Needs just 2 pts for price rise. ~50% ownership in global top 500. FanAmp and Pole Position both call him a must-have. ML may underrate him (BoxBox notes his sim position seems harsh)."
-      },
-      {
-        "name": "Franco Colapinto",
-        "acronym": "COL",
-        "price": "~10.6M",
-        "team_colour": "0093CC",
-        "note": "Averaging 11.1 pts/race, outperforming teammate Gasly recently. Back-to-back 14 and 13 pt scores. Only 1.6% owned in top 500 \u2014 massive differential. Longest active non-DNF streak. Needs only 2 pts for min price rise. Pole Position strongly recommends if you can't stretch to Lawson."
+        "note": "Williams brought major chassis/weight-strip upgrade. Strong Baku history (2, 12, 13 pts last 3 years). Needs only 2 pts for price rise. In ~50% of global top 500. FanAmp and PolePosition both highlight as must-have. ML may underrate due to lack of upgrade data."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
         "price": "~4.8M",
         "team_colour": "52E252",
-        "note": "Audi brought a massive 14-component upgrade package \u2014 biggest of the weekend. Excellent budget replacement for $3M assets like Perez/Stroll. Needs -3 pts for min price rise (very achievable). BoxBox and FanAmp both highlight him as a strong budget pick."
+        "note": "Audi brought massive 14-component upgrade package. Excellent budget replacement for $3M assets. Needs -3 pts for price rise (very achievable). BoxBox highlights as strong P\u00e9rez/Stroll replacement at 4.8M."
+      },
+      {
+        "name": "Franco Colapinto",
+        "acronym": "COL",
+        "price": "~10.6M",
+        "team_colour": "0093CC",
+        "note": "Averaging 11.1 pts/race, outperforming teammate Gasly recently. Back-to-back 14 and 13 pt scores. Longest active non-DNF streak. PolePosition highlights as strong mid-budget option if you can't reach Lawson. Needs only 2 pts for minimum price rise."
       }
     ],
     "consider": [
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
-        "price": "~9.7M",
+        "price": "~9.7M (Racing Bulls)",
         "team_colour": "6692FF",
-        "note": "Returns to Racing Bulls at reduced price. Pricing algorithm uncertainty \u2014 may need 27+ pts for min price rise if treated as 'new' asset. Great driver but budget-building risk this week. ML projects Racing Bulls constructor at 25.6 exp pts (value 1.74). Consider for following weeks if price drops further."
-      },
-      {
-        "name": "Gabriel Bortoleto",
-        "acronym": "BOR",
-        "price": "~5.0M",
-        "team_colour": "52E252",
-        "note": "Benefits from Audi's massive upgrade package. FanAmp says he 'could be a must-have' \u2014 but FP race pace data was underwhelming per BoxBox. Monitor FP3 closely before committing."
+        "note": "Back at Racing Bulls after Hadjar's return. Scored 12, 2, 16 in his last 3 Red Bull races. Price dropped 0.6M \u2014 on sale. Major uncertainty around pricing algorithm: may need 27-35 pts for price rise depending on how F1 Fantasy handles inactive period. Strong driver but budget-building risk."
       },
       {
         "name": "Isack Hadjar",
         "acronym": "HAD",
         "price": "~14.5M",
         "team_colour": "3671C6",
-        "note": "Returns to Red Bull after wrist injury. ML projects 16.9 exp pts, value 1.17 (highest value score among top drivers), but pricing algorithm uncertainty similar to Lawson. MEDIUM risk, DNF 0.16. Worth monitoring but risky for budget-building."
+        "note": "Returned to Red Bull after wrist injury. ML projects 17.7 exp pts (value 1.22, #5 overall). Same pricing algorithm uncertainty as Lawson. Strong upside but unknown form after 3-race absence."
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~4.5M",
+        "team_colour": "52E252",
+        "note": "Benefits from Audi's 14-component upgrade. FanAmp says 'could be must-have.' Cheaper than Hulkenberg but less proven. Watch FP3 performance."
       },
       {
         "name": "Ollie Bearman",
         "acronym": "BEA",
         "price": "~5.8M",
         "team_colour": "52E252",
-        "note": "Engine failure in FP2 \u2014 must confirm car is repaired. BoxBox notes only 4 pts needed for min price rise and calls him 'very interesting' at 5.8M. Cheaper than Albon. Popular pre-weekend pick but reliability concern after FP2."
+        "note": "BoxBox highlights at 5.8M \u2014 needs only 4 pts for min price rise, 9 for max. Had engine failure in FP2 though \u2014 must confirm car is repaired before selecting. Cheaper than Albon."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
-        "price": "~4.2M",
-        "team_colour": "6692FF",
-        "note": "Wall contact in FP2 but car looked okay. Consistent finisher \u2014 keeps bringing car home. Needs 7 pts for min price rise. FanAmp comfortable with him if car is repaired."
-      },
-      {
-        "name": "Pierre Gasly",
-        "acronym": "GAS",
-        "price": "~13.0M",
-        "team_colour": "0093CC",
-        "note": "P7 in FP2 \u2014 FanAmp highlights him for teams that can't afford a 4A lineup. Alpine performing well. ML projects Alpine constructor at 21.4 exp pts with LOW risk."
+        "price": "~5.0M",
+        "team_colour": "E8002D",
+        "note": "Hit wall in FP2 but car looked repairable. Needs 7 pts for min price rise. FanAmp says viable if car is back on track. BoxBox ML not high on him but channels like the upside."
       }
     ],
     "avoid": [
-      "Lance Stroll \u2014 20-place engine penalty + combined 15 DNFs on season for Aston Martin + slowest top speed on grid",
-      "Fernando Alonso \u2014 25-place engine penalty + excessive garage time in FP sessions + poor reliability all season",
-      "Sergio Perez \u2014 $3M price floor asset that has been consistently destroying fantasy squads",
-      "Valtteri Bottas \u2014 $3M asset; multiple channels explicitly advocate abandoning all $3M drivers",
-      "Any $3M price-floor driver \u2014 consensus across all sources is that $3M assets are 'killing squads' and managers should move to 3A/3.5A lineups to escape them"
+      "Lance Stroll \u2014 20-place engine penalty + combined 15 DNFs with Alonso + terrible pace (F2 cars posting faster top speeds)",
+      "Fernando Alonso \u2014 25-place engine penalty + same Aston Martin reliability disaster",
+      "Sergio P\u00e9rez \u2014 $3M asset trap, consensus is to escape all price-floor drivers this week",
+      "Cadillac drivers \u2014 PolePosition notes $3M assets have been rank killers; only use if absolutely forced by budget",
+      "Yuki Tsunoda \u2014 asset now inactive due to Hadjar's return, must remove from lineup",
+      "Valtteri Bottas \u2014 $3M asset, consensus strongly against bottom-barrel picks"
     ]
   },
   "chips": [
     {
       "name": "Wildcard",
       "rec": "maybe",
-      "reason": "If you're stuck with multiple $3M assets and need a full squad restructure to move to 3A/3.5A, this is a reasonable week given the long triple-header stretch ahead. However, no source explicitly recommends playing it here \u2014 save if you can make 2 transfers work."
+      "reason": "If you're stuck with multiple $3M assets and need to restructure to 3A/3.5A, this triple header is a reasonable time to play it. But most channels suggest saving it unless your team is in dire shape \u2014 the restructuring can often be done with 2-3 transfers."
     },
     {
-      "name": "3x Captain",
+      "name": "3x Captain Boost",
       "rec": "save",
-      "reason": "BoxBox activated 3x at Monza on Antonelli (93 pts) \u2014 that was the mega play. No source recommends 3x specifically for Baku. Save for a sprint weekend or a race with higher scoring ceiling."
+      "reason": "No explicit recommendation for Baku. BoxBox used 3x at Monza on Antonelli for huge returns. Save for a sprint weekend or a race where your captain pick has extreme confidence (lower CI range). Baku's street circuit variance makes this risky."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "No sprint this weekend reduces Limitless value. BoxBox showed at Monza that 3x can outscore Limitless in non-sprint weeks. Better saved for a sprint triple-header race (Singapore, COTA, or Brazil)."
-    },
-    {
-      "name": "Final Fix",
-      "rec": "maybe",
-      "reason": "Leclerc engine penalty decision likely comes after FP3 (before qualifying/deadline). If you lock in a Leclerc-penalty team and it doesn't happen, Final Fix lets you pivot. Also useful if Bearman or Lindblad have car issues confirmed late."
+      "reason": "No channel recommended Limitless for Baku. BoxBox's Monza analysis showed 3x outperformed Limitless in certain setups. Save for a sprint weekend or when team prices are most imbalanced."
     }
   ],
   "watch_items": [
-    "Leclerc engine penalty decision \u2014 Ferrari confirmed Monza PU is in the pool but penalty could still come after FP3; transforms his fantasy profile entirely",
-    "Bearman engine failure recovery \u2014 FP2 engine issue must be resolved; confirm car status before locking him in",
-    "Lindblad wall damage assessment \u2014 crashed in FP2 but car looked repairable; monitor FP3 participation",
-    "Antonelli hydraulics follow-up \u2014 issue in FP1 was fixed for FP2 but worth monitoring for recurrence in FP3/quali",
-    "Audi upgrade validation \u2014 14-component package is massive; FP3 and quali will reveal if Hulkenberg/Bortoleto are genuine Q3 contenders",
-    "Lawson/Hadjar pricing algorithm \u2014 F1 Fantasy has not communicated how returning drivers' 3-race rolling averages will be calculated; price rise potential is uncertain",
-    "Williams upgrade effectiveness \u2014 new chassis for weight reduction; Albon P12-13 in FP1 could signal genuine improvement",
-    "McLaren sidepod changes \u2014 major aero resculpt; Norris P14 in FP1 was alarming but may have been run-plan staggering; FP3 will clarify",
-    "Friday qualifying deadline \u2014 unusual Thursday-Friday-Saturday schedule; lineups lock Friday before qualifying, NOT Saturday"
+    "Charles Leclerc engine penalty decision \u2014 likely confirmed after FP3 on Friday morning. This is the single biggest swing factor for team selection.",
+    "Ollie Bearman's engine repair status after FP2 failure \u2014 must be confirmed running in FP3 before selecting.",
+    "Arvid Lindblad car repair status after FP2 wall contact \u2014 same as Bearman, confirm before selection.",
+    "Kimi Antonelli hydraulics issue from FP1 \u2014 Mercedes got him back for FP2 but monitor FP3 for lingering problems.",
+    "Audi upgrade performance in FP3/qualifying \u2014 14 components changed, could significantly boost Hulkenberg and Bortoleto.",
+    "Williams upgrade impact \u2014 new chassis designed to strip weight. Watch if Albon and Sainz can consistently exit Q1.",
+    "McLaren sidepod/aero upgrade effectiveness \u2014 Norris was P14 in FP1, need to see if this was staggered run plan or genuine struggle.",
+    "Liam Lawson and Isack Hadjar pricing algorithm \u2014 F1 Fantasy has not communicated how inactive periods affect 3-race rolling averages. Budget-building risk.",
+    "Friday qualifying deadline (not Saturday!) \u2014 lineups lock before qualifying at 1:00 PM UK time on Friday. Many managers will be at work."
   ],
-  "arc": "Baku kicks off a brutal stretch of three back-to-back triple headers with only one-week breaks between them (Azerbaijan\u2192Malaysia/Bahrain\u2192Singapore, then COTA\u2192Mexico\u2192Brazil, then Vegas\u2192Qatar\u2192Abu Dhabi). This makes budget-building critical now \u2014 the consensus move away from $3M assets toward 3A/3.5A lineups is designed to build a stronger roster for this marathon. Drivers like Albon and Colapinto who are near price rise thresholds could compound value across the triple header. Lawson's return to Racing Bulls at 9.7M creates a potential value play for Singapore (sprint weekend) if his price drops further. Chip management is paramount \u2014 save Limitless and 3x for sprint weekends in the upcoming stretch. The Audi upgrade package could make Hulkenberg/Bortoleto relevant budget picks for multiple races if it delivers. Williams' make-or-break upgrade determines whether Albon remains viable through year-end.",
+  "arc": "Baku kicks off a brutal stretch: three consecutive triple headers with only one-week breaks between them (Azerbaijan\u2192Malaysia\u2192Singapore, then USA\u2192Mexico\u2192Brazil, then Las Vegas\u2192Qatar\u2192Abu Dhabi). The key strategic arc is escaping $3M assets NOW while they're still avoidable \u2014 channels unanimously agree that Stroll, P\u00e9rez, and Cadillac drivers have been rank killers. Albon, Hulkenberg, and Colapinto are the budget bridges. The Audi and Williams upgrades debuting here will carry through the triple header, so their Baku performance sets expectations for Malaysia and Singapore. Lawson's return to Racing Bulls creates a potential value play over the next 2-3 races once his pricing normalizes. If Leclerc takes the penalty here, Ferrari may be fully healthy for Malaysia/Singapore \u2014 making this a short-term pain, long-term gain scenario. Save your power chips for sprint weekends or higher-confidence setups later in this marathon stretch.",
   "sources": [
     {
       "channel": "FanAmp",
@@ -213,5 +202,5 @@
       "url": "https://boxboxf1fantasy.com/picks/azerbaijan-gp-2026/"
     }
   ],
-  "_source_hash": "8b467d9c60fd7625012c76b8ed07483a9b1df18e765df5a2583567e375625112"
+  "_source_hash": "1700ab6a14d664225c4addccb1632188b0357a348ef6ec9c11ad63691bfa43dd"
 }
