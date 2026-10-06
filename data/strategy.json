@@ -1,29 +1,29 @@
 {
-  "race": "Bahrain Grand Prix in Malaysia",
+  "race": "Bahrain GP (at Sepang, Malaysia)",
   "round": 18,
   "season": 2026,
   "sprint": false,
-  "deadline": "October 5",
-  "central_unknown": "A ~50% chance of rain for both qualifying and the race at Sepang creates massive uncertainty in grid positions and race outcomes, making it unclear whether to prioritize proven wet-weather drivers or pure pace/overtake upside from penalized drivers.",
+  "deadline": "Saturday before qualifying (~9am UK time)",
+  "central_unknown": "Rain probability is ~50% for both qualifying and the race, making driver selection critical \u2014 do you prioritize proven wet-weather drivers or lean into the guaranteed position-gain upside from Hadjar and Lindblad's grid penalties?",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Penalty Gainers",
+    "name": "Mercedes core + penalty gainers or 4A heavy",
     "budget_tiers": [
       {
-        "budget": "~100M (4A Light)",
-        "core": "Antonelli (C) + Mercedes constructor + Hadjar + Lindblad",
-        "fills": "Bearman or Hulkenberg as safe Tier B fill",
+        "budget": "~117-118M",
+        "core": "Antonelli x2 + Mercedes constructor + Hadjar + Lindblad",
+        "fills": "Bearman or Hulkenberg as cheap Tier B, Cadillac/Audi floor filler",
         "optimal": true
       },
       {
-        "budget": "~107M+ (Full 4A)",
-        "core": "Antonelli (C) + Verstappen + Mercedes constructor",
-        "fills": "Leclerc or Norris as 4th A-tier; Lindblad or Hadjar if budget allows",
+        "budget": "~120M+",
+        "core": "Antonelli x2 + Verstappen + Russell + Mercedes constructor",
+        "fills": "Triple Mercedes with a budget Tier B driver (Bearman, Perez, Hulkenberg)",
         "optimal": false
       },
       {
-        "budget": "~105M (Antonelli + Norris variant)",
-        "core": "Antonelli (C) + Norris + Mercedes constructor + Lindblad",
-        "fills": "Bearman or Perez as Tier B option",
+        "budget": "~115M (budget-constrained)",
+        "core": "Antonelli x2 + Norris + Lindblad + Hadjar",
+        "fills": "Drop Verstappen to Norris to afford both penalty drivers, McLaren or Racing Bulls constructor",
         "optimal": false
       }
     ]
@@ -33,19 +33,37 @@
       "label": "Primary",
       "name": "Kimi Antonelli",
       "acronym": "ANT",
-      "price": "~26.9M",
+      "price": "~27.0M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "ML projects 27.4 exp pts, 42.5 proj pts, ppm 1.93, LOW risk, DNF 0.04, pred P2\u2192P1. FanAmp calls him 'the safest driver in Tier A.' Consensus across all sources \u2014 he is the clear #1 captain pick. Mercedes brought a major 7-component upgrade package to Sepang, further boosting confidence."
+      "reason": "ML projects 26.2 exp pts, 35.1 proj pts, ppm 1.14, LOW risk, DNF only 4%. Safest Tier A driver per FanAmp \u2014 first in scoring since Monaco at Monza comeback. Mercedes brought a massive 7-component upgrade package to Sepang. Consensus primary captain across all channels. Even in wet conditions, Mercedes car should be at the front."
+    },
+    {
+      "label": "Primary",
+      "name": "Max Verstappen",
+      "acronym": "VER",
+      "price": "~27.9M",
+      "team": "Red Bull",
+      "team_colour": "3671C6",
+      "reason": "ML projects 22.1 exp pts, 38.8 proj pts, ppm 1.65 (highest among top drivers), MEDIUM risk. Topped FP1, only driver to score 35+ fantasy pts in last 3 races, lowest price gain target in Tier A. FanAmp highlights him as a proven wet-weather driver. The Antonelli vs Verstappen captain debate is the question of the week \u2014 Verstappen has higher ceiling per ML (proj 38.8 vs 35.1) but more variance."
     },
     {
       "label": "Differential",
-      "name": "Max Verstappen",
-      "acronym": "VER",
-      "price": "~27.6M",
-      "team": "Red Bull Racing",
+      "name": "George Russell",
+      "acronym": "RUS",
+      "price": "~28.0M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "ML projects 24.9 exp pts, 39.2 proj pts (highest projected of any driver), MEDIUM risk. Dominated Baku, looked comfortable in FP1 (ahead of Antonelli). If you're already running Antonelli, Russell as captain differentiates. ML actually ranks him #2 on expected points behind only Antonelli."
+    },
+    {
+      "label": "Differential",
+      "name": "Isack Hadjar",
+      "acronym": "HAD",
+      "price": "~15.1M",
+      "team": "Red Bull",
       "team_colour": "3671C6",
-      "reason": "ML projects 23.4 exp pts, 30.4 proj pts, ppm 1.43, MEDIUM risk (DNF 0.15). Topped FP1. FanAmp notes he has the lowest price gain target in Tier A and is the only driver to score 35+ fantasy points in his last 3 races. Strong wet-weather pedigree makes him a compelling differential captain if rain hits. ML ranks him #2 overall on expected points."
+      "reason": "Only 4.4% ownership in top 500 but massive upside. 5-place grid penalty means guaranteed overtake opportunities. FP1 P3, FP2 P2 \u2014 showing genuine pace. Vegas projects P8 finish after penalty, meaning solid position gains. F1FantasyTools projects 22.1 pts with 86% price rise probability. Channels expect ownership to explode from 4.4% to 50%+. Huge differential captain if you're chasing."
     }
   ],
   "btier": {
@@ -55,82 +73,103 @@
         "acronym": "LIN",
         "price": "~8.8M",
         "team_colour": "6692FF",
-        "note": "Starting from back of grid due to multiple engine penalties \u2014 massive overtake upside. ML projects 20.5 exp pts (#3 overall!), value 2.33, LOW risk, DNF 0.04. FanAmp calls him an 'absolute lock.' Potential 12+ position gains on Sunday. Also has the 4th lowest price gain target."
+        "note": "Multiple engine penalties = back of grid start. Vegas projects P10 finish = ~12 positions gained = massive overtake points. Already in 34.5% of top 500. Needs only -5 pts for price rise. FanAmp calls him an absolute lock with penalty. Wet conditions could add further value if he's comfortable."
       },
       {
         "name": "Isack Hadjar",
         "acronym": "HAD",
         "price": "~15.1M",
-        "team_colour": "3671C6",
-        "note": "5-place grid penalty (7th ICE). ML projects 19.2 exp pts, value 1.27, ppm 1.72. P3 in FP1, P2 in FP2 \u2014 strong Red Bull pace. Has 3rd lowest price gain target. FanAmp calls him a lock alongside Lindblad for light lineups."
+        "team_colour": "6692FF",
+        "note": "5-place grid penalty with Red Bull pace = easy position recovery. 26 pts in Baku, avg P5 race finish since summer break (4th best on grid). F1FantasyTools projects 22.1 pts, 86% price rise chance. Only 4.4% owned \u2014 enormous differential potential."
+      },
+      {
+        "name": "Ollie Bearman",
+        "acronym": "BEA",
+        "price": "~5.6M",
+        "team_colour": "B6BABD",
+        "note": "Cheap Tier B option with low price gain target (7 pts min, 12 max). Haas brought updates and his form has improved over last 4 races. Good Albon replacement. Safe floor player who tends to finish races. 27.4% ownership in top 500."
       }
     ],
     "consider": [
       {
-        "name": "Oliver Bearman",
-        "acronym": "BEA",
-        "price": "~10M",
-        "team_colour": "B6BABD",
-        "note": "FanAmp highlights low price gain target and strong race finish rate. Safer Tier B option if you need reliability over upside."
+        "name": "Sergio Perez",
+        "acronym": "PER",
+        "price": "~3.0M",
+        "team_colour": "52E252",
+        "note": "New Ferrari power unit could help. Cheap budget filler but reliability concerns with Cadillac. FanAmp still trusts him as a Tier B option."
       },
       {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
-        "price": "~7M",
+        "price": "~5.0M",
         "team_colour": "B6BABD",
-        "note": "At or near price floor so can't lose budget value. FanAmp mentions him as a wet-weather veteran. Good budget safety net."
+        "note": "At price floor so can't lose value. Low price gain target, tends to finish races. FanAmp mentions him as a wet-weather veteran. Safe budget holder."
       },
       {
-        "name": "Sergio Perez",
-        "acronym": "PER",
-        "price": "~12M",
-        "team_colour": "3671C6",
-        "note": "FanAmp still trusts him with new Ferrari power unit. Benefits from strong Red Bull constructor pace this weekend."
+        "name": "Lando Norris",
+        "acronym": "NOR",
+        "price": "~26.4M",
+        "team_colour": "FF8000",
+        "note": "ML projects 17.1 exp pts, 20.5 proj. McLaren held back pace until end of qualifying \u2014 FP2 jump to P3/P6 was encouraging. If you can't afford Verstappen, Norris is the next Tier A option. McLaren brought minor upgrades for cooling."
+      },
+      {
+        "name": "Esteban Ocon",
+        "acronym": "OCO",
+        "price": "~7.0M",
+        "team_colour": "B6BABD",
+        "note": "FanAmp highlights him as a wet-weather specialist to watch. Could be a tiebreaker pick if rain materializes. Needs only 2 pts for price rise."
       }
     ],
     "avoid": [
-      "Gabriel Bortoleto \u2014 Audi stopped on track in FP2, reliability concerns, poor race pace data from recent weekends",
-      "Aston Martin drivers (Alonso/Stroll) \u2014 FanAmp and BoxBox both note Aston Martin not performing well, avoid unless at price floor for budget reasons",
-      "Ferrari constructor lock-in \u2014 FanAmp notes Ferrari are 4.5M cheaper than Red Bull but significantly weaker; move away if transfers allow"
+      "Alex Albon \u2014 losing value, Williams performance not there, sell this week",
+      "Charles Leclerc \u2014 big drop in betting odds behind Mercedes/Verstappen, Ferrari 4.5M cheaper than Red Bull but FanAmp recommends selling if possible",
+      "Valtteri Bottas \u2014 price floor but Cadillac reliability is terrible (minus 18-20 pts recent races)",
+      "Lance Stroll \u2014 Aston Martin not performing, budget trap",
+      "Gabriel Bortoleto \u2014 Audi stopped on track in FP2, reliability concerns"
     ]
   },
   "chips": [
     {
       "name": "No Negative",
       "rec": "save",
-      "reason": "FanAmp explicitly warns: despite ~50% rain threat this weekend, Singapore next week is a sprint weekend with rain already in the forecast. Better to hold No Negative for one more week where sprint + rain compounds the downside risk."
+      "reason": "50% rain chance makes this tempting, but Singapore next week is a sprint weekend with rain also forecast. FanAmp explicitly recommends holding No Negative one more week for Singapore where the sprint adds more variance and scoring opportunities."
     },
     {
-      "name": "3x Captain Boost",
-      "rec": "maybe",
-      "reason": "BoxBox activated 3x on Antonelli in a previous race with great results. With Antonelli's ML projection of 42.5 pts and LOW risk, this could be a strong 3x weekend \u2014 but rain uncertainty adds variance. Evaluate after qualifying."
+      "name": "3x Captain",
+      "rec": "save",
+      "reason": "No sprint this weekend limits the ceiling. Save for a sprint weekend or a race with higher certainty around a dominant driver. Singapore next week (sprint + potential rain) could be a better deployment."
     },
     {
       "name": "Wildcard",
-      "rec": "save",
-      "reason": "No source recommends using Wildcard this week. Better saved for a sprint weekend or major meta shift."
+      "rec": "maybe",
+      "reason": "If you're stuck with Ferrari assets and can't afford the Red Bull/Mercedes core + penalty drivers, a wildcard could restructure your team. But with Singapore sprint next week, holding may be wiser unless your team is badly misaligned."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "BoxBox's prior analysis showed Limitless can score less than a well-timed 3x boost. Save for a weekend with clearer pace gaps or a sprint double-header."
+      "reason": "Better saved for a sprint weekend where the extra scoring session maximizes the chip's value. Singapore next week is the obvious candidate."
     }
   ],
   "watch_items": [
-    "Rain probability (~50% for both qualifying and race) \u2014 could reshuffle grid dramatically; monitor Saturday morning forecasts before locking in",
-    "Mercedes upgrade performance \u2014 7 new components (sidepods, engine cover, floor, brake ducts); FP1/FP2 showed Russell P4 and Antonelli P5, validating the upgrade",
-    "Red Bull constructor strength \u2014 Verstappen P1 in FP1, Hadjar P2 in FP2; Red Bull could be the top constructor pick if Mercedes disappoints",
-    "Leclerc topped FP2 but betting lines show big drop to Ferrari for podium; monitor qualifying pace before committing to Ferrari assets",
-    "McLaren pace \u2014 were P11/P12 in FP1 but jumped to P3/P6 in FP2; FanAmp suspects they held back pace until late (repeat of prior weekends)",
-    "Audi reliability \u2014 Bortoleto's car stopped on track mid-FP2; await team update before considering any Audi assets",
-    "Esteban Ocon flagged by FanAmp as a wet-weather specialist to watch if rain intensifies"
+    "Rain forecast: 50/50 for both qualifying and race \u2014 monitor Saturday morning updates before locking lineups",
+    "Mercedes upgrade impact: 7 new components (sidepods, engine cover, floor, brake ducts) \u2014 FP3 pace will confirm if the upgrade is as significant as expected",
+    "Hadjar ownership spike: Currently 4.4% in top 500 but expected to surge \u2014 get in early if targeting him as a differential",
+    "Lindblad grid penalty: Exact starting position TBD after qualifying \u2014 more positions to gain = more fantasy points",
+    "Bortoleto reliability: Audi stopped on track in FP2 \u2014 await team update on cause before selecting",
+    "McLaren true pace: Held back in FP1 (P11/P12) then jumped to P3/P6 in FP2 \u2014 unclear if sandbagging or genuinely behind Mercedes/Red Bull",
+    "Verstappen tire strategy: Did not run soft tires in FP2 \u2014 true qualifying pace unknown"
   ],
-  "arc": "This Bahrain GP in Malaysia is a pivotal budget-building week thanks to engine penalties creating cheap position-gain opportunities via Hadjar and Lindblad. The Mercedes upgrade makes triple-Mercedes (Antonelli + Russell + constructor) the high-floor play, but committing to that means potentially missing the overtake bonanza from penalized Red Bull/Racing Bulls drivers. Next week is the Singapore Sprint, which compounds scoring opportunities and is already showing rain in the forecast \u2014 making it the ideal No Negative chip deployment. Players should use this week to build budget through Lindblad and Hadjar price rises while positioning their rosters for the sprint weekend pivot, where 4A lineups with sprint-strong drivers will be critical.",
+  "arc": "This Bahrain GP at Sepang is a pivotal budget-building race before the Singapore sprint weekend (Round 19). The engine penalties for Hadjar and Lindblad create rare guaranteed position-gain opportunities that should be exploited now. Mercedes' massive upgrade package could cement them as the dominant constructor through the end-of-season triple-header. Singapore next week is a sprint weekend with rain also forecast, making it the prime candidate for chip deployment (No Negative, Limitless, or 3x Captain). Players should use this week to lock in budget gains from penalty drivers and position their teams for the higher-variance sprint format. The ML data for Singapore already shows Mercedes (exp 66.8 constructor pts) and Antonelli (exp 26.2 pts) as clear frontrunners, suggesting continuity in the Mercedes core heading forward. Austin follows after Singapore, where Bearman historically performs well \u2014 making him a smart long-term Tier B hold.",
   "sources": [
     {
       "channel": "FanAmp",
       "title": "Penalty Drivers Locked\ud83d\udd12 But What About Rain?\ud83c\udf27\ufe0f | Bahrain GP in Malaysia Final Thoughts | F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=nffDmeBk_Do"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83c\udfaf MY F1 FANTASY MALAYSIAN GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
+      "url": "https://www.youtube.com/watch?v=n1IdTc9sWEY"
     },
     {
       "channel": "BoxBoxF1Fantasy",
@@ -149,9 +188,9 @@
     },
     {
       "channel": "BoxBoxF1Fantasy-ML",
-      "title": "BoxBoxF1Fantasy ML predictions \u2014 Bahrain Grand Prix in Malaysia",
-      "url": "https://boxboxf1fantasy.com/picks/bahrain-gp-in-malaysia-2026/"
+      "title": "BoxBoxF1Fantasy ML predictions \u2014 Singapore Grand Prix (used as numerical baseline)",
+      "url": "https://boxboxf1fantasy.com/picks/singapore-gp-2026/"
     }
   ],
-  "_source_hash": "e7a0df3756f8ebf69cb349ece8c3791c4084b7b0af722189c0bcfb43f67a4797"
+  "_source_hash": "635093592f0294148153af4a40462235cc5129cb19b0bdf59dfb79a50eef6b46"
 }
