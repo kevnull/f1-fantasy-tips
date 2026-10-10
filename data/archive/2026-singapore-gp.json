@@ -4,20 +4,20 @@
   "season": 2026,
   "sprint": true,
   "deadline": "October 10",
-  "central_unknown": "Singapore is a street circuit where safety cars and VSCs are highly likely, making race outcomes volatile. The key uncertainty is whether Red Bull and Verstappen can dominate as ML projects (P5\u2192P1 predicted) or whether Mercedes/Ferrari hold their qualifying advantage on a track that historically punishes overtaking.",
+  "central_unknown": "George Russell starts at the back with an older aero package and engine penalty \u2014 can he recover enough positions on a historically low-overtake street circuit to justify selection over Verstappen or Antonelli? Rain is forecast across all three days, which could reshuffle the entire field.",
   "meta_template": {
-    "name": "Verstappen x2 + Mercedes + Ferrari",
+    "name": "Verstappen x2 + Mercedes + Ferrari/Red Bull",
     "budget_tiers": [
       {
-        "budget": "~117M",
-        "core": "Verstappen (C), Russell, Leclerc, Mercedes, Ferrari",
-        "fills": "Hadjar or Lawson + budget B-tier driver (Lindblad/Colapinto)",
+        "budget": "~134M",
+        "core": "Verstappen (2x), Antonelli, Mercedes constructor",
+        "fills": "Hulkenberg, Lindblad/Lawson, Racing Bulls or Audi",
         "optimal": true
       },
       {
-        "budget": "~112M",
-        "core": "Antonelli (C), Hamilton, Leclerc, Mercedes, Ferrari",
-        "fills": "Hadjar + Lindblad/Lawson",
+        "budget": "~117-120M",
+        "core": "Verstappen (2x), Hadjar, Mercedes constructor",
+        "fills": "Hulkenberg, Lindblad, Audi/Racing Bulls",
         "optimal": false
       }
     ]
@@ -30,126 +30,127 @@
       "price": "~27.9M",
       "team": "Red Bull",
       "team_colour": "3671C6",
-      "reason": "ML projects 21.2 exp pts, 41.1 proj pts, ppm 1.65, MEDIUM risk. ML's top-ranked captain pick with predicted quali P5 \u2192 finish P1, suggesting strong race pace and overtaking points on a sprint weekend. DNF risk 0.14 is moderate. 90% CI [-12.8, 53.0] shows high upside. Channels have historically favored Antonelli/Russell for captaincy, but ML ranks Verstappen clearly #1 on expected points this week."
+      "reason": "ML projects 21.2 exp pts (41.1 proj), ppm 1.65, MEDIUM risk. Vegas has him finishing P2 in sprint and P1 on Sunday for ~42 fantasy points before DOTD. He leads the grid with 7 DOTD awards this season. Both FanAmp and LF1FantasyStrategy converge on Verstappen as the top captain pick over Russell. Sprint pole adds further upside."
     },
     {
-      "label": "Primary",
+      "label": "Differential",
       "name": "George Russell",
       "acronym": "RUS",
       "price": "~28.0M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "ML projects 20.3 exp pts, 39.3 proj pts, ppm 0.80, MEDIUM risk. Predicted to qualify P1 and finish P2 \u2014 solid qualifying bonus points but limited overtaking upside. DNF 0.13. Channels have consistently rated Russell highly, and ML agrees he's the #2 pick. Safe but slightly lower ceiling than Verstappen."
-    },
-    {
-      "label": "Differential",
-      "name": "Kimi Antonelli",
-      "acronym": "ANT",
-      "price": "~27.0M",
-      "team": "Mercedes",
-      "team_colour": "27F4D2",
-      "reason": "ML projects 18.0 exp pts but only 12.9 proj pts, ppm 1.14, LOW risk, DNF just 0.04. Channels have consistently favored Antonelli as a captain throughout the season (3x chip activated on him at Monza). ML has him predicted quali P7 \u2192 finish P8 which seems pessimistic given channel sentiment. A differential pick if you believe channels over ML \u2014 his low DNF probability provides safety but ML's projected points are significantly lower than Verstappen/Russell."
+      "reason": "ML projects 20.3 exp pts (39.3 proj), ppm 0.8, MEDIUM risk \u2014 second-highest expected points on the grid. However, both channels actively recommend AGAINST Russell as captain: older aero package, engine penalty starting from the back, Singapore ranked bottom-half for overtakes in each of last 3 seasons. FanAmp estimates ~38 pts \u00b15, below Verstappen's ~42 baseline. A safety car or rain could unlock huge upside, but the floor is much lower. ML and channels disagree on upside vs. risk \u2014 ML ranks him #2 on expected points but channels see too many structural disadvantages."
     }
   ],
   "btier": {
     "buy": [
       {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~6.5M",
+        "team_colour": "52E252",
+        "note": "At price floor, cannot lose value. In 96.2% of Global League top 500 teams. Gearbox issue in FP1 but expected to be resolved. Budget anchor."
+      },
+      {
+        "name": "Arvid Lindblad",
+        "acronym": "LIN",
+        "price": "~6.0M",
+        "team_colour": "6692FF",
+        "note": "Qualified P17 in sprint qualifying \u2014 huge overtake upside from the back half. Could score 8-10 pts in sprint alone. Key budget builder with near-guaranteed price rise."
+      },
+      {
         "name": "Isack Hadjar",
         "acronym": "HAD",
         "price": "~15.7M",
         "team_colour": "6692FF",
-        "note": "ML projects 12.4 exp pts, ppm 1.62, value 0.79 \u2014 excellent value pick. Channels consistently rate him as a must-have budget builder. Predicted quali P8 \u2192 finish P7, providing position gain points."
-      },
-      {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
-        "price": "~12.5M",
-        "team_colour": "6692FF",
-        "note": "Channels call him a 'no-brainer' budget pick. Low price means easy budget building with minimal downside. Pairs well with Hadjar and Racing Bulls constructor."
-      },
-      {
-        "name": "Awad Lindblad",
-        "acronym": "LIN",
-        "price": "~6.5M",
-        "team_colour": "6692FF",
-        "note": "Channels rate him as a top budget builder alongside Lawson. At rock-bottom price, any points scored contribute to price rises with virtually no risk of price drops."
+        "note": "ML projects 12.4 exp pts, ppm 1.62, value 0.79. Strong FP1 showing (P11/P13). Excellent stopgap between B-tier price and A-tier car. Racing Bulls constructor synergy."
       }
     ],
     "consider": [
+      {
+        "name": "Kimi Antonelli",
+        "acronym": "ANT",
+        "price": "~27.0M",
+        "team_colour": "27F4D2",
+        "note": "ML projects 18.0 exp pts, ppm 1.14, LOW risk (4% DNF). Running newer aero package that should suit Singapore better than Malaysia. 7 fastest lap awards this season \u2014 most on grid. FanAmp projects ~35 pts baseline with upside from bonus points. Struggled in sprint qualifying (P7) \u2014 needs Mercedes to sort setup. Channels favor him over Russell as the Mercedes driver pick."
+      },
       {
         "name": "Lewis Hamilton",
         "acronym": "HAM",
         "price": "~24.3M",
         "team_colour": "E8002D",
-        "note": "ML projects 19.7 exp pts, value 0.81 \u2014 highest value score among top drivers. Predicted quali P6 \u2192 finish P5 with DNF only 0.10. Channels see Hamilton and Leclerc as interchangeable; ML slightly favors Hamilton on expected points."
+        "note": "ML projects 19.7 exp pts, value 0.81, MEDIUM risk. Third-highest expected points. Strong Singapore history. Budget-friendlier than Verstappen/Russell but lower projected ceiling."
       },
       {
-        "name": "Franco Colapinto",
-        "acronym": "COL",
-        "price": "~7.0M",
-        "team_colour": "52E252",
-        "note": "Channels highlight he needs only -8 points for a price rise \u2014 easiest budget builder. Low floor, low ceiling, but excellent for accumulating team value."
-      },
-      {
-        "name": "Oliver Bearman",
-        "acronym": "BEA",
-        "price": "~9.5M",
-        "team_colour": "B6BABD",
-        "note": "Channels mention him as a budget option but express hesitancy about Haas reliability. Needs only 6 points for a price rise."
+        "name": "Charles Leclerc",
+        "acronym": "LEC",
+        "price": "~23.8M",
+        "team_colour": "E8002D",
+        "note": "ML projects 18.0 exp pts, proj 34.1, ppm 1.01, MEDIUM risk. Pred quali P2 \u2192 finish P3. Ferrari strong constructors pick synergy. On an upward trend per BoxBox analysis."
       }
     ],
     "avoid": [
-      "Sergio Perez \u2014 channels explicitly say stay away; poor value and performance",
-      "Valtteri Bottas \u2014 at price floor but channels warn about Cadillac reliability issues (recent scores of -18, -20)",
-      "Alex Albon \u2014 channels say Williams performance is not there this year despite driver talent",
-      "Lance Stroll \u2014 only useful as price-floor insurance; Aston Martin struggling"
+      "Sergio Perez \u2014 red-flagged sprint qualifying with front wing damage, inconsistent and risky",
+      "Valtteri Bottas \u2014 at price floor but reliability is terrible (multiple -18 to -20 point weeks)",
+      "Carlos Sainz \u2014 underperforming massively relative to price, predicted negative points in recent ML sims"
     ]
   },
   "chips": [
     {
+      "name": "Wildcard",
+      "rec": "save",
+      "reason": "Both channels recommend saving the wildcard. With 6-7 races left, there may be better restructuring opportunities later. LF1FantasyStrategy notes the wildcard could have been used in Malaysia but still sees future value. No consensus trigger event this week."
+    },
+    {
       "name": "3x Boost",
       "rec": "maybe",
-      "reason": "Channels activated 3x at Monza on Antonelli and found it scored higher than Limitless. Sprint weekend with double scoring opportunities could justify using it on Verstappen (ML's #1 projected) or Antonelli. However, Singapore's street circuit volatility (safety cars, DNFs) adds risk to 3x. Consider if you have strong conviction in your captain pick."
+      "reason": "Sprint weekend adds extra scoring sessions, which amplifies the 3x chip value. BoxBox previously activated 3x on sprint weekends and found it outscored Limitless. If you're confident in your captain (Verstappen), this could be a strong week \u2014 but rain uncertainty adds risk. Consider if you're chasing in your league."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "Channels noted Limitless scored lower than 3x at Monza due to the captain multiplier being more valuable. Unless your budget is severely constrained, the 3x chip outperforms Limitless when you have a high-conviction captain."
+      "reason": "BoxBox analysis showed Limitless scored lower than 3x boost on a comparable sprint weekend. Save for a week with clearer form differentiation and no rain chaos."
     },
     {
-      "name": "Wildcard",
+      "name": "4A (Four A-tier)",
       "rec": "save",
-      "reason": "Channels suggest saving Wildcard for a round where maximum budget building can be achieved. If you need to restructure around budget builders (Hadjar, Lawson, Lindblad, Colapinto), this could be justified, but most managers should have these drivers accessible without a Wildcard."
-    },
-    {
-      "name": "4A (No Constructor Lock)",
-      "rec": "maybe",
-      "reason": "Channels activated 4A at the Dutch GP with Ferrari + McLaren. For Singapore, ML projects Mercedes (53.6 exp) and Ferrari (50.6 exp) as top two constructors \u2014 running both with top drivers from each could be strong. Consider if your budget allows fielding both premium constructors alongside top drivers."
+      "reason": "No strong signal to deploy this week. Better saved for a weekend where four elite drivers have clear high-floor projections without weather uncertainty."
     }
   ],
   "watch_items": [
-    "Safety car probability is very high at Singapore street circuit \u2014 channels predict multiple VSCs and at least one full SC, which dramatically reshuffles finishing positions",
-    "FP1/FP2 long run pace data to validate ML's prediction that Verstappen can go from P5 to P1 on race pace alone \u2014 street circuits historically punish overtaking",
-    "Antonelli's consistency in practice \u2014 channels note he has been prone to gravel trap excursions which could cost floor damage and depress qualifying",
-    "Rain probability for race day \u2014 channels flag that wet conditions at Singapore would massively increase variance and favor experienced drivers (Verstappen, Hamilton)",
-    "Constructor price rises \u2014 Racing Bulls (15.9M, value 1.78) and Audi (9.8M, value 1.97) offer strong budget building potential as B-tier constructors",
-    "ML has Verstappen at DNF 0.14 and Norris at DNF 0.18 \u2014 street circuit walls make these probabilities meaningful; factor into captain risk assessment"
+    "Rain forecast for all three days \u2014 could massively reshuffle qualifying and race results, increasing safety car probability and making overtakes easier for Russell",
+    "Verstappen potential penalty for alleged yellow flag overtake on Hamilton in sprint qualifying \u2014 a grid drop could paradoxically ADD fantasy points via overtake scoring",
+    "Antonelli's sprint qualifying struggles (P7) \u2014 needs Mercedes to fix setup before Grand Prix qualifying; if unresolved, his scoring floor drops significantly",
+    "Hulkenberg's gearbox issue from FP1 \u2014 he's in 96% of top teams, so any DNF would be catastrophic for the field. Monitor repair status before deadline",
+    "Mercedes running split aero packages: Russell on older Baku-spec, Antonelli on newer Malaysia-spec. Singapore's smooth(er) surface may suit the newer package better",
+    "Mercedes will likely need a SECOND engine penalty later this season since current PUs won't last 7 more races \u2014 factor into medium-term planning",
+    "First-ever sprint in Singapore \u2014 no historical sprint data for this track, making projections less reliable than usual"
   ],
-  "arc": "Singapore is a pivotal sprint weekend where budget building remains crucial heading into the final stretch of the season. Channels have emphasized accumulating value through low-cost drivers (Hadjar, Lawson, Lindblad, Colapinto) to enable premium 4A lineups for the closing rounds. The ML data shows Mercedes and Ferrari as the top two constructors with Verstappen projected as the standout individual performer \u2014 managers should be positioning their teams to afford the premium driver-constructor combinations. After Singapore, the focus shifts to preparing for the final races where chip deployment (3x, Limitless) on high-ceiling weekends becomes the differentiator between league winners and also-rans.",
+  "arc": "Singapore is a pivotal weekend with 6 races remaining in the season. Russell's engine penalty here likely means another penalty later, creating a second opportunity for overtake-point harvesting \u2014 but possibly at a better overtaking venue. The split aero packages at Mercedes will reveal which specification is genuinely faster, informing constructor strategy through the final stretch. Red Bull's recent upward trajectory (strong in Malaysia and now sprint pole in Singapore) suggests Verstappen may be the reliable captain anchor through the season's end. Budget builders like Lindblad, Hadjar, and Hulkenberg remain essential holds as price rises compound heading into the final rounds. Teams chasing in leagues should look for differential plays in the rain-affected sessions rather than burning chips in uncertain conditions.",
   "sources": [
     {
+      "channel": "FanAmp",
+      "title": "Is George Russell Worth It Starting Last? \ud83e\udd14 | Singapore GP Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=kmRNdsDwQsQ"
+    },
+    {
+      "channel": "LF1FantasyStrategy",
+      "title": "F1 Fantasy 2026 \ud83c\uddf8\ud83c\uddec Singapore GP | Russell 2X Gamble? Red Bull vs Mercedes!",
+      "url": "https://www.youtube.com/watch?v=_Ze1BwCdfv4"
+    },
+    {
       "channel": "BoxBoxF1Fantasy",
-      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy - 2026 F1 Fantasy Tips & Tricks",
+      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=dSPcjpghfbs"
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "4A Activated! Dutch Grand Prix Final Thoughts for F1 Fantasy - 2026 F1 Fantasy Tips, Tricks & Lineup",
+      "title": "4A Activated! Dutch Grand Prix Final Thoughts for F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=oTKy-073tFk"
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "Drivers to TRANSFER in and out + Why! - Belgian GP - 2026 F1 Fantasy Drafts, Data, Tips & Strategy",
+      "title": "Drivers to TRANSFER in and out + Why! - Belgian GP",
       "url": "https://www.youtube.com/watch?v=i8sMEiFZJog"
     },
     {
@@ -158,5 +159,5 @@
       "url": "https://boxboxf1fantasy.com/picks/singapore-gp-2026/"
     }
   ],
-  "_source_hash": "ce44f5968efb1c6d5a8437f05e8ae95c97d061a286b1406c99d02b0e3e5d14ba"
+  "_source_hash": "d9833980cd633b7f03d973b0dc83ed6fde2c4013c3e88a7a34ba5c3d577d5494"
 }
