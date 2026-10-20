@@ -3,21 +3,21 @@
   "round": 20,
   "season": 2026,
   "sprint": false,
-  "deadline": "October 13",
-  "central_unknown": "McLaren's form appears to have dropped significantly at Austin compared to Mercedes and Ferrari, making it unclear whether they deserve a spot in lineups. Additionally, the pecking order between Mercedes' two drivers and Ferrari's Leclerc remains tight and hard to separate.",
+  "deadline": "October 24",
+  "central_unknown": "Whether Mercedes' recent upgrade regression has been resolved for Austin, and whether Max Verstappen can reassert dominance at a circuit that historically favors Red Bull \u2014 ML projects him P1 finish from P3 quali, but the gap to Russell/Leclerc is tight.",
   "meta_template": {
     "name": "Verstappen x2 + Mercedes + Ferrari",
     "budget_tiers": [
       {
         "budget": "~107M",
         "core": "Verstappen (C), Antonelli, Leclerc, Mercedes, Ferrari",
-        "fills": "Hadjar + budget drivers (Lawson, Lindblad, Hulkenberg)",
+        "fills": "Hadjar or Hulkenberg as budget driver",
         "optimal": true
       },
       {
-        "budget": "~112M",
-        "core": "Verstappen (C), Russell, Leclerc, Mercedes, Ferrari",
-        "fills": "Hadjar + budget drivers",
+        "budget": "~103M",
+        "core": "Russell (C), Antonelli, Leclerc, Mercedes, Ferrari",
+        "fills": "Hulkenberg + Lindblad/Lawson as budget fills",
         "optimal": false
       }
     ]
@@ -30,7 +30,7 @@
       "price": "~28.2M",
       "team": "Red Bull",
       "team_colour": "3671C6",
-      "reason": "ML projects 26.1 exp pts (39.3 proj), ppm 1.81, MEDIUM risk, predicted to qualify P3 and finish P1. Verstappen is the clear ML #1 captain recommendation and aligns with FanAmp's preference for backing Max over Russell. Historically strong at COTA. DNF risk 0.14 is manageable."
+      "reason": "ML projects 25.1 exp pts, 37.8 proj pts, ppm 1.81, MEDIUM risk. Predicted to qualify P3 and finish P1, giving position-gain upside. Historically dominant at COTA. Channels consistently rank him as the top captain option when he's expected to win on Sunday. Best ceiling on the grid with 90% CI up to 51.0 pts."
     },
     {
       "label": "Differential",
@@ -39,7 +39,7 @@
       "price": "~27.9M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "ML projects 24.4 exp pts (30.6 proj), MEDIUM risk, pred quali P4 \u2192 finish P2. Russell has strong upside if Mercedes' pace holds. However, ppm is only 0.68 \u2014 the lowest among the top 4 drivers \u2014 making him expensive for his output. FanAmp showed hesitation on Russell in penalty scenarios but here he's not penalized. A differential pick if you believe Mercedes can lock out the podium."
+      "reason": "ML projects 23.4 exp pts, 29.3 proj pts, ppm 0.68, MEDIUM risk. Predicted P4 quali \u2192 P2 finish. Channels note Russell has been inconsistent after Mercedes' upgrade regression in Malaysia, but ML still ranks him #2 on expected points. Lower ppm than Verstappen (0.68 vs 1.81) makes him a riskier captain. Worth considering if you already own him and want to avoid transfer penalties."
     }
   ],
   "btier": {
@@ -49,89 +49,93 @@
         "acronym": "HAD",
         "price": "~16.3M",
         "team_colour": "6692FF",
-        "note": "ML projects 8.9 exp pts, ppm 1.21, value 0.55. Budget-friendly with Racing Bulls providing a competitive midfield car. Key budget builder with low price threshold for rises. Consensus pick across channels as a must-have budget driver."
+        "note": "ML projects 9.9 exp pts, ppm 1.21, solid value tier driver. Channels consistently flag him as a must-have budget builder \u2014 needs very few points for price rises. Predicted P8 quali \u2192 P8 finish with upside in chaotic races."
       },
       {
         "name": "Arvid Lindblad",
         "acronym": "LIN",
-        "price": "~7.0M",
+        "price": "~5.0M",
         "team_colour": "6692FF",
-        "note": "Floor-price driver on Racing Bulls. FanAmp highlighted his ability to gain positions from lower grid slots (8-10 pts in sprints). Essential budget filler who can gain price rises with minimal scoring."
-      },
-      {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "~10.0M",
-        "team_colour": "52E252",
-        "note": "At or near price floor \u2014 cannot lose further value. BoxBoxF1Fantasy channels consistently recommend him as insurance. In 96.2% of top 500 Global League teams per FanAmp."
-      }
-    ],
-    "consider": [
-      {
-        "name": "Charles Leclerc",
-        "acronym": "LEC",
-        "price": "~24.1M",
-        "team_colour": "E8002D",
-        "note": "ML projects 22.4 exp pts, ppm 1.33, value 0.93, pred quali P2 \u2192 finish P3. Strong value among premium drivers. BoxBoxF1Fantasy noted Leclerc trending upward. Close to Hamilton in expected points but better ppm."
-      },
-      {
-        "name": "Lewis Hamilton",
-        "acronym": "HAM",
-        "price": "~24.4M",
-        "team_colour": "E8002D",
-        "note": "ML projects 19.0 exp pts, LOW risk, DNF only 0.10. Stable floor but lower ceiling than Leclerc (proj 19.2 vs 27.4). Pick if you need safety over upside."
+        "note": "Channels highlight Lindblad as a no-brainer budget builder at the price floor. Has shown flashes of strong pace (SQ1 surprise in Singapore). Easy price-rise candidate needing minimal points."
       },
       {
         "name": "Liam Lawson",
         "acronym": "LAW",
-        "price": "~8.0M",
+        "price": "~9.3M",
         "team_colour": "6692FF",
-        "note": "BoxBoxF1Fantasy channels consistently list Lawson as a no-brainer budget builder. Low price, easy price rise threshold."
+        "note": "Channels flag Lawson as an underrated differential \u2014 under 5% ownership in top 500. Recent form: 12, 25, 16, 3, 17 pts across last 5 races. COTA could suit his aggressive style. Strong price-rise candidate."
+      }
+    ],
+    "consider": [
+      {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~5.0M",
+        "team_colour": "52E252",
+        "note": "At price floor \u2014 cannot lose value. In ~96% of top 500 teams per channel data. Safe budget anchor. ML has Audi at 14.9 exp pts as constructor, so some baseline scoring expected."
+      },
+      {
+        "name": "Fernando Alonso",
+        "acronym": "ALO",
+        "price": "~5.6M",
+        "team_colour": "229971",
+        "note": "Channels note Alonso performs well at low-speed-corner tracks but explicitly flag COTA as 'probably not an ideal option' for Aston Martin. Sub-1% ownership makes him a pure differential punt. High risk."
+      },
+      {
+        "name": "Sergio Perez",
+        "acronym": "PER",
+        "price": "~3.0M",
+        "team_colour": "52E252",
+        "note": "Channels describe him as a 'transfer target/transfer trap' \u2014 ultra-cheap at 3M but DNF-prone. Could work in mega-team builds pairing with Verstappen + Red Bull constructor. Channels warn to have a plan to exit quickly."
       }
     ],
     "avoid": [
-      "Sergio Perez \u2014 BoxBoxF1Fantasy explicitly warns away; poor performance relative to price",
-      "Lando Norris \u2014 ML projects only 15.6 exp pts at 26.1M, ppm 0.29 (worst among top 8), MEDIUM risk with 0.18 DNF probability; McLaren's form questionable at Austin",
-      "Oscar Piastri \u2014 ML projects 17.4 exp pts at 23.4M, ppm 0.50; McLaren underperforming expectations",
-      "Franco Colapinto \u2014 mentioned as a budget builder in earlier rounds but no strong Austin-specific case"
+      "Carlos Sainz \u2014 13M price for predicted P18, terrible value per ML and channels",
+      "Valtteri Bottas \u2014 reliability concerns, DNF history, channels explicitly warn against despite price floor",
+      "Franco Colapinto \u2014 channels suggest replacing with Lawson or Hadjar if at awkward price point"
     ]
   },
   "chips": [
     {
+      "name": "Wildcard",
+      "rec": "save",
+      "reason": "No channel explicitly recommends Wildcard for Austin. Non-sprint weekend limits chip value. Better saved for a triple-header or race with clearer scoring separation."
+    },
+    {
       "name": "3x Boost",
       "rec": "maybe",
-      "reason": "BoxBoxF1Fantasy activated 3x at Monza when Mercedes dominated and showed it can outscore Limitless. If Mercedes + Verstappen lineup looks dominant after FP sessions, 3x on Verstappen or Antonelli could be powerful. Evaluate after practice."
+      "reason": "Channels used 3x at Monza when Mercedes dominated \u2014 similar logic could apply if Mercedes/Verstappen look dominant after FP sessions. ML shows Verstappen at 37.8 proj pts and Antonelli at 23.5, so a 3x on Verstappen could yield ~75 pts. Wait for FP data before committing."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "BoxBoxF1Fantasy showed Limitless scored lower than 3x Boost at Monza. Save for a sprint weekend or a race with clearer dominance from expensive drivers."
+      "reason": "Channels note Limitless scored lower than 3x in recent simulations. Better saved for a sprint weekend or round with extreme budget constraints."
     },
     {
-      "name": "Wildcard",
-      "rec": "save",
-      "reason": "No compelling restructuring need this week. Multiple channels suggest saving Wildcard for maximum budget-building opportunities at upcoming races."
-    },
-    {
-      "name": "4A (Autopilot)",
-      "rec": "save",
-      "reason": "BoxBoxF1Fantasy activated 4A at Zandvoort with a clear top-heavy field. Austin's tighter midfield spread doesn't strongly favor 4A over manual picks."
+      "name": "4A (Final Fix)",
+      "rec": "maybe",
+      "reason": "Channels recommend 4A when constructor scoring is tightly bunched. ML has Mercedes (60.8), Ferrari (51.9), Red Bull (46.5), McLaren (43.8) \u2014 all viable. Could final-fix a constructor after qualifying to optimize. Consider if you can run Mercedes + Ferrari base and final-fix to Red Bull if Verstappen qualifies strongly."
     }
   ],
   "watch_items": [
-    "Mercedes aero package split between drivers \u2014 older spec proved faster at Baku; monitor which package performs better at COTA's unique surface",
-    "McLaren's pace deficit \u2014 ML has both Norris and Piastri well below Mercedes/Ferrari/Red Bull; watch FP sessions to confirm if McLaren is truly off the pace",
-    "Verstappen DNF risk at 0.14 \u2014 COTA has historically produced incidents; any first-lap contact could turn a captain pick negative",
-    "Antonelli qualifying \u2014 ML predicts P1 quali but only P4 finish, implying race pace may not match one-lap speed; FP long runs will clarify",
-    "Weather \u2014 BoxBoxF1Fantasy consistently monitors rain probability; any wet session reshuffles the grid and creates overtake opportunities",
-    "Engine penalties \u2014 FanAmp noted Russell likely needs a second engine penalty later this season; if taken at Austin rather than expected, that changes scoring calculus dramatically"
+    "Mercedes upgrade status \u2014 channels note regression after Malaysia upgrades; check if older Baku-spec aero or newer package is run at COTA",
+    "Verstappen qualifying position \u2014 ML predicts P3 quali but P1 finish; if he qualifies higher, captain value increases further",
+    "Antonelli FP pace \u2014 ML predicts P1 quali but only P4 finish (pred 21.6 exp pts); watch if Mercedes race pace confirms or if quali flattered",
+    "Weather at COTA \u2014 rain could shuffle the order significantly and boost safety-car-dependent drivers like Lindblad and Lawson",
+    "Hulkenberg reliability \u2014 gearbox issue flagged in Singapore sprint qualifying; monitor FP sessions for recurring mechanical problems",
+    "Red Bull constructor value \u2014 ML projects 46.5 exp pts at 32.7M vs Mercedes 60.8 at 34.0M; Red Bull cheaper but significantly lower floor"
   ],
-  "arc": "The United States GP is the first of a crucial late-season triple-header stretch. Mercedes appear to have the strongest overall package (ML projects them at 65.1 exp constructor pts), making Antonelli and Russell premium holds through the final races. Budget building remains critical \u2014 drivers like Hadjar, Lindblad, and Lawson should be locked in now to accumulate price rises for the season finale push. McLaren's apparent regression at Austin needs monitoring: if it continues into Mexico and Brazil, pivoting away from McLaren constructor permanently and redistributing that budget into Ferrari or Red Bull becomes the dominant strategy. Save chips for sprint weekends or races where one team clearly dominates practice sessions.",
+  "arc": "Austin marks a critical inflection point in the season with only a handful of races remaining. Budget building enters its final phase \u2014 channels stress loading up on price-rise candidates like Hadjar, Lindblad, and Lawson now to maximize budget for the season-ending stretch through Mexico, Brazil, and Abu Dhabi. The Mercedes upgrade trajectory is the key storyline: if the older Baku aero specification proves competitive at COTA (as it did for Russell's Baku win), Mercedes remains the top constructor play through the Americas swing. If not, a pivot to Ferrari + Red Bull constructors may be needed for Mexico. Chip deployment becomes increasingly urgent \u2014 any unused 3x or Limitless chips should ideally be played within the next 2-3 races to avoid wasting them. Watch Verstappen's form closely; if he dominates Austin, he becomes the locked-in captain through the final rounds.",
   "sources": [
     {
       "channel": "FanAmp",
       "title": "Is George Russell Worth It Starting Last? \ud83e\udd14 | Singapore GP Final Thoughts | F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=kmRNdsDwQsQ"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83c\udfaf MY F1 FANTASY SINGAPORE GP TRANSFER TARGETS | F1 Fantasy 2026 Tips, Picks & Strategy \ud83c\udfaf",
+      "url": "https://www.youtube.com/watch?v=h5NXwDWw_ZA"
     },
     {
       "channel": "BoxBoxF1Fantasy",
@@ -154,5 +158,5 @@
       "url": "https://boxboxf1fantasy.com/picks/united-states-gp-2026/"
     }
   ],
-  "_source_hash": "d3cc130cba1fa3d96531fa4c318733da12494e401d4a233792f8bb2f1ed98490"
+  "_source_hash": "7b926423d4866c28dcdbffe513f462706b19d2b56f3c742b34ac5716cbe6a5d0"
 }
