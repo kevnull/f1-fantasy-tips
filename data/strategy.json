@@ -3,21 +3,27 @@
   "round": 20,
   "season": 2026,
   "sprint": false,
-  "deadline": "October 24",
-  "central_unknown": "Ferrari vs Mercedes vs Red Bull constructor pecking order at COTA \u2014 McLaren's relative weakness in ML projections creates a key budget allocation decision, and whether Verstappen's medium-risk DNF probability (14%) materializes could swing the entire weekend.",
+  "deadline": "October 25",
+  "central_unknown": "Ferrari brought major upgrades and topped both FP1 and FP2, but historically they have flattered on Fridays and faded on race day. The key question is whether Ferrari's upgrade gains hold through qualifying and the race, and whether McLaren's big upgrade package (which Norris says may take time to dial in) closes the gap.",
   "meta_template": {
-    "name": "Verstappen x2 + Antonelli + Leclerc + Mercedes + Ferrari",
+    "name": "Leclerc x2 + Ferrari + Mercedes",
     "budget_tiers": [
       {
-        "budget": "~107M",
-        "core": "Verstappen (C), Antonelli, Leclerc, Mercedes, Ferrari",
-        "fills": "Bortoleto + H\u00fclkenberg as budget fillers",
+        "budget": "~105M",
+        "core": "Leclerc (2x), Antonelli, Ferrari, Mercedes",
+        "fills": "Hulkenberg, Bearman/Lindblad",
         "optimal": true
       },
       {
-        "budget": "~105M",
-        "core": "Antonelli (C), Leclerc, Hamilton, Mercedes, Ferrari",
-        "fills": "Bortoleto + budget filler \u2014 pivots away from Verstappen's 14% DNF risk",
+        "budget": "~110M",
+        "core": "Leclerc (2x), Verstappen, Ferrari, Mercedes",
+        "fills": "Hulkenberg, Bearman",
+        "optimal": false
+      },
+      {
+        "budget": "~140M+",
+        "core": "Leclerc (2x), Antonelli, Ferrari, Mercedes",
+        "fills": "Hulkenberg, Bortoleto (differential gamble from back of grid)",
         "optimal": false
       }
     ]
@@ -25,112 +31,135 @@
   "captains": [
     {
       "label": "Primary",
-      "name": "Max Verstappen",
-      "acronym": "VER",
-      "price": "~28.2M",
-      "team": "Red Bull",
-      "team_colour": "3671C6",
-      "reason": "ML projects 28.9 exp pts (highest on grid), 39.2 proj pts, ppm 1.81, MEDIUM risk. Predicted to qualify P3 and finish P1 \u2014 significant overtake upside. FanAmp channels consistently rank Verstappen as the top captain option. 14% DNF probability is the main concern but upside justifies the pick. 90% CI [-11.5, 51.0]."
-    },
-    {
-      "label": "Differential",
       "name": "Charles Leclerc",
       "acronym": "LEC",
       "price": "~24.1M",
       "team": "Ferrari",
       "team_colour": "E8002D",
-      "reason": "ML projects 28.1 exp pts (essentially tied with Antonelli), 30.8 proj pts, ppm 1.33, value 1.17 \u2014 best value among top-3 drivers. Predicted to qualify P1 and finish P2 with a 14% DNF risk. BoxBox previously noted Leclerc is 'on the trend up' and Ferrari looked strong in recent races. Lower ownership than Verstappen/Antonelli makes him a compelling differential captain."
+      "reason": "ML projects 29.8 exp pts (proj 37.7), ppm 1.33, value 1.24, MEDIUM risk, predicted P1\u2192P1. Topped both FP1 and FP2 at COTA. Ferrari brought 4 upgrades and looked genuinely fast. FanAmp considers him a lock. ML ranks him #1 captain by expected points. DNF risk 0.14 is the main concern, but upside (90% CI up to 51 pts) is enormous."
+    },
+    {
+      "label": "Primary",
+      "name": "Max Verstappen",
+      "acronym": "VER",
+      "price": "~28.2M",
+      "team": "Red Bull Racing",
+      "team_colour": "3671C6",
+      "reason": "ML projects 27.8 exp pts (proj 30.4), ppm 1.81, MEDIUM risk, predicted P4\u2192P2. Was top 3 in both practice sessions. FanAmp had him as the default 2x before Friday but now rates Leclerc slightly higher. Concern: Hadjar said car looked 'horrendous' which could drag Red Bull constructor down. Still a strong captain if you prefer consistency at COTA."
+    },
+    {
+      "label": "Differential",
+      "name": "Kimi Antonelli",
+      "acronym": "ANT",
+      "price": "~27.1M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "ML projects 24.0 exp pts (proj 30.1), ppm 1.11, LOW risk (only 4% DNF), predicted P3\u2192P3, 90% CI [-2.8, 42.0]. Finished P2 in FP2. FanAmp considers him one of three must-have drivers alongside Leclerc and Verstappen. Lower ceiling than Leclerc but safest floor of the top 3 options."
     }
   ],
   "btier": {
     "buy": [
       {
-        "name": "Gabriel Bortoleto",
-        "acronym": "BOR",
-        "price": "~7.0M",
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~8.5M",
         "team_colour": "52E252",
-        "note": "ML projects 20.3 exp pts at only 7.0M \u2014 value score of 2.9 is the highest on the grid. LOW risk, 8% DNF. The ultimate budget enabler to afford premium drivers and constructors."
+        "note": "Six consecutive price rises of 0.6M. 81% chance of another price increase per F1 Fantasy Tools. FP1 power unit complaints resolved after setup change in FP2. Budget cornerstone \u2014 virtually a must-have."
       },
       {
-        "name": "Kimi Antonelli",
-        "acronym": "ANT",
-        "price": "~27.1M",
-        "team_colour": "27F4D2",
-        "note": "ML projects 28.4 exp pts, LOW risk (4% DNF), 90% CI [-3.7, 48.0]. Narrowest downside range among top drivers. FanAmp channels consistently back Antonelli as a core hold. Strong Mercedes pairing synergy."
+        "name": "Oliver Bearman",
+        "acronym": "BEA",
+        "price": "~6.4M",
+        "team_colour": "52E252",
+        "note": "82% chance of price rise per F1 Fantasy Tools. Needs only -7 to -2 pts for price increase. Great budget filler alongside Hulkenberg."
       },
       {
-        "name": "Charles Leclerc",
-        "acronym": "LEC",
-        "price": "~24.1M",
-        "team_colour": "E8002D",
-        "note": "ML projects 28.1 exp pts, value 1.17 \u2014 cheapest of the Big 3 drivers with comparable expected points. Predicted P1 in qualifying. Ferrari constructor synergy makes him a natural pairing."
+        "name": "Liam Lawson",
+        "acronym": "LAW",
+        "price": "~9.9M",
+        "team_colour": "6692FF",
+        "note": "ML projects 14.0 exp pts. F1FantasyPolePosition favors Lawson over Lindblad long-term due to upcoming 3-race average benefit from Singapore's big score. 82% chance of max price rise. Saves 0.1M vs Lindblad."
+      },
+      {
+        "name": "Arvid Lindblad",
+        "acronym": "LIN",
+        "price": "~10.0M",
+        "team_colour": "6692FF",
+        "note": "ML projects 14.6 exp pts (proj 17.2), LOW risk (4% DNF), predicted P12\u2192P10. Taking 5-place grid penalty \u2014 extra overtake opportunities. FanAmp rates him equal to Lawson with a slight edge on overtake potential."
       }
     ],
     "consider": [
       {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
-        "price": "~9.3M",
-        "team_colour": "6692FF",
-        "note": "F1FantasyPolePosition flagged Lawson as a differential (<5% ownership in top 500). Recent scores of 17 pts in Malaysia. COTA may not be his strongest track but price is right. ML data not explicitly listed but Racing Bulls constructor shows 27.9 exp pts."
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~7.0M",
+        "team_colour": "52E252",
+        "note": "ML projects 16.5 exp pts (proj 18.7), value 2.36 (highest on the grid), LOW risk, predicted P13\u2192P13. Taking 20-place grid penalty \u2014 starts at the back behind Cadillac, Williams, Aston Martin. FanAmp says possible 15-20 pt day but will almost certainly lose 0.6M in price. High-risk/high-reward differential for teams with 140M+ budget."
       },
       {
-        "name": "Sergio Perez",
-        "acronym": "PER",
-        "price": "~3.0M",
-        "team_colour": "6692FF",
-        "note": "F1FantasyPolePosition calls him a 'transfer target/transfer trap' \u2014 floor price asset enabling mega-teams. Only 27% ownership in top 500. Volatile scoring (-18 to +13 recent range) but enables Verstappen + Red Bull constructor stacking at minimal cost."
+        "name": "Esteban Ocon",
+        "acronym": "OCO",
+        "price": "~9.9M",
+        "team_colour": "B6BABD",
+        "note": "Scored 12 points in two consecutive races. 60% chance of price rise. Underrated per F1FantasyPolePosition. Alternative to Lawson/Lindblad at same price point."
       },
       {
-        "name": "Lewis Hamilton",
-        "acronym": "HAM",
-        "price": "~24.4M",
-        "team_colour": "E8002D",
-        "note": "ML projects 14.9 exp pts, LOW risk (10% DNF). Solid floor but significantly lower ceiling than Leclerc (16.3 proj vs 30.8 proj). Ferrari constructor pairing option if budget doesn't stretch to Leclerc elsewhere."
+        "name": "Fernando Alonso",
+        "acronym": "ALO",
+        "price": "~5.4M",
+        "team_colour": "229971",
+        "note": "One-week budget saver option at 5.4M. 60% price rise chance. F1FantasyPolePosition sees him as a differential but COTA is power-dependent which doesn't suit Aston Martin."
       }
     ],
     "avoid": [
-      "Lando Norris \u2014 ML projects only 13.5 exp pts despite 26.1M price, 18% DNF probability (highest among frontrunners), predicted to qualify P2 but drop to P5. McLaren constructor also ranks 4th.",
-      "George Russell \u2014 ML projects only 17.5 exp pts at 27.9M, poor value (0.63). No grid penalty boost this week unlike Singapore. Better to take Antonelli from Mercedes.",
-      "Fernando Alonso \u2014 F1FantasyPolePosition noted COTA is 'probably not an ideal option' for Aston Martin. Power-dependent circuit doesn't suit their package."
+      "Alex Albon \u2014 didn't complete a representative flying lap in either session due to track limits; Williams struggling badly at COTA",
+      "Franco Colapinto \u2014 10-place grid penalty, DNF'd sprint and race at Singapore, needs 39 pts just to avoid price drop",
+      "Lance Stroll \u2014 Aston Martin looked poor in practice",
+      "Williams constructor \u2014 worst performer on Friday"
     ]
   },
   "chips": [
     {
       "name": "Wildcard",
-      "rec": "save",
-      "reason": "No major structural team changes needed this week. The meta favors existing core assets (Verstappen, Antonelli, Leclerc). Save for a week with grid penalties, major price shifts, or constructor reshuffles."
+      "rec": "maybe",
+      "reason": "If you need to restructure for the final triple-header (US/Mexico/S\u00e3o Paulo), a Wildcard now lets you optimize for Ferrari upgrades and set up value growth through Hulkenberg, Bearman, and Lawson. Only use if your team needs 3+ changes."
     },
     {
       "name": "3x Boost",
-      "rec": "maybe",
-      "reason": "If you have a strong lineup with Verstappen or Antonelli as captain, COTA could be a decent 3x weekend given the high expected points at the top. However, without a sprint to boost scoring ceiling, the multiplier effect is lower than sprint weekends."
+      "rec": "save",
+      "reason": "No sprint this weekend reduces the total points ceiling. BoxBoxF1Fantasy previously showed 3x boost works best on high-ceiling weekends \u2014 consider saving for a sprint weekend or a race where your captain pick is more certain."
     },
     {
       "name": "Limitless",
       "rec": "save",
-      "reason": "BoxBox analysis from previous rounds showed 3x often outscores Limitless. Non-sprint weekend further reduces Limitless value. Save for a sprint weekend or major grid shakeup."
+      "reason": "Without a sprint, the delta between limitless and a well-constructed normal team is small. Save for a sprint weekend where it can generate a larger advantage."
     },
     {
       "name": "Final Fix",
-      "rec": "save",
-      "reason": "Hold for a weekend where qualifying results create a clear pivot opportunity. No extraordinary circumstances flagged for COTA."
+      "rec": "maybe",
+      "reason": "COTA Turn 1 chaos is a real risk \u2014 Lawson called it 'a lottery.' Having a Final Fix available to swap out a DNF victim could be valuable. Consider holding but being ready to deploy."
     }
   ],
   "watch_items": [
-    "Verstappen's 14% DNF probability \u2014 highest among the top 3 projected drivers. Monitor practice reliability closely before locking captain.",
-    "Mercedes constructor (61.9 exp pts, LOW risk) vs Ferrari constructor (56.4 exp pts but better value at 2.0 vs 1.82) \u2014 the 5.8M price gap could fund a driver upgrade.",
-    "McLaren underperformance \u2014 ML projects only 39.4 exp pts for the constructor (4th), with Norris at 18% DNF. This is a significant shift from recent form; monitor FP sessions.",
-    "Bortoleto's qualifying position \u2014 predicted P8 to P13 finish. If he qualifies higher, overtake points evaporate and his value case weakens.",
-    "Red Bull constructor (50.3 exp pts, MEDIUM risk) \u2014 wide confidence interval [5.6, 84.0] driven by Perez volatility. High ceiling if both drivers perform.",
-    "Perez price movement \u2014 at 3.0M floor price, even modest scoring triggers a price increase. F1FantasyPolePosition flagged this as a speculative asset play."
+    "FP3 pace: Does Ferrari's Friday dominance hold, or do Mercedes/Red Bull close the gap on Saturday? Ferrari have flattered on Fridays before.",
+    "Isack Hadjar's comfort with the car \u2014 he said it looked 'horrendous' in FP2. If he's still struggling in FP3, downgrade Red Bull constructor in favor of Mercedes + Ferrari.",
+    "Turn 1 chaos potential: Multiple drivers have been taken out in T1 at COTA historically. Lawson called it 'a lottery.' Midfield drivers could gain or lose massively on lap 1.",
+    "McLaren upgrade dial-in: Norris says big packages take time. Watch if McLaren pace improves through FP3 or if they remain behind Ferrari and Mercedes.",
+    "Hulkenberg power unit: FP1 complaints were attributed to setup divergence per Audi team boss McNish, but monitor FP3 for any recurrence.",
+    "Track limits enforcement in qualifying \u2014 affected Albon in both sessions. Could catch other drivers off guard.",
+    "George Russell's race pace on mediums was masked in FP2 \u2014 watch FP3 for true Mercedes pace read."
   ],
-  "arc": "The United States GP is a transitional race where the key strategic question is constructor allocation heading into the final stretch. Mercedes maintains the highest expected constructor points but at a premium price, while Ferrari offers better value. McLaren's projected dip at COTA (only 4th in constructor rankings) could signal a longer-term shift away from them. If Verstappen wins as projected, his price ceiling may lock out budget flexibility for Mexico and beyond. Bortoleto at 7.0M remains the critical budget enabler \u2014 his trajectory (value score 2.9) allows managers to run three premium assets. The next 1-2 races (Mexico, S\u00e3o Paulo) will test whether Ferrari's upward trend and McLaren's relative struggles are durable, so avoid burning chips now and preserve flexibility for what could be a more decisive points swing weekend.",
+  "arc": "The US GP kicks off a critical end-of-season stretch. Ferrari's upgrades could reshape the constructor hierarchy for the remaining races (Mexico, S\u00e3o Paulo, and beyond). If the upgrades deliver as promised \u2014 Leclerc suggested one big package could vault a team from 4th to 1st constructor \u2014 Ferrari assets become premium holds through the final triple-header. McLaren's upgrades may take longer to unlock, making them a wait-and-see for Mexico. The value growth plays (Hulkenberg, Bearman, Lawson) are setting up nicely for sustained price appreciation across the final 6 races. Budget managers should be positioning now for maximum team value heading into the season finale stretch, with the Wildcard best used either this weekend or Mexico depending on how Ferrari's upgrades perform in race conditions.",
   "sources": [
     {
       "channel": "FanAmp",
-      "title": "Is George Russell Worth It Starting Last? \ud83e\udd14 | Singapore GP Final Thoughts | F1 Fantasy",
-      "url": "https://www.youtube.com/watch?v=kmRNdsDwQsQ"
+      "title": "Paddock Scoop: Leclerc & Norris Upgrades, Turn 1 Chaos \ud83d\udca5 | US Grand Prix Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=zY1fFOOm_Eg"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83c\uddfa\ud83c\uddf8 MY F1 FANTASY UNITED STATES GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\uddfa\ud83c\uddf8",
+      "url": "https://www.youtube.com/watch?v=q_E4TcGj4sU"
     },
     {
       "channel": "F1FantasyPolePosition",
@@ -153,5 +182,5 @@
       "url": "https://boxboxf1fantasy.com/picks/united-states-gp-2026/"
     }
   ],
-  "_source_hash": "cb6f656bc32ab8fc5abe73b02977d028f380e90a5d781fdbea88e9e6176a7b5f"
+  "_source_hash": "7b97a2cb60c496f591da87f8a53bddeae1a7d1f0ad1ee39707070367af952953"
 }
