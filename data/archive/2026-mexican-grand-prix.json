@@ -1,0 +1,179 @@
+{
+  "race": "Mexican Grand Prix",
+  "round": 21,
+  "season": 2026,
+  "sprint": false,
+  "deadline": "October 26",
+  "central_unknown": "Lewis Hamilton's power unit issue from FP2 \u2014 if Ferrari need to replace components, Hamilton could take a grid penalty, which would dramatically change his fantasy value by adding overtake potential. Also, the extent of Bortoleto's issues and whether his penalty grows beyond five places.",
+  "meta_template": {
+    "name": "Antonelli x2 + Ferrari + Red Bull (4A)",
+    "budget_tiers": [
+      {
+        "budget": "~105M",
+        "core": "Antonelli (x2 captain), Leclerc or Verstappen, Ferrari constructor",
+        "fills": "Lawson + Perez/Bottas/Hulkenberg",
+        "optimal": true
+      },
+      {
+        "budget": "~100M",
+        "core": "Antonelli (x2 captain), Hadjar, Red Bull constructor",
+        "fills": "Lawson + budget driver (Bottas/Perez)",
+        "optimal": false
+      }
+    ]
+  },
+  "captains": [
+    {
+      "label": "Primary",
+      "name": "Kimi Antonelli",
+      "acronym": "ANT",
+      "price": "~27.5M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "Consensus #1 captain across all channels. ML projects 28.5 exp pts, ppm 1.13, LOW risk, predicted P1\u2192P1. Expected to clinch the F1 Fantasy title and take Driver of the Day (Lance Stroll viral campaign dismissed by FanAmp \u2014 FIA has overridden meme votes before). Topped FP1 P2 and FP2 P4, showing strong pace despite limited FP1 running with rookies."
+    },
+    {
+      "label": "Primary",
+      "name": "Max Verstappen",
+      "acronym": "VER",
+      "price": "~28.8M",
+      "team": "Red Bull Racing",
+      "team_colour": "3671C6",
+      "reason": "ML projects 26.6 exp pts, ppm 1.49, MEDIUM risk, predicted P4\u2192P2. Betting lines have him neck-and-neck with Antonelli. FanAmp notes Red Bull may have prioritized race sims in FP2 (hence P5 finish). Strong 2x captain alternative if you believe Red Bull found more pace. BoxBox notes Verstappen's soft tire pace looked promising."
+    },
+    {
+      "label": "Differential",
+      "name": "Charles Leclerc",
+      "acronym": "LEC",
+      "price": "~24.7M",
+      "team": "Ferrari",
+      "team_colour": "E8002D",
+      "reason": "ML projects 22.3 exp pts, ppm 1.57 (highest value among top drivers), MEDIUM risk, predicted P2\u2192P3. Topped BOTH practice sessions in Mexico. Austin upgrades clearly working. Was the top-scoring driver in Austin. BoxBox long-run data shows Leclerc had the best race pace on mediums \u2014 very consistent 1:21.2s across a long stint. Channels favor him as the primary alternative to Verstappen for the 2x slot."
+    }
+  ],
+  "btier": {
+    "buy": [
+      {
+        "name": "Liam Lawson",
+        "acronym": "LAW",
+        "price": "~6.0M",
+        "team_colour": "6692FF",
+        "note": "One of the top midfield drivers per FanAmp. Has a 1-place grid penalty from the Verstappen FP2 incident which could yield an extra overtake point. BoxBox notes his race pace was 'actually not bad.' Needs only 6 points for a budget rise \u2014 very doable. Strong B-tier anchor."
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~5.5M",
+        "team_colour": "52E252",
+        "note": "Already confirmed 5-place penalty for new control electronics, could grow larger after FP2 garage time. Had a great recovery drive in Austin scoring double-digit points. Penalty-driven overtake points make him interesting at a low price, though FP2 issues are a concern."
+      },
+      {
+        "name": "Valtteri Bottas",
+        "acronym": "BOT",
+        "price": "~3.0M",
+        "team_colour": "52E252",
+        "note": "Taking all-new power unit components with a 50-place grid drop. At $3M floor price with a brand new PU, he's the safest ultra-budget option. New PU makes him more reliable than other $3M drivers for the remaining races."
+      }
+    ],
+    "consider": [
+      {
+        "name": "Isack Hadjar",
+        "acronym": "HAD",
+        "price": "~16.3M",
+        "team_colour": "3671C6",
+        "note": "11 consecutive top-10 finishes. FanAmp says he's still the next-best option if you can't afford a full 4A lineup. However, if budget allows two elite drivers, he becomes a sell. BoxBox long-run data showed him with decent but shorter stints vs Leclerc."
+      },
+      {
+        "name": "Sergio Perez",
+        "acronym": "PER",
+        "price": "~8.0M",
+        "team_colour": "3671C6",
+        "note": "Home race \u2014 300th Grand Prix. Sentimental/crowd favorite. FanAmp includes him in their top lineup for emotional upside. BoxBox considers him as a budget option over Bottas for future value. Not a strong points play but cheap Red Bull exposure."
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~6.5M",
+        "team_colour": "52E252",
+        "note": "BoxBox identifies him as having the most budget potential among cheap drivers. Decent midfield option though Audi race pace looked concerning in FP2 data."
+      },
+      {
+        "name": "Lewis Hamilton",
+        "acronym": "HAM",
+        "price": "~25.0M",
+        "team_colour": "E8002D",
+        "note": "Parked in FP2 with a suspected PU issue. If he takes an engine penalty, he becomes a high-ceiling recovery play. Without a penalty, he's a strong 4A option \u2014 nearly matched Leclerc's race pace in long-run data. Monitor closely through FP3/qualifying."
+      }
+    ],
+    "avoid": [
+      "Lance Stroll \u2014 negative 147 points and 12 DNFs on the season. The viral Driver of the Day campaign will not work (FIA has overridden meme votes before). Do not roster him.",
+      "Oscar Piastri \u2014 BoxBox explicitly says 'I trust Hadjar a lot more than Piastri' and notes his inconsistent pace. Not worth the premium.",
+      "Carlos Sainz \u2014 BoxBox skeptical of his value relative to price.",
+      "Esteban Ocon \u2014 Confirmed OUT for the rest of the race weekend. Remove immediately if rostered."
+    ]
+  },
+  "chips": [
+    {
+      "name": "Autopilot",
+      "rec": "maybe",
+      "reason": "FanAmp suggests this is a good time to use it if you still have it, especially with two strong captain candidates (Antonelli/Verstappen or Antonelli/Leclerc). If one DNFs, auto-swap to the other's 2x could be huge. Even better saved for Brazil where 17 DNFs over last 4 seasons make it extremely valuable."
+    },
+    {
+      "name": "Final Fix",
+      "rec": "save",
+      "reason": "Better saved for Brazil (weather chaos, potential grid penalties) unless Hamilton's PU situation forces a last-minute swap. Brazil has 68% rain chance and historically chaotic qualifying."
+    },
+    {
+      "name": "No Negative",
+      "rec": "save",
+      "reason": "Brazil is the ideal deployment \u2014 17 DNFs over last 4 seasons, high rain probability. F1FantasyPolePosition explicitly says 'smoke them if you got them' for Brazil. Mexico is relatively straightforward by comparison."
+    },
+    {
+      "name": "Wildcard",
+      "rec": "save",
+      "reason": "BoxBox is considering wildcard deployment but leaning toward saving it to set up for the next race weekend. With the triple-header in progress, a wildcard for Brazil or the final races could be more impactful."
+    }
+  ],
+  "watch_items": [
+    "Lewis Hamilton PU status: If Ferrari replace components, expect a grid penalty \u2014 transforms him from standard 4A pick into high-ceiling recovery play with overtake points",
+    "Gabriel Bortoleto's penalty size: Currently 5-place for control electronics, but FP2 garage time suggests possible additional components needed \u2014 could grow to 10+ places",
+    "FP3 Mercedes performance: Russell in P3 during FP2. If he stays top-5 in FP3, Mercedes constructor becomes viable; if he drops, Red Bull constructor gains edge",
+    "Lance Stroll Driver of the Day campaign: FIA has historically overridden meme votes (Mazepin 2021, Latifi 2022). Antonelli should still win DOTD \u2014 do not adjust lineups for this",
+    "Max Verstappen true pace: Only had FP2 (no FP1 due to rookie requirement), may have been sandbagging or doing race sims \u2014 FP3 will reveal more",
+    "Ocon replacement driver confirmation for remaining races \u2014 impacts Haas constructor and budget planning"
+  ],
+  "arc": "Mexico is the second race of a triple-header, with Brazil immediately following. The key strategic arc is chip management \u2014 Mexico is relatively predictable (Ferrari and Mercedes look strong, Antonelli remains dominant), making it a 'hold your chips' weekend. Brazil's Interlagos presents chaos potential with 55-68% rain probability, historically high DNF rates, and possible grid penalties (Verstappen engine penalty rumors). Channels unanimously agree that defensive chips (Autopilot, Final Fix, No Negative) should be deployed in Brazil rather than Mexico. Budget-wise, picking up Lawson and Bottas now at floor prices positions you for flexibility heading into S\u00e3o Paulo, where the ML projects Antonelli (28.5 exp pts), Verstappen (26.6), and Leclerc (22.3) as the clear top three with Mercedes (61.9 exp pts) and Ferrari (56.1) as the top constructors.",
+  "sources": [
+    {
+      "channel": "FanAmp",
+      "title": "Can Lance Stroll Steal Kimi's Driver of the Day? \ud83d\uddf3\ufe0f | Mexican GP Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=H98IoemaUrs"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83c\udde7\ud83c\uddf7 ALL ABOARD BORTOLETO | BRAZILIAN GP TEAM SELECTION | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83c\udde7\ud83c\uddf7",
+      "url": "https://www.youtube.com/watch?v=kPZDAmn2tws"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "Mexican Grand Prix Final Thoughts - Get Ocon out NOW! F1 Fantasy 2026",
+      "url": "https://www.youtube.com/watch?v=JwrQ2tvt0gU"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=dSPcjpghfbs"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "4A Activated! Dutch Grand Prix Final Thoughts for F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=oTKy-073tFk"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy-ML",
+      "title": "BoxBoxF1Fantasy ML predictions \u2014 Brazilian Grand Prix",
+      "url": "https://boxboxf1fantasy.com/picks/brazilian-gp-2026/"
+    }
+  ],
+  "_source_hash": "793d84b2c96c35d09af8518c4beb6050aa035e2cf00bf9cc4be33b5cf64e6839"
+}
