@@ -1,0 +1,181 @@
+{
+  "race": "Las Vegas GP",
+  "round": 23,
+  "season": 2026,
+  "sprint": false,
+  "deadline": "November 14",
+  "central_unknown": "Whether rain disrupts qualifying and race order, and whether Nico Hulkenberg faces an engine penalty after Freddy Slater's reliability issue in his car at the Brazilian GP \u2014 Audi reliability remains the key swing factor for budget builds.",
+  "meta_template": {
+    "name": "Antonelli x2 + Mercedes + Ferrari core",
+    "budget_tiers": [
+      {
+        "budget": "~139M",
+        "core": "Antonelli (captain), Verstappen, Leclerc, Mercedes constructor",
+        "fills": "Hulkenberg + Bearman/Bortoleto/Lindblad as budget picks",
+        "optimal": true
+      },
+      {
+        "budget": "~130M",
+        "core": "Antonelli (captain), Verstappen, Ferrari constructor",
+        "fills": "Hulkenberg + Bortoleto + Colapinto/Lindblad as budget picks",
+        "optimal": false
+      }
+    ]
+  },
+  "captains": [
+    {
+      "label": "Primary",
+      "name": "Kimi Antonelli",
+      "acronym": "ANT",
+      "price": "~27.6M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "ML projects 26.0 exp pts, proj 34.2 pts, ppm 1.04, LOW risk, predicted P1 quali \u2192 P2 finish, 90% CI [-3.5, 48.0]. Narrator consensus across channels also places Antonelli as the top tier-A pick \u2014 locked-in world champion with strong wet-weather form and dominant FP sessions. Mercedes also ML-projected as #1 constructor (60.8 exp pts), giving double exposure upside."
+    },
+    {
+      "label": "Primary",
+      "name": "Max Verstappen",
+      "acronym": "VER",
+      "price": "~29.1M",
+      "team": "Red Bull Racing",
+      "team_colour": "3671C6",
+      "reason": "ML projects 25.9 exp pts, proj 40.5 pts (highest projected pts of any driver), ppm 1.62, MEDIUM risk, DNF 0.11, predicted P5 quali \u2192 P1 finish, 90% CI [-11.2, 50.0]. FanAmp highlights Verstappen won both wet races this season (Singapore, Malaysia) and won 3 of last 4 races. Incredible wet-weather pedigree makes him essential if rain materializes. Channels unanimously rank him tier-A."
+    },
+    {
+      "label": "Differential",
+      "name": "Lando Norris",
+      "acronym": "NOR",
+      "price": "~26.0M",
+      "team": "McLaren",
+      "team_colour": "FF8000",
+      "reason": "ML projects 20.3 exp pts, proj 21.8 pts, ppm 0.92, MEDIUM risk, DNF 0.16, predicted P6 quali \u2192 P4 finish. Only 4.2% ownership in Global Top 500 per FanAmp \u2014 massive differential upside. Won this race last season, McLaren bringing biggest upgrade package of the weekend. FP1 P1, FP2 strong. Channels flag him as the top differential; ML supports with 5th-highest expected points. Higher DNF risk (0.16) is the main concern."
+    }
+  ],
+  "btier": {
+    "buy": [
+      {
+        "name": "Nico Hulkenberg",
+        "acronym": "HUL",
+        "price": "~8.5M",
+        "team_colour": "52E252",
+        "note": "Veteran trusted in mixed/wet conditions. Budget-friendly with strong recent point-scoring streak. Watch FP3 closely \u2014 Freddy Slater's car had reliability issues at Brazil, if Audi fix the PU he's a safe hold. ML ranks Audi constructor at 13.8 exp pts with MEDIUM risk."
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~5.8M",
+        "team_colour": "52E252",
+        "note": "Consistent P8 in both FP1 and FP2 at Brazil. Cheap budget option with easy price rise thresholds (-12 for min, -7 for max). Pole Position channel highlights him as a strong budget fill."
+      },
+      {
+        "name": "Oliver Bearman",
+        "acronym": "BEA",
+        "price": "~7.5M",
+        "team_colour": "E8002D",
+        "note": "Strong Interlagos history (30 pts last year, 14 pts in 2024 sub appearance). Ferrari-powered car gives scoring floor. Multiple channels keeping him in lineups despite modest FP finishes (P12/P10)."
+      }
+    ],
+    "consider": [
+      {
+        "name": "Pierre Gasly",
+        "acronym": "GAS",
+        "price": "~10.0M",
+        "team_colour": "0093CC",
+        "note": "FanAmp trusts him in wet conditions. Alpine P7 and P9 in FP1 even with Gabriella Mini subbing in. Mercedes-powered team benefits on long straights. Solid mid-tier option."
+      },
+      {
+        "name": "Carlos Sainz",
+        "acronym": "SAI",
+        "price": "~9.5M",
+        "team_colour": "64C4FF",
+        "note": "FanAmp warming up to Williams duo in wet conditions. 8 top-10 finishes this season per LF1 strategy. Needs just 2 pts for min price rise. Watch rain forecast \u2014 veteran wet-weather racer."
+      },
+      {
+        "name": "Franco Colapinto",
+        "acronym": "COL",
+        "price": "~5.5M",
+        "team_colour": "0093CC",
+        "note": "2.2% ownership in top 500 \u2014 pure differential. FP1 P9, FP2 P11. Alpine has history of strong Brazil results (double podium 2025). However, historically terrible at Interlagos (DNF 2024, -16 pts 2025). High risk/high reward."
+      },
+      {
+        "name": "Isack Hadjar",
+        "acronym": "HAD",
+        "price": "~16.5M",
+        "team_colour": "3671C6",
+        "note": "ML projects 12.4 exp pts, ppm 1.15, MEDIUM risk. Multiple channels highlight him as key to avoiding 3M budget traps. Solid floor when paired with Verstappen via Red Bull constructor. Returning from injury with proven pre-injury form (15-25 pt range)."
+      }
+    ],
+    "avoid": [
+      "Rafa Camara \u2014 F1 debut, never raced at Interlagos, near top of first-retirement betting lines. FanAmp explicitly keeping off team.",
+      "Sergio Perez \u2014 persistent 3M trap asset, channels unanimously warn against budget-floor drivers.",
+      "Lance Stroll \u2014 finished only 2 of last 9 races per ReinFantasy. Aston Martin reliability catastrophic.",
+      "Valtteri Bottas \u2014 same 3M trap category, Cadillac unreliable, channels warn about recurring DNFs.",
+      "Oscar Piastri \u2014 ML projects 17.7 exp pts but only 0.57 ppm. Channels say he 'looks lost in the car.' Not worth premium price when Norris is the McLaren to own."
+    ]
+  },
+  "chips": [
+    {
+      "name": "Wildcard",
+      "rec": "maybe",
+      "reason": "If you're stuck with multiple 3M budget-trap assets (Perez, Stroll, Bottas) and need to restructure toward Antonelli + Verstappen + better budget picks, Wildcard is justified now. ReinFantasy notes end-of-season positioning matters more than saving budget. However, with only a few races left, saving for a double-header might yield more value."
+    },
+    {
+      "name": "3x Boost",
+      "rec": "save",
+      "reason": "BoxBox used 3x at Monza on Antonelli and it scored higher than Limitless. Las Vegas could be a candidate if Mercedes dominance continues, but most channels are not explicitly recommending chip usage this week due to rain uncertainty."
+    },
+    {
+      "name": "Final Fix",
+      "rec": "save",
+      "reason": "Hold for a race where qualifying drastically reshuffles expectations. Rain at Las Vegas could make this valuable if you want to react to quali results, but channels generally suggest saving for season finale stretch."
+    }
+  ],
+  "watch_items": [
+    "Rain forecast: greatest chance early afternoon Sunday, could taper off \u2014 Verstappen and Antonelli both strong in wet. Monitor weather updates before deadline.",
+    "Hulkenberg / Audi reliability: Freddy Slater's car retired in FP1 at Brazil with a PU issue. If Audi take an engine penalty for Hulkenberg, he becomes a MUST-HAVE with back-of-grid overtaking upside. Watch FP3 closely.",
+    "George Russell 5-place grid penalty (ICE only, not full PU swap): still useful for Mercedes constructor but Russell individually capped around 20-25 pts per FanAmp. ML projects 19.3 exp pts, MEDIUM risk.",
+    "McLaren upgrades: biggest package of any team this weekend, components expected to carry into 2027 car. Watch if Norris continues FP1 pace through qualifying.",
+    "Mercedes engine update status: Pole Position channel speculates Mercedes may not introduce their engine update this season since Antonelli already clinched WDC. Could affect late-season Mercedes pace ceiling.",
+    "Verstappen steering/downshift complaints: Red Bull usually make big setup steps but monitor FP3 to confirm race pace.",
+    "Betting lines for first retirement: Aston Martin drivers top the list, followed by Cadillacs and Camara. Avoid these assets."
+  ],
+  "arc": "Las Vegas is a street circuit that rewards straight-line speed and energy management \u2014 Mercedes and Ferrari power units should excel. With Antonelli's WDC wrapped up, the focus shifts to the constructors' championship battle between Mercedes and McLaren/Ferrari. The rain variable could create chaos and favor veterans like Verstappen and Hulkenberg. Budget restructuring away from 3M trap assets (Perez, Stroll, Bottas) toward a leaner Antonelli + Verstappen + quality mid-tier core is the key strategic move heading into the final 2-3 races. If you haven't already pivoted to this structure, Las Vegas with its scoring volatility (rain, penalties, street circuit chaos) is the weekend to make the switch \u2014 either via transfers or Wildcard \u2014 to set up a strong finish through Abu Dhabi.",
+  "sources": [
+    {
+      "channel": "FanAmp",
+      "title": "Rafa Camara Enters the Game, But What About Your Team? \ud83d\udc40 | Brazilian GP Final Thoughts | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=xuz_DvcKAIk"
+    },
+    {
+      "channel": "ReinFantasy",
+      "title": "The $3.0M trap | Azerbaijan GP Final Thoughts | F1 Fantasy Tips 2026",
+      "url": "https://www.youtube.com/watch?v=s_Hd8ne3F-E"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83e\udde0 BRAZILIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
+      "url": "https://www.youtube.com/watch?v=qyMZ6scgQUE"
+    },
+    {
+      "channel": "LF1FantasyStrategy",
+      "title": "F1 Fantasy Azerbaijan GP 2026 | Baku Transfer Targets & Team Builds",
+      "url": "https://www.youtube.com/watch?v=sr1s79ocuZ0"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=dSPcjpghfbs"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy",
+      "title": "Mexican Grand Prix Final Thoughts - Get Ocon out NOW! F1 Fantasy 2026",
+      "url": "https://www.youtube.com/watch?v=JwrQ2tvt0gU"
+    },
+    {
+      "channel": "BoxBoxF1Fantasy-ML",
+      "title": "BoxBoxF1Fantasy ML predictions \u2014 Las Vegas Grand Prix",
+      "url": "https://boxboxf1fantasy.com/picks/las-vegas-gp-2026/"
+    }
+  ],
+  "_source_hash": "4099dd6b3504d33a0c2aabf0a25ee92f2b97508f6077b9bd01f470bd931ce295"
+}

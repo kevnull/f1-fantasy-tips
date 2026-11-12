@@ -1,29 +1,23 @@
 {
-  "race": "S\u00e3o Paulo GP",
-  "round": 22,
+  "race": "Las Vegas GP",
+  "round": 23,
   "season": 2026,
   "sprint": false,
-  "deadline": "Saturday before qualifying",
-  "central_unknown": "Rain is forecast throughout Sunday at Interlagos, creating major uncertainty around qualifying positions, race-day grip, and DNF risk \u2014 this disproportionately favors experienced wet-weather drivers like Verstappen while making rookies like Rafa C\u00e2mara and unreliable cars (Aston Martin, Cadillac) extremely risky.",
+  "deadline": "November 14",
+  "central_unknown": "Whether rain disrupts qualifying and race order, and whether Nico Hulkenberg faces an engine penalty after Freddy Slater's reliability issue in his car at the Brazilian GP \u2014 Audi reliability remains the key swing factor for budget builds.",
   "meta_template": {
-    "name": "Verstappen x2 + Antonelli + Mercedes/Red Bull",
+    "name": "Antonelli x2 + Mercedes + Ferrari core",
     "budget_tiers": [
       {
-        "budget": "~107M+",
-        "core": "Verstappen (2x captain), Antonelli, Hamilton or Leclerc as 3rd A-tier, Red Bull or Mercedes constructor",
-        "fills": "Bortoleto + Bearman/Hulkenberg/Lindblad",
+        "budget": "~139M",
+        "core": "Antonelli (captain), Verstappen, Leclerc, Mercedes constructor",
+        "fills": "Hulkenberg + Bearman/Bortoleto/Lindblad as budget picks",
         "optimal": true
       },
       {
-        "budget": "~100-107M",
-        "core": "Verstappen (2x) or Antonelli (2x), Hamilton, Mercedes constructor",
-        "fills": "Bortoleto + Hulkenberg + budget B-tier (Sainz/Colapinto)",
-        "optimal": false
-      },
-      {
-        "budget": "~95-100M",
-        "core": "Antonelli (2x), Hamilton, Mercedes constructor",
-        "fills": "Bortoleto + two budget B-tiers from Hulkenberg/Bearman/Sainz/Lindblad",
+        "budget": "~130M",
+        "core": "Antonelli (captain), Verstappen, Ferrari constructor",
+        "fills": "Hulkenberg + Bortoleto + Colapinto/Lindblad as budget picks",
         "optimal": false
       }
     ]
@@ -31,12 +25,21 @@
   "captains": [
     {
       "label": "Primary",
+      "name": "Kimi Antonelli",
+      "acronym": "ANT",
+      "price": "~27.6M",
+      "team": "Mercedes",
+      "team_colour": "27F4D2",
+      "reason": "ML projects 26.0 exp pts, proj 34.2 pts, ppm 1.04, LOW risk, predicted P1 quali \u2192 P2 finish, 90% CI [-3.5, 48.0]. Narrator consensus across channels also places Antonelli as the top tier-A pick \u2014 locked-in world champion with strong wet-weather form and dominant FP sessions. Mercedes also ML-projected as #1 constructor (60.8 exp pts), giving double exposure upside."
+    },
+    {
+      "label": "Primary",
       "name": "Max Verstappen",
       "acronym": "VER",
       "price": "~29.1M",
-      "team": "Red Bull",
+      "team": "Red Bull Racing",
       "team_colour": "3671C6",
-      "reason": "Consensus #1 captain across all channels. Won both wet races this season (Singapore & Malaysia). Finished P3 in both FP1 and FP2. Exceptional Interlagos record \u2014 won 3 of last 4 races here. Wet weather is his superpower. ML projects 25.9 exp pts, ppm 1.62, MEDIUM risk for Las Vegas (nearest available ML data); channels unanimously rate him as the top pick for S\u00e3o Paulo, especially in changeable conditions. ZachGP explicitly names him as 2x pick."
+      "reason": "ML projects 25.9 exp pts, proj 40.5 pts (highest projected pts of any driver), ppm 1.62, MEDIUM risk, DNF 0.11, predicted P5 quali \u2192 P1 finish, 90% CI [-11.2, 50.0]. FanAmp highlights Verstappen won both wet races this season (Singapore, Malaysia) and won 3 of last 4 races. Incredible wet-weather pedigree makes him essential if rain materializes. Channels unanimously rank him tier-A."
     },
     {
       "label": "Differential",
@@ -45,127 +48,113 @@
       "price": "~26.0M",
       "team": "McLaren",
       "team_colour": "FF8000",
-      "reason": "Only 4.2% ownership in Global Top 500. McLaren brought their biggest upgrade package of the season to Interlagos. P1 in FP1, P2 in FP2. Won this race last season. Strong in wet conditions historically. FanAmp notes betting lines show him closing the gap to top two. ML projects 20.3 exp pts at Las Vegas \u2014 but channels flag his FP pace and upgrades may push him higher here. ZachGP considers him a differential but isn't personally going near McLaren; FanAmp and PolePosition are more bullish."
+      "reason": "ML projects 20.3 exp pts, proj 21.8 pts, ppm 0.92, MEDIUM risk, DNF 0.16, predicted P6 quali \u2192 P4 finish. Only 4.2% ownership in Global Top 500 per FanAmp \u2014 massive differential upside. Won this race last season, McLaren bringing biggest upgrade package of the weekend. FP1 P1, FP2 strong. Channels flag him as the top differential; ML supports with 5th-highest expected points. Higher DNF risk (0.16) is the main concern."
     }
   ],
   "btier": {
     "buy": [
       {
-        "name": "Gabriel Bortoleto",
-        "acronym": "BOR",
-        "price": "~5.8M",
-        "team_colour": "52E252",
-        "note": "Home GP, P8 in both FP1 and FP2. Strong pace from Audi. Budget-increasing asset \u2014 needs only -12 for min price rise, -7 for max. Consensus best cheap B-tier across all channels. Potential DOTD if he performs well at home."
-      },
-      {
         "name": "Nico Hulkenberg",
         "acronym": "HUL",
         "price": "~8.5M",
         "team_colour": "52E252",
-        "note": "Trusted wet-weather veteran per FanAmp. Has been adding value consistently. CAUTION: Freddy Slater had reliability issues in Hulk's car during FP1, and Hulk did not set a time in FP2. Monitor FP3 closely \u2014 if he completes laps, he's a strong hold. Possible engine penalty would actually make him a better fantasy asset (back of grid overtake points)."
+        "note": "Veteran trusted in mixed/wet conditions. Budget-friendly with strong recent point-scoring streak. Watch FP3 closely \u2014 Freddy Slater's car had reliability issues at Brazil, if Audi fix the PU he's a safe hold. ML ranks Audi constructor at 13.8 exp pts with MEDIUM risk."
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "acronym": "BOR",
+        "price": "~5.8M",
+        "team_colour": "52E252",
+        "note": "Consistent P8 in both FP1 and FP2 at Brazil. Cheap budget option with easy price rise thresholds (-12 for min, -7 for max). Pole Position channel highlights him as a strong budget fill."
       },
       {
         "name": "Oliver Bearman",
         "acronym": "BEA",
-        "price": "~6.5M",
-        "team_colour": "52E252",
-        "note": "Scored 30 pts at S\u00e3o Paulo last season and 14 pts in 2024 when he subbed in. P12 FP1, P10 FP2. Loves this track. PolePosition highlights his strong Interlagos history across multiple years."
+        "price": "~7.5M",
+        "team_colour": "E8002D",
+        "note": "Strong Interlagos history (30 pts last year, 14 pts in 2024 sub appearance). Ferrari-powered car gives scoring floor. Multiple channels keeping him in lineups despite modest FP finishes (P12/P10)."
       }
     ],
     "consider": [
       {
-        "name": "Carlos Sainz",
-        "acronym": "SAI",
-        "price": "~9.0M",
-        "team_colour": "64C4FF",
-        "note": "FanAmp warming up to Williams duo in mixed conditions. Needs only 2 pts for min price rise. Experienced wet-weather driver. FP1/FP2 pace not highlighted but Williams improving lately."
+        "name": "Pierre Gasly",
+        "acronym": "GAS",
+        "price": "~10.0M",
+        "team_colour": "0093CC",
+        "note": "FanAmp trusts him in wet conditions. Alpine P7 and P9 in FP1 even with Gabriella Mini subbing in. Mercedes-powered team benefits on long straights. Solid mid-tier option."
       },
       {
-        "name": "Alex Albon",
-        "acronym": "ALB",
-        "price": "~8.5M",
+        "name": "Carlos Sainz",
+        "acronym": "SAI",
+        "price": "~9.5M",
         "team_colour": "64C4FF",
-        "note": "FanAmp also warming to Albon for wet conditions. Williams had some FP1 issues but are a viable mid-budget option."
+        "note": "FanAmp warming up to Williams duo in wet conditions. 8 top-10 finishes this season per LF1 strategy. Needs just 2 pts for min price rise. Watch rain forecast \u2014 veteran wet-weather racer."
       },
       {
         "name": "Franco Colapinto",
         "acronym": "COL",
         "price": "~5.5M",
         "team_colour": "0093CC",
-        "note": "Differential at 2.2% ownership in top 500. P9 FP1, P11 FP2. Alpine showed decent pace. But terrible Interlagos history (-10 in 2024, -16 in 2025). PolePosition considers him only as a Hulkenberg backup."
+        "note": "2.2% ownership in top 500 \u2014 pure differential. FP1 P9, FP2 P11. Alpine has history of strong Brazil results (double podium 2025). However, historically terrible at Interlagos (DNF 2024, -16 pts 2025). High risk/high reward."
       },
       {
-        "name": "Arvid Lindblad",
-        "acronym": "LIN",
-        "price": "~5.5M",
-        "team_colour": "6692FF",
-        "note": "Budget option from Racing Bulls. ZachGP includes him in team builds. Decent budget-preserving filler."
+        "name": "Isack Hadjar",
+        "acronym": "HAD",
+        "price": "~16.5M",
+        "team_colour": "3671C6",
+        "note": "ML projects 12.4 exp pts, ppm 1.15, MEDIUM risk. Multiple channels highlight him as key to avoiding 3M budget traps. Solid floor when paired with Verstappen via Red Bull constructor. Returning from injury with proven pre-injury form (15-25 pt range)."
       }
     ],
     "avoid": [
-      "Rafa C\u00e2mara \u2014 debut race, never raced at Interlagos, first time in 2026 car during FP1, wet conditions are worst-case for a rookie. Betting lines show him among the most likely first retirements. Consensus avoid across all channels.",
-      "Lance Stroll \u2014 finished only 2 of last 9 races. DNF magnet. Budget floor but not worth the -25 risk.",
-      "Fernando Alonso \u2014 serial DNFs in the Aston Martin. Another DNF-after-DNF driver per ZachGP.",
-      "Valtteri Bottas \u2014 budget floor but same DNF problems as other Cadillac/Aston Martin assets.",
-      "Sergio Perez \u2014 less FP running time, unreliable, limited upside.",
-      "Esteban Ocon \u2014 INACTIVE DRIVER. Must remove immediately or face -25 per race.",
-      "Rio Hirakawa \u2014 INACTIVE DRIVER. Must remove immediately or face -25 per race.",
-      "Pierre Gasly \u2014 ZachGP places him on the do-not-use list; Alpine pace not strong enough relative to budget.",
-      "Oscar Piastri \u2014 still looks lost in the McLaren, gave up FP1 seat. Only Norris worth considering from McLaren.",
-      "George Russell \u2014 5-place grid penalty, recent form of P9/P8/P6 since Baku win, Mercedes weak in dirty air. Upside capped around 20-25 pts per FanAmp. Better options available."
+      "Rafa Camara \u2014 F1 debut, never raced at Interlagos, near top of first-retirement betting lines. FanAmp explicitly keeping off team.",
+      "Sergio Perez \u2014 persistent 3M trap asset, channels unanimously warn against budget-floor drivers.",
+      "Lance Stroll \u2014 finished only 2 of last 9 races per ReinFantasy. Aston Martin reliability catastrophic.",
+      "Valtteri Bottas \u2014 same 3M trap category, Cadillac unreliable, channels warn about recurring DNFs.",
+      "Oscar Piastri \u2014 ML projects 17.7 exp pts but only 0.57 ppm. Channels say he 'looks lost in the car.' Not worth premium price when Norris is the McLaren to own."
     ]
   },
   "chips": [
     {
       "name": "Wildcard",
       "rec": "maybe",
-      "reason": "If you're stuck with multiple dead assets (Ocon, Hirakawa, Stroll, Bottas) and need a full restructure to get Verstappen + Antonelli + quality B-tiers, this is a reasonable week to wildcard. Rain creates variance that could reward a well-constructed team. However, Las Vegas is also a strong wildcard candidate if you can manage with transfers this week."
+      "reason": "If you're stuck with multiple 3M budget-trap assets (Perez, Stroll, Bottas) and need to restructure toward Antonelli + Verstappen + better budget picks, Wildcard is justified now. ReinFantasy notes end-of-season positioning matters more than saving budget. However, with only a few races left, saving for a double-header might yield more value."
     },
     {
-      "name": "Autopilot (2x Captain)",
-      "rec": "use",
-      "reason": "ZachGP explicitly recommends using the 2x on Verstappen this weekend. Wet conditions at Interlagos historically produce dominant Verstappen performances. His ceiling is enormous if rain materializes. If you've already used autopilot, manually captaining Verstappen is the consensus play."
-    },
-    {
-      "name": "Limitless",
+      "name": "3x Boost",
       "rec": "save",
-      "reason": "No channel recommends Limitless for S\u00e3o Paulo. Save for a weekend with clearer pace hierarchies and less weather variance \u2014 Las Vegas or end-of-season races are better candidates."
+      "reason": "BoxBox used 3x at Monza on Antonelli and it scored higher than Limitless. Las Vegas could be a candidate if Mercedes dominance continues, but most channels are not explicitly recommending chip usage this week due to rain uncertainty."
     },
     {
       "name": "Final Fix",
       "rec": "save",
-      "reason": "Hold Final Fix for a weekend where a late qualifying surprise (engine penalty, crash) creates a clear last-minute optimization. Could be useful if Hulkenberg situation clarifies late."
+      "reason": "Hold for a race where qualifying drastically reshuffles expectations. Rain at Las Vegas could make this valuable if you want to react to quali results, but channels generally suggest saving for season finale stretch."
     }
   ],
   "watch_items": [
-    "Hulkenberg's car reliability: Freddy Slater's FP1 red flag and Hulk's zero laps in FP2 are major red flags. If Hulk doesn't complete meaningful FP3 running, consider swapping to Colapinto, Sainz, or Bearman.",
-    "Verstappen engine penalty: He has hinted at a potential late-season engine penalty. Small chance it comes at Brazil. If announced, he becomes an EVEN BETTER asset due to overtake points \u2014 do not panic sell.",
-    "Rain timing on Sunday: Greatest chance of rain in early afternoon per weather analyst Ralpho. Even if F1 adjusts start time, rain is predicted throughout the day. This favors veterans and punishes rookies/unreliable machinery.",
-    "McLaren upgrades: Biggest upgrade package on the grid. Chris Medlin reports these may be 2027 components being tested. Monitor FP3/quali to see if Norris pace from FP1/FP2 holds \u2014 could validate him as a serious differential.",
-    "C\u00e2mara's debut: Emotional home race story but extremely risky fantasy asset. Do not chase the narrative unless FP3 shows shocking pace.",
-    "Mercedes constructor vs Red Bull constructor: Russell's 5-place penalty gives him overtake upside that could swing the Russell vs Hadjar matchup in Mercedes' favor. FanAmp prefers Mercedes constructor over Red Bull this week despite giving up 0.3M price gain potential."
+    "Rain forecast: greatest chance early afternoon Sunday, could taper off \u2014 Verstappen and Antonelli both strong in wet. Monitor weather updates before deadline.",
+    "Hulkenberg / Audi reliability: Freddy Slater's car retired in FP1 at Brazil with a PU issue. If Audi take an engine penalty for Hulkenberg, he becomes a MUST-HAVE with back-of-grid overtaking upside. Watch FP3 closely.",
+    "George Russell 5-place grid penalty (ICE only, not full PU swap): still useful for Mercedes constructor but Russell individually capped around 20-25 pts per FanAmp. ML projects 19.3 exp pts, MEDIUM risk.",
+    "McLaren upgrades: biggest package of any team this weekend, components expected to carry into 2027 car. Watch if Norris continues FP1 pace through qualifying.",
+    "Mercedes engine update status: Pole Position channel speculates Mercedes may not introduce their engine update this season since Antonelli already clinched WDC. Could affect late-season Mercedes pace ceiling.",
+    "Verstappen steering/downshift complaints: Red Bull usually make big setup steps but monitor FP3 to confirm race pace.",
+    "Betting lines for first retirement: Aston Martin drivers top the list, followed by Cadillacs and Camara. Avoid these assets."
   ],
-  "arc": "S\u00e3o Paulo is a high-variance race due to weather uncertainty, making it a weekend where getting the captain right (Verstappen in rain, Antonelli in dry) is worth more than optimizing B-tier selections. The Hulkenberg reliability situation could cascade into future weeks if Audi takes engine penalties. McLaren's upgrade package is potentially the biggest development story \u2014 if it translates to genuine pace, Norris becomes a factor for Las Vegas and beyond. With Antonelli having already clinched the WDC and Mercedes potentially holding back their engine upgrade, the constructor battle shifts focus to value extraction. Las Vegas (Round 23) is a power circuit where Mercedes and Red Bull should dominate, making it a strong Limitless or 3x candidate \u2014 plan your chip sequencing accordingly. Budget management is critical in these final rounds: prioritize assets that score points over those that gain price, as channels unanimously agree end-of-season rank matters more than budget.",
+  "arc": "Las Vegas is a street circuit that rewards straight-line speed and energy management \u2014 Mercedes and Ferrari power units should excel. With Antonelli's WDC wrapped up, the focus shifts to the constructors' championship battle between Mercedes and McLaren/Ferrari. The rain variable could create chaos and favor veterans like Verstappen and Hulkenberg. Budget restructuring away from 3M trap assets (Perez, Stroll, Bottas) toward a leaner Antonelli + Verstappen + quality mid-tier core is the key strategic move heading into the final 2-3 races. If you haven't already pivoted to this structure, Las Vegas with its scoring volatility (rain, penalties, street circuit chaos) is the weekend to make the switch \u2014 either via transfers or Wildcard \u2014 to set up a strong finish through Abu Dhabi.",
   "sources": [
-    {
-      "channel": "ZachGP",
-      "title": "F1 FANTASY POST FP2 FINAL THOUGHTS - BRAZIL 2026",
-      "url": "https://www.youtube.com/watch?v=vJ2r8hZOqxY"
-    },
     {
       "channel": "FanAmp",
       "title": "Rafa Camara Enters the Game, But What About Your Team? \ud83d\udc40 | Brazilian GP Final Thoughts | F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=xuz_DvcKAIk"
     },
     {
-      "channel": "F1FantasyPolePosition",
-      "title": "\ud83e\udde0 BRAZILIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
-      "url": "https://www.youtube.com/watch?v=qyMZ6scgQUE"
-    },
-    {
       "channel": "ReinFantasy",
       "title": "The $3.0M trap | Azerbaijan GP Final Thoughts | F1 Fantasy Tips 2026",
       "url": "https://www.youtube.com/watch?v=s_Hd8ne3F-E"
+    },
+    {
+      "channel": "F1FantasyPolePosition",
+      "title": "\ud83e\udde0 BRAZILIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
+      "url": "https://www.youtube.com/watch?v=qyMZ6scgQUE"
     },
     {
       "channel": "LF1FantasyStrategy",
@@ -174,7 +163,7 @@
     },
     {
       "channel": "BoxBoxF1Fantasy",
-      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy - 2026 F1 Fantasy Tips & Tricks",
+      "title": "3X Chip Activated! Italian Grand Prix Final Thoughts F1 Fantasy",
       "url": "https://www.youtube.com/watch?v=dSPcjpghfbs"
     },
     {
@@ -184,9 +173,9 @@
     },
     {
       "channel": "BoxBoxF1Fantasy-ML",
-      "title": "BoxBoxF1Fantasy ML predictions \u2014 Las Vegas Grand Prix (nearest available ML data, not S\u00e3o Paulo-specific)",
+      "title": "BoxBoxF1Fantasy ML predictions \u2014 Las Vegas Grand Prix",
       "url": "https://boxboxf1fantasy.com/picks/las-vegas-gp-2026/"
     }
   ],
-  "_source_hash": "76b6de20913001d5c64ea28252c6e96c79b262eb7e1ce0a805dac99e011d9ff7"
+  "_source_hash": "4099dd6b3504d33a0c2aabf0a25ee92f2b97508f6077b9bd01f470bd931ce295"
 }
