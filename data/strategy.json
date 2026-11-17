@@ -3,21 +3,21 @@
   "round": 23,
   "season": 2026,
   "sprint": false,
-  "deadline": "November 13",
-  "central_unknown": "Whether Mercedes or Ferrari will dominate race pace on the long Las Vegas Strip straight given the 2026 energy management dynamics, and whether any top drivers will take engine penalties this weekend.",
+  "deadline": "November 14",
+  "central_unknown": "Whether Mercedes will introduce their ADO2 upgraded power unit this weekend, and if so, which driver (Russell or Antonelli) receives it \u2014 this determines who takes a grid penalty and becomes the top fantasy asset.",
   "meta_template": {
-    "name": "Antonelli x2 + Mercedes + Ferrari midfield fills",
+    "name": "Antonelli x2 + Mercedes + McLaren/Ferrari pivot",
     "budget_tiers": [
       {
-        "budget": "~105M",
-        "core": "Antonelli (C), Leclerc, Mercedes constructor",
-        "fills": "Hadjar + Hulkenberg/Bearman + budget filler",
+        "budget": "107M+",
+        "core": "Antonelli (C), Verstappen, Norris, Mercedes constructor",
+        "fills": "Hadjar or budget filler (Lawson/Hulkenberg)",
         "optimal": true
       },
       {
-        "budget": "~110M+",
-        "core": "Antonelli (C), Leclerc or Verstappen, Mercedes or Ferrari constructor",
-        "fills": "Hadjar + Bearman/Lawson + mid-tier filler",
+        "budget": "100-107M",
+        "core": "Antonelli (C), Norris, Leclerc, Mercedes constructor",
+        "fills": "Hadjar + budget filler",
         "optimal": false
       }
     ]
@@ -30,16 +30,25 @@
       "price": "~27.6M",
       "team": "Mercedes",
       "team_colour": "27F4D2",
-      "reason": "ML projects 26.0 exp pts (proj 34.2), ppm 1.04, LOW risk, DNF 0.04, predicted P1 quali \u2192 P2 finish, 90% CI [-3.5, 48.0]. Already clinched WDC so no pressure. Multiple channels identify Antonelli as the consensus captain pick \u2014 dominant all season and Mercedes look strong. Safest ceiling+floor combination."
+      "reason": "ML projects 26.0 exp pts, ppm 1.04, LOW risk, pred Q1\u2192P2. Mercedes historically dominant in cold conditions and at Las Vegas (Russell won here in 2024). If Antonelli receives the ADO2 power unit and takes a grid penalty, his overtaking upside makes him even more compelling. FanAmp channel also highlights Antonelli as a top pick especially if he's the experimental driver for the new engine. Championship already secured removes any team-order downside."
     },
     {
-      "label": "Differential",
+      "label": "Primary",
       "name": "Max Verstappen",
       "acronym": "VER",
       "price": "~29.1M",
       "team": "Red Bull",
       "team_colour": "3671C6",
-      "reason": "ML projects 25.9 exp pts (proj 40.5 \u2014 highest projected points of any driver), ppm 1.62, MEDIUM risk, DNF 0.11, predicted P5 quali \u2192 P1 finish. Massive overtake potential on the Strip straight gives huge fantasy upside via positions gained. Channels note Verstappen won and took fastest lap at Baku 2025 from the front; the long straight at Las Vegas suits Red Bull's top speed. Higher variance than Antonelli but the highest projected ceiling in the field."
+      "reason": "ML projects 25.9 exp pts (highest projected at 40.5 pts), ppm 1.62, MEDIUM risk, pred Q5\u2192P1. Highest projected points ceiling on the grid. Historically took fastest lap here in 2025 and led from start to finish. FanAmp ranks Verstappen among their top options. DNF risk slightly elevated at 0.11."
+    },
+    {
+      "label": "Differential",
+      "name": "Lando Norris",
+      "acronym": "NOR",
+      "price": "~26.0M",
+      "team": "McLaren",
+      "team_colour": "FF8000",
+      "reason": "ML projects 20.3 exp pts, ppm 0.92, MEDIUM risk, DNF 0.16. Rumored 10-place grid penalty creates overtaking upside. FanAmp actually ranks Norris as their top pick this week \u2014 he took pole and crossed P2 at Las Vegas last year before disqualification, and dialed in Brazil upgrades. Higher DNF risk (0.16) is a concern but ceiling is huge with penalty. Channels favor Norris but ML ranks him 5th on expected points."
     }
   ],
   "btier": {
@@ -48,95 +57,88 @@
         "name": "Isack Hadjar",
         "acronym": "HAD",
         "price": "~16.5M",
-        "team_colour": "3671C6",
-        "note": "ML exp 12.4 pts, ppm 1.15, pred P8\u2192P8. Back from injury, strong pre-injury form with near 100% Q3 rate and 8 top-10 finishes. Channels highlight him as the key mid-price upgrade over 3M assets \u2014 avoids the DNF trap of Perez/Stroll/Bottas."
-      },
-      {
-        "name": "Nico Hulkenberg",
-        "acronym": "HUL",
-        "price": "~8.0M",
-        "team_colour": "52E252",
-        "note": "Multiple consecutive races adding value. Channels note he's graduated from 3M budget filler tier but still offers strong points-per-million. Watch FP sessions for any mechanical issues like Brazil."
-      },
-      {
-        "name": "Carlos Sainz",
-        "acronym": "SAI",
-        "price": "~9.5M",
         "team_colour": "6692FF",
-        "note": "Strong recent form \u2014 8 top-10 finishes this season, Q3 four times, only needs 2 pts for price rise. Alpine's Mercedes engine benefits from the long straight. Won DOTD at Baku 2025. Good budget value play."
+        "note": "ML projects 12.4 exp pts, ppm 1.15, MEDIUM risk. Recently returned to F1 and was delivering 15-25 pt performances pre-injury. ReinFantasy strongly recommends Hadjar as a way to avoid the 3M trap of Perez/Bottas/Stroll. Near-100% Q3 record and consistent top-10 finisher."
+      },
+      {
+        "name": "Lando Norris",
+        "acronym": "NOR",
+        "price": "~26.0M",
+        "team_colour": "FF8000",
+        "note": "Rumored 10-place grid penalty makes him a strong overtaking play. FanAmp's top-ranked driver this weekend. ML projects Q6\u2192P4 even without full penalty factored. Consider swapping Ferrari constructor for McLaren if running Norris."
       }
     ],
     "consider": [
       {
-        "name": "Oliver Bearman",
-        "acronym": "BEA",
-        "price": "~7.5M",
-        "team_colour": "E8002D",
-        "note": "Channels highlight his track affinity \u2014 scored 30 pts at Brazil last year, P6 finish in rookie season. Ferrari customer car benefits from strong PU. Solid floor for a budget asset."
+        "name": "George Russell",
+        "acronym": "RUS",
+        "price": "~27.2M",
+        "team_colour": "27F4D2",
+        "note": "ML projects 19.3 exp pts, pred Q3\u2192P6, MEDIUM risk. Won Las Vegas in 2024 and inherited P2 in 2025. If he takes a penalty for the ADO2 engine, he jumps significantly in value. FanAmp says if Russell takes even a 10-place penalty, he ranks above Piastri. Watch FP sessions for engine news."
       },
       {
-        "name": "Liam Lawson",
-        "acronym": "LAW",
-        "price": "~5.5M",
-        "team_colour": "3671C6",
-        "note": "Budget-friendly with overtake potential if starting lower. Channels note pace wasn't bad in recent races. Only needs ~6 pts for price rise. Grid penalties could boost fantasy upside."
+        "name": "Oscar Piastri",
+        "acronym": "PIA",
+        "price": "~22.7M",
+        "team_colour": "FF8000",
+        "note": "ML projects 17.7 exp pts, LOW risk, pred Q7\u2192P7. Potential back-of-grid start from engine penalty (hasn't taken one all season). However, FanAmp and ReinFantasy both express skepticism \u2014 only 3 races with 30+ fantasy pts in 2026, hasn't adapted well to new regs. Hamilton only scored 26 pts from the back in Brazil. Upside capped at ~P6-P8 per channel consensus."
       },
       {
-        "name": "Gabriel Bortoleto",
-        "acronym": "BOR",
-        "price": "~5.8M",
-        "team_colour": "52E252",
-        "note": "Consistent P8-P10 finishes in recent free practice sessions. Channels note he's a solid differential at low ownership (~2.2% in top 500). Needs -12 for min price rise, -7 for max \u2014 low risk of price drop."
+        "name": "Carlos Sainz",
+        "acronym": "SAI",
+        "price": "~14.0M",
+        "team_colour": "1868DB",
+        "note": "LF1FantasyStrategy highlights Sainz's consistent form \u2014 Q3 four times, top-10 finish eight times. Good budget enabler with likely price rise potential needing only 2 pts for minimum increase."
       }
     ],
     "avoid": [
-      "Sergio Perez \u2014 Chronic DNFs and negative points; channels describe 3M assets as a 'trap' with repeated -20 scores",
-      "Lance Stroll \u2014 Finished only 2 of last 9 races; one of the worst points streaks in F1 Fantasy history",
-      "Valtteri Bottas \u2014 Same DNF liability as Perez/Stroll; channels warn of inevitable negative scores",
-      "Fernando Alonso \u2014 Aston Martin updates haven't fixed reliability; not worth the risk even at low price"
+      "Sergio Perez \u2014 3M trap, serial DNFs and negative fantasy scores",
+      "Lance Stroll \u2014 finished only 2 of last 9 races, massive DNF liability",
+      "Valtteri Bottas \u2014 floor-price asset with persistent reliability issues",
+      "Fernando Alonso \u2014 Aston Martin updates haven't fixed reliability, cold conditions compound struggles"
     ]
   },
   "chips": [
     {
       "name": "Wildcard",
       "rec": "maybe",
-      "reason": "With only ~7 confirmed races left, channels suggest this could be the time to attack if your team needs a full restructure \u2014 especially to purge 3M assets and bring in Hadjar + better fills. If you're already competitive, save for a sprint weekend or confirmed penalty round."
+      "reason": "With only 3 races remaining, if you need to restructure away from 3M trap assets (Perez/Stroll/Bottas) toward Hadjar and better fills, this could be the last good window. ReinFantasy notes wanting 3 transfers to execute the Hadjar restructure cleanly. If you're already well-positioned, save for Abu Dhabi."
     },
     {
-      "name": "3x Boost",
+      "name": "3x Captain",
       "rec": "save",
-      "reason": "Channels and ML both show Antonelli as a dominant captain pick, but the 3x chip was recommended at Monza where Mercedes dominated. Save for a weekend with even clearer dominance or a sprint race with more scoring opportunities."
-    },
-    {
-      "name": "Limitless",
-      "rec": "save",
-      "reason": "BoxBox analysis at Monza showed 3x boost actually outscored limitless. Save limitless for a weekend where budget constraints truly prevent you from fielding the optimal team, or when there's a clear top-heavy scoring weekend."
+      "reason": "No sprint this weekend limits ceiling. BoxBox used 3x at Monza when Mercedes dominated with a back-of-grid Antonelli. If Mercedes ADO2 penalty situation creates a similar setup, reconsider \u2014 but current uncertainty suggests saving for a cleaner read."
     },
     {
       "name": "Final Fix",
       "rec": "save",
-      "reason": "Hold for a weekend where late qualifying results (penalties, crashes) create a clear swap opportunity. Channels note Leclerc's wall risk in qualifying on street-style circuits \u2014 Final Fix could rescue a DNQ scenario."
+      "reason": "Hold for post-qualifying adjustments at Abu Dhabi or if late engine penalty news breaks. Useful insurance given the ADO2 uncertainty."
+    },
+    {
+      "name": "Limitless",
+      "rec": "save",
+      "reason": "BoxBox analysis showed 3x chip outscored Limitless at Monza. With only 2-3 races left, Limitless is best saved for the final round when you can go all-in without budget constraints."
     }
   ],
   "watch_items": [
-    "Engine penalty watch: Multiple channels flagged potential engine penalties for top drivers (Russell was expected to take one around this point in the season). Check official communications before deadline.",
-    "Energy management on the Strip straight: The 2026 battery/energy rules mean cars may run out of charge on the extremely long Las Vegas straight \u2014 this could create a yo-yo effect and impact overtaking patterns significantly.",
-    "Mercedes engine advantage: Alpine, McLaren, and Williams all use Mercedes PUs \u2014 the long straight could amplify their performance, making Sainz and other Mercedes-powered drivers better value.",
-    "Hulkenberg mechanical reliability: FP1 issues in Brazil (only 7 laps from reserve driver, Hulkenberg didn't set a time). Monitor FP sessions closely before committing.",
-    "Hadjar fitness post-injury: First race back \u2014 watch FP pace and consistency to confirm he's fully fit and competitive.",
-    "Night race conditions: Las Vegas is a unique night race with cold track temperatures that can affect tire behavior and create unexpected results."
+    "Mercedes ADO2 power unit: Which driver (Russell vs Antonelli) gets the upgraded engine? FanAmp's Terry suspects Antonelli may be the experimental driver since both championships are decided, which would flip the captain calculus.",
+    "Oscar Piastri engine penalty confirmation: Initial sims suggest back-of-grid start. Monitor official communications through FP1/FP2.",
+    "Lando Norris 10-place grid penalty: Rumored first engine component penalty since Spa. Confirm before locking lineup.",
+    "Ferrari tire warm-up issues in cold conditions: Charlotte Claire described Brazil as 'driving on ice.' Las Vegas is a November night race \u2014 if Ferrari can't get temperature into tires, avoid Ferrari constructor.",
+    "McLaren vs Ferrari constructor swap: FanAmp burned by Ferrari in Brazil (62 pts, lowest since Baku). Both channels lean McLaren constructor if Norris+Piastri are both penalized and can overtake. ML ranks Ferrari #2 (57.9 exp pts) slightly above McLaren #4 (49.0 exp pts) \u2014 a notable disagreement with narrator sentiment.",
+    "Energy deployment on the long Turn 16-to-Turn 1 straight: LF1FantasyStrategy notes cars may run out of battery charge before the end of the straight, creating yo-yo overtaking patterns that could affect fantasy points from position changes."
   ],
-  "arc": "Las Vegas is the 23rd round of a season where Antonelli has already locked up the WDC, which reduces Mercedes' strategic urgency and could mean they experiment with setups or engine modes. With roughly 7 races remaining (Qatar and Abu Dhabi still TBC), this is the period where managers need to decide whether to attack or defend their overall ranking. The key structural move channels are advocating is the shift away from 3M 'trap' assets (Perez, Stroll, Bottas) toward a team built around Hadjar at ~16.5M plus Antonelli, which allows for a much higher floor. Budget managers who haven't yet made this transition should consider using their Wildcard here or in the next 1-2 races. The long straight at Las Vegas favors Mercedes-powered cars and Red Bull's top speed, setting up a similar dynamic for Abu Dhabi's Yas Marina circuit if it remains on the calendar.",
+  "arc": "Las Vegas is the first of the final three races, and the key strategic thread is the Mercedes ADO2 power unit introduction. If it debuts here successfully, it validates Mercedes' engine advantage in cold conditions heading into the final two rounds. The Piastri and Norris engine penalties this weekend could create a template for how grid-drop plays score under 2026 regulations \u2014 if they underperform expectations (like Hamilton's modest 26 pts from the back in Brazil), it recalibrates penalty-based captain strategies for the remaining rounds. Budget restructuring away from 3M trap assets toward Hadjar is urgent with only 2-3 races left; teams that haven't made this pivot risk bleeding points through DNFs. The Ferrari cold-weather vulnerability revealed in Brazil could persist through the season finale if conditions remain cool, making the McLaren vs Ferrari constructor decision a multi-race commitment.",
   "sources": [
+    {
+      "channel": "FanAmp",
+      "title": "Should You Gamble on Piastri From the Back? \ud83c\udfb2 | Las Vegas GP Best Lineups | F1 Fantasy",
+      "url": "https://www.youtube.com/watch?v=5NF3D4-dU3E"
+    },
     {
       "channel": "ReinFantasy",
       "title": "The $3.0M trap | Azerbaijan GP Final Thoughts | F1 Fantasy Tips 2026",
       "url": "https://www.youtube.com/watch?v=s_Hd8ne3F-E"
-    },
-    {
-      "channel": "F1FantasyPolePosition",
-      "title": "\ud83e\udde0 BRAZILIAN GP F1 FANTASY FINAL THOUGHTS | F1 Fantasy 2026 Tips, Picks, & Strategy \ud83e\udde0",
-      "url": "https://www.youtube.com/watch?v=qyMZ6scgQUE"
     },
     {
       "channel": "LF1FantasyStrategy",
@@ -159,5 +161,5 @@
       "url": "https://boxboxf1fantasy.com/picks/las-vegas-gp-2026/"
     }
   ],
-  "_source_hash": "38db1329a041b3565f2f51f5a936e6a15e5bec61744cae04828f89fa75453f08"
+  "_source_hash": "82d89bde0dbde783374bb3fc8274f2ebec05ac318a33dd8614b78b1ecc4694d0"
 }
